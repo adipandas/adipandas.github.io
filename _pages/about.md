@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Aditya Blog"
+title: "Aditya Deshpande"
 excerpt: "About me"
 author_profile: true
 redirect_from:
