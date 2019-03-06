@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am PhD Candidate in [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html) specializing in Robotics at [University of Cincinnati](https://www.uc.edu/). I am advised by [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/) in my research. My research is focused on embodied intelligence in robots.
+PhD Candidate in [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html) specializing in Robotics at [University of Cincinnati](https://www.uc.edu/). I am advised by [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My research is focused on embodied intelligence in robots.
 
 Research Interests
 ======
