@@ -88,8 +88,8 @@ author:
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=MHFiZZsAAAAJ&hl=en"
   email            : "adityadeshpande2010@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://www.researchgate.net/profile/Aditya_Deshpande8"
+  researchgate     :  "https://www.researchgate.net/profile/Aditya_Deshpande8" # example: "https://www.researchgate.net/profile/yourprofile"
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
