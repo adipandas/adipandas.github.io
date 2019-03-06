@@ -1,15 +1,16 @@
 ---
-title: "Paper Title Number 1"
+title: "Constraint handling in firefly algorithm"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+permalink: #/publication/2009-10-01-paper-title-number-1
+excerpt: 'Most of the contemporary nature-/bio-inspired techniques are unconstrained algorithms. Their performance may get affected when dealing with the constrained problems. There are number of constraint handling techniques developed for these algorithms. This paper intends to compare the performance of the emerging metaheuristic swarm optimization technique of Firefly Algorithm when incorporated with the generalized constrained handling techniques such as penalty function method, feasibility-based rule and the combination of both, i.e. combined approach. Seven well known test problems have been solved. The results obtained using the three constraint handling techniques are compared and discussed with regard to the robustness, computational cost, rate of convergence, etc. The associated strengths, weaknesses and future research directions are also discussed.'
+date: 2013-06-13
+venue: '2013 IEEE international conference on cybernetics'
+paperurl: 'https://ieeexplore.ieee.org/document/6617447'
+citation: 'Deshpande, A.M., Phatnani, G.M. and Kulkarni, A.J., 2013, June. Constraint handling in firefly algorithm. In 2013 IEEE international conference on cybernetics (CYBCO) (pp. 186-190). IEEE.'
 ---
-This paper is about the number 1. The number 2 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+Most of the contemporary nature-/bio-inspired techniques are unconstrained algorithms. Their performance may get affected when dealing with the constrained problems. There are number of constraint handling techniques developed for these algorithms. This paper intends to compare the performance of the emerging metaheuristic swarm optimization technique of Firefly Algorithm when incorporated with the generalized constrained handling techniques such as penalty function method, feasibility-based rule and the combination of both, i.e. combined approach. Seven well known test problems have been solved. The results obtained using the three constraint handling techniques are compared and discussed with regard to the robustness, computational cost, rate of convergence, etc. The associated strengths, weaknesses and future research directions are also discussed.
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+<!--[Download paper here](http://academicpages.github.io/files/paper1.pdf)-->
+
+<!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
