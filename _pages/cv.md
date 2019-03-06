@@ -26,7 +26,7 @@ Work experience
 * May 2017 - Present: Graduate Research Assistant
   * [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html), University of Cincinnati
   <!-- * Duties included: Tagging issues -->
-  * Supervisor: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
+  * Supervisor: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
 
 * January 2019 - Present: Instructor
   * University of Cincinnati
