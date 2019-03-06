@@ -21,7 +21,7 @@ Work experience
   * [DASSAULT SYSTÈMES](https://www.3ds.com/)
 
 * August 2016 - April 2017: Student Worker
-  * University of Cincinnati
+  * [University of Cincinnati](https://www.uc.edu/)
 
 * May 2017 - Present: Graduate Research Assistant
   * [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html), University of Cincinnati
