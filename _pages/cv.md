@@ -30,7 +30,7 @@ Work experience
 
 * January 2019 - Present: Instructor
   * University of Cincinnati
-  * Instructed the graduate level course of Robot Control Design.
+  * Instructed the graduate level course of [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1) in College of Engineering and Applied Sciences at University of Cincinnati.
 
 Publications
 ======
