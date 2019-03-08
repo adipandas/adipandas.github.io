@@ -29,7 +29,6 @@ Work experience
   * Supervisor: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
 
 * January 2019 - Present: Instructor
-  * University of Cincinnati
   * Instructed the graduate level course of [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1) in [College of Engineering and Applied Sciences](https://ceas.uc.edu/) at University of Cincinnati.
 
 Publications
