@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-PhD Candidate in [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html) specializing in Robotics at [University of Cincinnati](https://www.uc.edu/). I am advised by [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My research is focused on embodied intelligence in robots.
+## Hello World
+I am Aditya. I am from Pune. Currently, I am pursuing PhD in [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html) specializing in Robotics at [University of Cincinnati](https://www.uc.edu/). I am advised by [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My research is focused on embodied intelligence in robots.
+I completed my Masters in Mechanical Engineering from University of Cincinnati in Summer 2017 and Bachelors in Mechanical Engineering from University of Pune in 2014.
 
 Research Interests
 ======
