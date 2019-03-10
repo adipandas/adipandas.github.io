@@ -58,11 +58,11 @@
 }
 
 .archive__item-excerpt {
-  text-align: justify;
   margin-top: 0;
   font-size: $type-size-6;
 
   & + p {
+    text-align: justify;
     text-indent: 0;
   }
 }
