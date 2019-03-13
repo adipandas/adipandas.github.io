@@ -5,6 +5,15 @@ type: "Talk"
 permalink: /talks/2018-09-10-schoolOfAI
 venue: 
 date: 2018-09-10
+tags:
+  - computer-vision
+  - deep-learning
+  - multi-object tracking
+  - cv
+  - opencv
+  - python
+  - school-of-ai
+  - artificial-intelligence
 location: "Cincinnati, Ohio"
 ---
 
