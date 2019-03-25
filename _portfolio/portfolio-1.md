@@ -1,7 +1,13 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Autonomous Flying Robot"
+excerpt: "Demonstration of autonomous quadrotor robot"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML.
+This is the demonstration of autonomous quadrotor developed by me using [Robot Operating System (ROS)](http://www.ros.org/) and [Pixhawk Firmware](https://px4.io/).
+
+Video Links:
+* [Pixhawk for Quadcopter Waypoint Navigation using External Position Estimation](https://youtu.be/U_rrq_xeDkc)
+* [Pixhawk Quadrotor Test for Robustness to Disturbance](https://www.youtube.com/watch?v=qzLG4EuJ_VQ)
+
+
