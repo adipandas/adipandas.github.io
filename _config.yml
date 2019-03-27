@@ -265,13 +265,14 @@ plugins:
   - jekyll-redirect-from
   - jemoji
   - jekyll-seo-tag
-# mimic GitHub Pages with --safe
-whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+# mimic GitHub Pages with --safe
+whitelist:
+
 
 
 # Archives
