@@ -1,6 +1,7 @@
 ---
 title: "Autonomous Flying Robot"
 excerpt: "Demonstration of autonomous quadrotor robot"
+tags: px4, autopilot, uav, quadcopter, indoor-flight, pixhawk, ROS, robot
 collection: portfolio
 ---
 
