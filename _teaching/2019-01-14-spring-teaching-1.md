@@ -20,5 +20,4 @@ tags:
   - CEAS
 ---
 
-Test Test Test.
-
+I designed and taught a class on <b>MECH5132/MECH6032 - Robot Control and Design</b> in the Spring 2019 at University of Cincinnati. It was a dual level course including undergraduate as well as graduate students. The class had an enrollment of 60 students. I introduced a new curriculum of project work based on open-source hardware platforms in this course. The students were provided with the kits of robot platforms (including robot arm and/or differential drive robots) and micro-controllers (including Ardunio Uno). These hardware kits were used by students to implement and test the controllers discussed in class.
