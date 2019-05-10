@@ -13,6 +13,8 @@ tags:
   - control design
   - robot control
   - control systems
+  - University of Cincinnati
+  - CEAS
 ---
 
 I designed and taught a class on <b>MECH5132/MECH6032 - Robot Control and Design</b> in the Spring 2019 at University of Cincinnati. It was a dual level course including both undergraduate as well as graduate students. The class had an enrollment of 60 students.
