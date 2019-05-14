@@ -15,6 +15,7 @@ I completed my Masters in Mechanical Engineering from University of Cincinnati i
 
 Curriculum Vitae (May 2019): [PDF](https://adipandas.github.io/files/aditya-cv-web.pdf)
 
+Email: <a href="mailto:deshpaad@mail.uc.edu">deshpaad@<span style="display:none;">mail.</span>uc.edu
 
 Research Interests
 ======
