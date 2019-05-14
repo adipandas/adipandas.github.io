@@ -32,6 +32,8 @@ Video Links:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qzLG4EuJ_VQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
+
 References:
 
 \[1\]. Redmon, J., Farhadi, A. (2018). Yolov3: An incremental improvement. arXiv preprint arXiv:1804.02767.
