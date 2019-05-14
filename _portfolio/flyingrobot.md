@@ -13,7 +13,8 @@ tags:
   - object detection
   - deep learning
   - YOLO
-  - [Intel$^{\tiny{\textregistered}}$ Movidius^{\texttrademark} Neural Compute Stick](https://software.intel.com/en-us/neural-compute-stick)
+  - Movidius
+  
 collection: portfolio
 ---
 
@@ -34,3 +35,4 @@ Video Links:
 References:
 
 \[1\]. Redmon, J., Farhadi, A. (2018). Yolov3: An incremental improvement. arXiv preprint arXiv:1804.02767.
+\[2\]. [Intel$^{\tiny{\textregistered}}$ Movidius^{\texttrademark} Neural Compute Stick](https://software.intel.com/en-us/neural-compute-stick)
