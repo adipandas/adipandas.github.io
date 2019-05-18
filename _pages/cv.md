@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,6 +8,9 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+[PDF - CV](https://adipandas.github.io/files/aditya-cv-web.pdf)
+======
 
 Education
 ======
@@ -17,19 +20,20 @@ Education
 
 Work experience
 ======
-* August 2014 - July 2015: Software Engineer
-  * [DASSAULT SYSTÈMES](https://www.3ds.com/)
-
-* August 2016 - April 2017: Student Worker
-  * [University of Cincinnati](https://www.uc.edu/)
 
 * May 2017 - Present: Graduate Research Assistant
   * [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html), University of Cincinnati
   <!-- * Duties included: Tagging issues -->
   * Supervisor: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
 
-* January 2019 - Present: Instructor
+* January 2019 - April 2019: Instructor
   * Instructed the graduate level course of [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1) in [College of Engineering and Applied Sciences](https://ceas.uc.edu/) at University of Cincinnati.
+
+* August 2016 - April 2017: Student Worker
+  * [University of Cincinnati](https://www.uc.edu/)
+  
+* August 2014 - July 2015: Software Engineer
+  * [Dassault Syst\{`e}mes](https://www.3ds.com/)
 
 Publications
 ======
@@ -42,7 +46,6 @@ Skills
 ======
 * Software: Python, C++, OpenCV, PyTorch, ROS
 * Hardware: PixHawk Autopilot, Arduino, Raspberry Pi, Nvidia Jetson
-
 
 Teaching
 ======
