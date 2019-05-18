@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Curriculum Vitae](https://adipandas.github.io/files/aditya-cv-web.pdf)
+[CV - PDF](https://adipandas.github.io/files/aditya-cv-web.pdf)
 
 Education
 ====
