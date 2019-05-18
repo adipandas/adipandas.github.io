@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Curriculum Vitae"
+title: "[Curriculum Vitae](https://adipandas.github.io/files/aditya-cv-web.pdf)"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,9 +8,6 @@ redirect_from:
 ---
 
 {% include base_path %}
-
-[PDF - CV](https://adipandas.github.io/files/aditya-cv-web.pdf)
-======
 
 Education
 ======
