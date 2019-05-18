@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "[Curriculum Vitae](https://adipandas.github.io/files/aditya-cv-web.pdf)"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+[Curriculum Vitae](https://adipandas.github.io/files/aditya-cv-web.pdf)
 
 Education
 ====
@@ -21,7 +23,7 @@ Work experience
 * May 2017 - Present: Graduate Research Assistant
   * [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html), University of Cincinnati
   <!-- * Duties included: Tagging issues -->
-  * Supervisor: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
+  * Adivsors: [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/)
 
 * January 2019 - April 2019: Instructor
   * Instructed the graduate level course of [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1) in [College of Engineering and Applied Sciences](https://ceas.uc.edu/) at University of Cincinnati.
