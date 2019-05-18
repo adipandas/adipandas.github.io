@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 Education
-======
+====
 * B.E. in Mechanical, University of Pune, 2014
 * M.S. in Mechanical, University of Cincinnati, 2017
 * Ph.D in Robotics, University of Cincinnati (on-going)
