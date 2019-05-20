@@ -32,7 +32,7 @@ Work experience
   * [University of Cincinnati](https://www.uc.edu/)
   
 * August 2014 - July 2015: Software Engineer
-  * [Dassault Syst&#232mes](https://www.3ds.com/)
+  * [Dassault Systemes](https://www.3ds.com/)
 
 Publications
 ======
