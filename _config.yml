@@ -86,7 +86,7 @@ author:
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=MHFiZZsAAAAJ&hl=en"
-  email            : "adityadeshpande2010 _at_ gmail _dot_ com"
+  email            : # "adityadeshpande2010 _at_ gmail _dot_ com"
   researchgate     :  "https://www.researchgate.net/profile/Aditya_Deshpande8" # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : 
   bitbucket        :
