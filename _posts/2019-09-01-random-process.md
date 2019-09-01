@@ -12,7 +12,8 @@ To understand a random process is very important to study Gaussian Processes and
 
 Random Experiment
 ===
-An experiment whose outcome cannot be predicted with certainty is called a Random Experiment.  
+An experiment whose outcome cannot be predicted with certainty is called a Random Experiment.
+
 Examples:
 1. Life time of light bulb.
 2. Rolling a dice.
