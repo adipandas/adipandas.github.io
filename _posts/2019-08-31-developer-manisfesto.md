@@ -7,9 +7,9 @@ tags:
   - Engineering
 ---
 
-Some of the thoughts I like about engineering and software development:
+Some thoughts about engineering and software development:
 
-1. **The most important**: You Are an Artisan, Not an Engineer
+1. **The most important**: **You Are an Artisan, Not an Engineer**
 2. Style matters: For product you develop, its aesthetic quality matters.
 3. Maniacal Focus on Elegance and Simplicity
 4. Finish the Job: Simply "working" solution doesn't mean your work has finished.
@@ -28,7 +28,7 @@ Some of the thoughts I like about engineering and software development:
 
 
 
-I came accros these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I will like to thank Tyler Flint for sharing these.
+I came accros these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I want to thank Tyler Flint for sharing these. I try to incorporate these in my work as much as I can.
 
 References
 ------
