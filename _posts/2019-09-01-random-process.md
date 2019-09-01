@@ -32,7 +32,7 @@ Let $$X$$ be random variable for the random experiment of tossing a coin.
 $$X$$ is a deterministic function that assigns a real-value to outcome of random experiment.
 Thus, we can write it as follows:  
 $$X(H) = 1$$ and $$X(T)=0$$  
-$$X(\xi)=x$$ where $$x\in{0, 1}$$ and $$\xi\in{T, H}$$.
+$$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$.
 
 
 
