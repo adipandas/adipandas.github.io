@@ -28,7 +28,7 @@ Some of the thoughts I like about engineering and software development:
 
 
 
-I came accros this at [this link](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I will like to thank Tyler Flint for sharing these.
+I came accros these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I will like to thank Tyler Flint for sharing these.
 
 References
 ------
