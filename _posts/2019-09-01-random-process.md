@@ -4,11 +4,12 @@ date: 2019-09-01
 permalink: /posts/2019/09/random-process/
 tags:
   - Random Process
+  - Stochastic Process
   - Randomness
   - Probability
 ---
 
-To understand a random process is very important to study Gaussian Processes and Markov Processes. This page explains the basics of what is Random Process.
+To understand a random process is very important to study Gaussian Processes and Markov Processes. This page explains the basics of Random Process.
 
 Random Experiment
 ===
@@ -26,10 +27,10 @@ Random variable is a *deterministic* function that assigns a real value to an ou
 Example:  
 Let there be an experiment of tossing a coin. This experiment may result in two outcomes, viz., Heads (H) or Tails (T). Mathematically speaking the sample space of this experiment can be defined as {H, T}. We can assign a numerical value to these possible outcomes of the sample space. Lets say, we call getting H in coin toss as 1 and getting T as 0. Therefore, we can represent the sample space in terms of numerical value as {1, 0}.
 
-One should notice that assigning a value if 1 to H is a deterministic function, i.e., whenever one gets an outcome of the coin toss as H, we will always assign it a value of 1.
+One should notice that assigning a value of 1 to H is a deterministic function, i.e., whenever one gets an outcome of the coin toss as H, we will always assign it a value of 1.
 
 Let $$X$$ be random variable for the random experiment of tossing a coin.  
-$$X$$ is a deterministic function that assigns a real-value to outcome of random experiment.
+Here, $$X$$ is a deterministic function that assigns a real-value to outcome of experiment of tossing a coin.
 Thus, we can write it as follows:  
 $$X(H) = 1$$ and $$X(T)=0$$  
 $$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$.
@@ -38,11 +39,27 @@ Random variable in case of the above example of random experiment can take only 
 
 Random Process
 ===
-Random Process depends on random variable as well as time. In an experiment, one always takes into account the occurance of an event. While the one is observing the experiment, the observations are done over a course of time. Multiple observations are made at different time instances. These observations are also effected by randomness. The randomness in the experiment does not effect only a single instance of the experiment, but its effects are seen over the complete period of time. A **random process** takes this time dependence into consideration.
+Random Process depends on random variable as well as time. In an experiment, one always takes into account the occurence of an event. While one is observing the experiment, the observations are done over a course of time. Multiple observations are made at different time instances. These observations are also effected by randomness. The randomness in the experiment does not effect only a single instance of the experiment, but its effects are seen over the complete period of time. A **random process** takes this time dependence into consideration.
 
 ### Definition:
-The random process is an infinite indexed collection of random variables defined over a common probability space.
-Random process: $$\{X(t): t\in T\}$$
+The random process is an infinite indexed collection of random variables defined over a common probability space.  
+Random process: $$\{X(t): t\in T\}$$  
+This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is drawn from an index set $$T$$. The index set $$T$$ can be discrete where it make take values as $${1, 2, 3, ...}$$. In continuous case it may take value in a range, for example the time of the experiment may fall in the interval $$[5, 10]$$.
+
+A more intutive way to understand this definition is as follows -  
+Random process: $$X(\xi, t)$$.  
+It is a function of the outcome of a random experiment $$\xi$$ at time $$t$$.
+
+
+For example:
+1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed.
+  * The IMU sensor if measuring acceleration, its outcome at anytime can be written as:  
+   $$a_{x}(t) = X(t)$$.
+   Since, the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in x direction at time $$t$$ may be some non-zero random value.
+2. Price of a stock recorded every day.
+  * Stock prices vary every day, and the variation if observed seems random.
+  
+
 
 
 
