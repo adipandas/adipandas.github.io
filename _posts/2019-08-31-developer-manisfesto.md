@@ -30,5 +30,3 @@ Some thoughts about engineering and software development:
 
 I came accros these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I want to thank Tyler Flint for sharing these. I try to incorporate these in my work as much as I can.
 
-References
-------
