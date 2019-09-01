@@ -23,12 +23,19 @@ Random Variable
 ===
 Random variable is a *deterministic* function that assigns a real value to an outcome of a random experiment.
 
-Example:
+Example:  
 Let there be an experiment of tossing a coin. This experiment may result in two outcomes, viz., Heads (H) or Tails (T). Mathematically speaking the sample space of this experiment can be defined as {H, T}. We can assign a numerical value to these possible outcomes of the sample space. Lets say, we call getting H in coin toss as 1 and getting T as 0. Therefore, we can represent the sample space in terms of numerical value as {1, 0}.
 
 One should notice that assigning a value if 1 to H is a deterministic function, i.e., whenever one gets an outcome of the coin toss as H, we will always assign it a value of 1.
 
-Let $$X$$ be random variable for the random experiment of tossing a coin.
+Let $$X$$ be random variable for the random experiment of tossing a coin.  
+$$X$$ is a deterministic function that assigns a real-value to outcome of random experiment.
+Thus, we can write it as follows:  
+$$X(H) = 1$$ and $$X(T)=0$$  
+$$X(\xi)=x$$ where $$x\in{0, 1}$$ and $$\xi\in{T, H}$$.
+
+
+
 
 
 
