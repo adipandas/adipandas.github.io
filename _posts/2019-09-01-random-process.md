@@ -34,9 +34,15 @@ Thus, we can write it as follows:
 $$X(H) = 1$$ and $$X(T)=0$$  
 $$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$.
 
-
 Random variable in case of the above example of random experiment can take only discrete values. Thus, $$X$$ is called a discrete random variable. It is also possible for a random variable to take continuous values. For example, it the random experiment is measuring the height of an individual, the height is not a discrete number, it can take any value in the interval $$[0, \infty)$$.
 
+Random Process
+===
+Random Process depends on random variable as well as time. In an experiment, one always takes into account the occurance of an event. While the one is observing the experiment, the observations are done over a course of time. Multiple observations are made at different time instances. These observations are also effected by randomness. The randomness in the experiment does not effect only a single instance of the experiment, but its effects are seen over the complete period of time. A **random process** takes this time dependence into consideration.
+
+### Definition:
+The random process is an infinite indexed collection of random variables defined over a common probability space.
+Random process: $$\{X(t): t\in T\}$$
 
 
 
