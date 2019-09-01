@@ -35,7 +35,8 @@ $$X(H) = 1$$ and $$X(T)=0$$
 $$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$.
 
 
-Random variable in case of the above example of random experiment can take only discrete values. Thus, $$X$$ is called a discrete random variable. It is also possible for a random variable to take continuous values. For example, it the random experiment is measuring the height of an individual, the height is not a discrete number, it can take any value in the interval $$\[0, \infty)$$
+Random variable in case of the above example of random experiment can take only discrete values. Thus, $$X$$ is called a discrete random variable. It is also possible for a random variable to take continuous values. For example, it the random experiment is measuring the height of an individual, the height is not a discrete number, it can take any value in the interval $$[0, \infty)$$.
+
 
 
 
