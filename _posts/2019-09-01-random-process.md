@@ -44,14 +44,14 @@ Random Process depends on random variable as well as time. In an experiment, one
 ### Definition:
 The random process is an infinite indexed collection of random variables defined over a common probability space.  
 Random process: $$\{X(t): t\in T\}$$  
-This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is drawn from an index set $$T$$. The index set $$T$$ can be discrete where it make take values as $${1, 2, 3, ...}$$. In continuous case it may take value in a range, for example the time of the experiment may fall in the interval $$[5, 10]$$.
+This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is drawn from an index set $$T$$. The index set $$T$$ can be discrete where it make take values as $$\{1, 2, 3, ...\}$$. In continuous case it may take value in a range, for example the time of the experiment may fall in the interval $$[5, 10]$$.  
+Here, the index parameter is typically a variable which accounts for time. But this value can also represent an indexing of a spatial domain.
 
 A more intutive way to understand this definition is as follows -  
-Random process: $$X(\xi, t)$$.  
-It is a function of the outcome of a random experiment $$\xi$$ at time $$t$$.
+Random process: $$X(\xi, t)$$   
+It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$.
 
-
-For example:
+**Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed.
   * The IMU sensor if measuring acceleration, its outcome at anytime can be written as:  
    $$a_{x}(t) = X(t)$$.
@@ -60,6 +60,13 @@ For example:
   * Stock prices vary every day, and the variation if observed seems random.
   
 
+**Example of Random Process with spatial indexing:**
+1. Flipping of 4 unbiased coins at 4 different locations.
+  * Coins are at 4 different locations. The indices representing these locations are $$T=\{1, 2, 3, 4\}$$.
+  * All the coins are unbiased and the sample space for each coin toss is $$\{H, T\}$$. Each outcome is equally probable.
+  * Random process is $$X(\xi, t)$$ where $$\xi \in \{H, T\}$$ and $$t \in \{1, 2, 3, 4\}$$.
+  
+  
 
 
 
