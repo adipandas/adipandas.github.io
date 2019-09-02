@@ -53,9 +53,7 @@ It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$.
 
 **Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed.
-  * The IMU sensor if measuring acceleration, its outcome at anytime can be written as:  
-   $$a_{x}(t) = X(t)$$.
-   Since, the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in x direction at time $$t$$ may be some non-zero random value.
+  * The IMU sensor if measuring acceleration, its outcome at anytime can be written as $$a_{x}(t) = X(t)$$. Since, the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in x direction at time $$t$$ may be some non-zero random value.
 2. Price of a stock recorded every day.
   * Stock prices vary every day, and the variation if observed seems random.
   
