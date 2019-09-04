@@ -1,5 +1,5 @@
 ---
-title: 'Random Process'
+title: 'Random Processes'
 date: 2019-09-01
 permalink: /posts/2019/09/random-process/
 tags:
@@ -9,7 +9,7 @@ tags:
   - Probability
 ---
 
-To understand a random process is very important to study Gaussian Processes and Markov Processes. This page explains the basics of Random Process.
+Gaussian processes allow the incorporation of prior knowlegde the data while making any predictions. They are a very powerful tool for regression as well as classification problems. Similarly, with the developments in Reinforcement Learning (RL), Markov Processes and Markov Decision Processes are the fundamental component of RL theory. In both the topics mentioned above, the common component is Randomness/Stochasticity. After giving a thought, it can be realized that when we are working with a RL-agent, the stochasticity is not about a single step in its life time. It is the behavior of this agent over time. Because of randomness in each action a RL agent takes, to perform a same task, it may come up with various trajectories. Or one can think about any real life situation, observations are made over a period of time and they may be influenced by random effects, not just at a single instant but throughout the entire interval of time or sequence of times. If one defines it in terms of mathematics, a Random Variable defines a random experiment at a single instance. To understand the overtime behavior of any experiment with random/stochastic nature, one needs to understand the **Random Processes**. This page explains the basics of Random Processes.
 
 Random Experiment
 ===
