@@ -15,6 +15,8 @@ Gaussian Processes allow the incorporation of prior knowlegde about the data whi
 Lets start thinking about it in terms of mathematics. A random variable holds an outcome of random experiment. For example, number of people standing in front of you right now. Randomly speaking, the number can be anything from the set of natural numbers $$N \equiv \{0, 1, 2, 3, ...\}$$ at the instance of observation. But this random experiment is over once you observe its outcome. Lets say, you observed 3 poeple standing in from of you.
 Lets complicate our experiment. *What is the number of people standing in front of you overtime in a day?* Now, the random variable which holds a value from set $$N$$ will take different values at each instance of obervation. You will need to observe multiple instances for the entire day. Not just that, the set of observations you make will vary each day. It will not be the same. If you count the people standing in front of you for each instance of today, it will just be a *single realization* of all the possiblities of observations on different days. To understand this stochasticity overtime, one needs to understand the **Random Processes**.
 
+The rest of the page formalizes the idea of Random Processes.
+
 Random Experiment
 ===
 An experiment whose outcome cannot be predicted with certainty is called a Random Experiment.
