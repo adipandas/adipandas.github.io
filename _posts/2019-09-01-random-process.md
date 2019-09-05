@@ -1,7 +1,7 @@
 ---
 title: 'Random Processes'
 date: 2019-09-01
-excerpt: The post explains the basics of **Random Processes**.
+excerpt: The post explains the basics of **Random Processes**. Click [here](https://adipandas.github.io/posts/2019/09/random-process/) to read further.
 permalink: /posts/2019/09/random-process/
 tags:
   - Random Process
