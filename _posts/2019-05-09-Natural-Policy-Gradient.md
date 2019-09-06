@@ -1,7 +1,7 @@
 ---
 title: 'Natural Policy Gradient'
-date: 2030-08-11
-permalink: /posts/2019/05/natural-policy-gradient/
+date: 2030-01-01
+permalink: /posts/2030/01/natural-policy-gradient/
 tags:
   - Deep Learning
   - Machine Learning
