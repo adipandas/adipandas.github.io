@@ -5,9 +5,10 @@ permalink: /posts/2019/08/developer-manifesto/
 tags:
   - Software Development
   - Engineering
+  - Thoughts
 ---
 
-Some thoughts about engineering and software development:
+Some thoughts about engineering and software development.
 
 1. **The most important**: **You Are an Artisan, Not an Engineer**
 2. Style matters: For product you develop, its aesthetic quality matters.
