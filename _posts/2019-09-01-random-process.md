@@ -2,12 +2,13 @@
 title: 'Random Processes'
 date: 2019-09-01
 excerpt: The post explains the basics of **Random Processes**. Click [here](https://adipandas.github.io/posts/2019/09/random-process/) to read further.
-permalink: /posts/random-process/
+permalink: /posts/2019/09/random-processes/
 tags:
   - Random Process
   - Stochastic Process
   - Randomness
   - Probability
+  - Machine Learning
 ---
 
 Gaussian Processes allow the incorporation of prior knowlegde about the data while making predictions. These are a very powerful tool for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commanality of Randomness/Stochasticity. While working with a RL agent, the stochasticity in the MDP is not about a single step in agent's life, but over the entire period of time the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real life scenario or task. The observations are made over a period of time and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
