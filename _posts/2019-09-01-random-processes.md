@@ -48,7 +48,8 @@ Once, we observe the outcome of our experiment, there is no more randomness invo
 
 Random Processes
 ===
-Random Process depends on random variable as well as time or some indexing variable. While one is observing a random experiment, the observations are done over a interval of time. Multiple observations are made at different time instances which may have been effected by randomness. This randomness does not effect only a single observation, but its effects are seen over the complete period of time. **Random process** can take the time of observation as an input parameter.
+Random Process depends on a random variable as well as an indexing variable.  
+In many stochastic processes, the indexing variable which will represent some index set will be related to a temporal dimension. For example, while one is observing a random experiment, the observations are done over a interval of time. Multiple observations are made at different time instances which may have been effected by randomness. This randomness does not effect only a single observation, but its effects are seen over the duration of the experiment. **Random process** can take the time of observation as an input parameter which will be represented as an indexing variable.
 
 ### Definition:
 The random process is an infinite indexed collection of random variables defined over a common probability space.  
@@ -57,8 +58,8 @@ This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is 
 Here, the index parameter is typically a variable which accounts for time. But this value can also represent an indexing of a spatial domain.
 
 A more intutive way to understand this definition is as follows -  
-Random process: $$X(\xi, t)$$   
-It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$.
+Random process: $$X(\xi, t)$$ or $$X_{t}(\xi)$$  or $$X_{t}$$  
+It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. Unless otherwise stated, a random process is represented by one of the above notations. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
 
 **Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed from point A to point B on a road.
