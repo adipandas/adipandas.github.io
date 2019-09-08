@@ -59,7 +59,7 @@ Here, the index parameter is typically a variable which accounts for time. But t
 
 A more intutive way to understand this definition is as follows -  
 Random process: $$X(\xi, t)$$ or $$X_{t}(\xi)$$  or $$X_{t}$$  
-It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. Unless otherwise stated, a random process is represented by one of the above notations. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
+It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. Unless otherwise stated, a random process is represented by one of the above notations. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation in $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
 
 **Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed from point A to point B on a road.
