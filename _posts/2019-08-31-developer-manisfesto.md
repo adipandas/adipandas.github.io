@@ -25,7 +25,8 @@ Some thoughts about engineering and software development.
 13. Ignore the Competition.
 14. Have Strong Opinions, but hold on to them Weakly. Be willing to change your mind when you learn new information.
 15. Ownership is not only about your work. Own up to Failure.
-16. Be Passionate.
+16. Be Passionate
+17. Participate and contribute if you can: Be the Jack of all trades and Master of ONE.
 
 
 I came accross these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I want to thank Tyler Flint for sharing these. I try to incorporate these in my work as much as I can.
