@@ -73,8 +73,10 @@ It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. U
   * Coins are at 4 different locations. The indices representing these locations are $$T=\{1, 2, 3, 4\}$$.
   * All the coins are unbiased and the sample space for each coin toss is $$\{H, T\}$$. Each outcome is equally probable.
   * Random process is $$X(\xi, t)$$ where $$\xi \in \{H, T\}$$ and $$t \in \{1, 2, 3, 4\}$$.
-  
-  
+
+
+As explained before, random process $X(\xi, t)$$ an be understood as a function of two variables, $$\xi \in \Xi$$ and $$t \in T$$. Here, $$\Xi$$ is the sample space of random experiment underlying this random process and $$T$$ is the index set.  
+
 
 
 
