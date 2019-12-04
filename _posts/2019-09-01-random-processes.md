@@ -11,10 +11,10 @@ tags:
   - Machine Learning
 ---
 
-Gaussian Processes allow the incorporation of prior knowlegde about the data while making predictions. These are a very powerful tool for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commanality of Randomness/Stochasticity. While working with a RL agent, the stochasticity in the MDP is not about a single step in agent's life, but over the entire period of time the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real life scenario or task. The observations are made over a period of time and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
+Gaussian Processes allow the incorporation of prior knowledge about the data while making predictions. These are a very powerful tool for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commonality of Randomness/Stochasticity. While working with a RL agent, the stochasticity in the MDP is not about a single step in the agent’s life, but over the entire period, the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real-life scenario or task. The observations are made a timespan and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
 
-Lets start thinking about it in terms of mathematics. A random variable holds an outcome of random experiment. For example, number of people standing in front of you right now. Randomly speaking, the number can be anything from the set of natural numbers $$N \equiv \{0, 1, 2, 3, ...\}$$ at the instance of observation. But this random experiment is over once you observe its outcome. Lets say, you observed 3 poeple standing in from of you.
-Lets complicate our experiment. *What is the number of people standing in front of you overtime in a day?* Now, the random variable which holds a value from set $$N$$ will take different values at each instance of obervation. You will need to observe multiple instances for the entire day. Not just that, the set of observations you make will vary each day. It will not be the same. If you count the people standing in front of you for each instance of today, it will just be a *single realization* of all the possiblities of observations on different days. To understand this stochasticity overtime, one needs to understand the **Random Processes**.
+Let us start thinking about it in terms of mathematics. A random variable holds the outcome of a random experiment. For example, several people standing in front of you right now. Randomly speaking, the number can be anything from the set of natural numbers $$N \equiv \{0, 1, 2, 3, ...\}$$ at the instance of observation. But this random experiment is over once you observe its outcome. Let's say, you observed 3 people standing in from of you.
+Let's complicate our experiment. *What is the number of people standing in front of you over time in a day?* Now, the random variable which holds a value from set $$N$$ will take different values at each instance of observation. You will need to observe multiple instances for the entire day. Not just that, the set of observations you make will vary each day. It will not be the same. If you count the people standing in front of you for each instance of today, it will just be a *single realization* of all the possibilities of observations on different days. To understand this stochasticity over time, one needs to understand the **Random Processes**.
 
 The rest of the page formalizes the idea of Random Processes.
 
@@ -23,13 +23,13 @@ Random Experiment
 An experiment whose outcome cannot be predicted with certainty is called a Random Experiment.
 
 Examples:
-1. Life time of light bulb.
+1. The lifetime of a light bulb.
 2. Rolling a dice.
 3. A coin toss.
 
 Random Variable
 ===
-Random variable is a *deterministic* function that assigns a real value to an outcome of a random experiment.
+A random variable is a *deterministic* function that assigns a real value to an outcome of a random experiment.
 
 Example:  
 Let there be an experiment of tossing a coin. This experiment may result in two outcomes, viz., Heads ($$H$$) or Tails ($$T$$). Mathematically speaking the sample space of this experiment can be defined as $$\{H, T\}$$. We can assign a numerical value to these possible outcomes of the sample space. Lets say, we call getting $$H$$ in the coin toss as $$1$$ and getting $$T$$ as $$0$$. Therefore, we can represent the sample space in terms of numerical value as $$\{1, 0\}$$.
