@@ -16,8 +16,8 @@ Some thoughts about engineering and software development.
 4. Finish the Job: Simply "working" solution doesn't mean your work has finished.
 5. Timing is Everything
 6. Throw It Away: Don't be afraid to restart.
-7. Everything is an Experiment: Everything you do is subject to change. It can start, stop, fail or succeed. But that doesn't mean you should be demotivated to pursue the ideas you have. It also means you should not see ending of something as a failure. Learn from it.
-8. Question Everything: Status quo is boring.
+7. Everything is an Experiment: Everything you do is subject to change. It can start, stop, fail or succeed. But that doesn't mean you should be demotivated to pursue the ideas you have. It also means you should not see the ending of something as a failure. Learn from it.
+8. Question Everything: The status quo is boring.
 9. Believe in Your Intuition.
 10. Create Value
 11. Trust is Earned
@@ -28,6 +28,5 @@ Some thoughts about engineering and software development.
 16. Be Passionate
 17. Participate and contribute if you can: Be the Jack of all trades and Master of ONE.
 
-
-I came accross these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I want to thank Tyler Flint for sharing these. I try to incorporate these in my work as much as I can.
+I came across these thoughts [here](https://content.nanobox.io/the-developer-manifesto/#ampshare=https://content.nanobox.io/the-developer-manifesto/) and I want to thank Tyler Flint for sharing these. I try to incorporate these into my work as much as I can.
 
