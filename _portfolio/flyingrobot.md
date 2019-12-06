@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Flying Robot"
-excerpt: "Demonstration of autonomous quadrotor robot developed at University of Cincinnati with an objective to assist in search and rescue missions in the post-disaster scenarios. Click [here](https://adipandas.github.io/portfolio/flyingrobot/) to know more."
+excerpt: "Demonstration of autonomous quadrotor robot developed at the University of Cincinnati to assist in search and rescue missions in the post-disaster scenarios. Click [here](https://adipandas.github.io/portfolio/flyingrobot/) to know more."
 tags:
   - px4
   - autopilot
@@ -20,9 +20,9 @@ collection: portfolio
 
 This is the demonstration of autonomous quadrotor developed by me using [Robot Operating System (ROS)](http://www.ros.org/) and [Pixhawk Firmware](https://px4.io/).
 
-This project was completed at University of Cincinnati as a part of [Cooperative Distributed Systems Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html). The objective of the project was to develop a robot to assist first responders in search and rescue missions in the post-disaster scenarios. The robot was designed and developed with an intension of flying in the cluttered indoor environment without GPS or any external positioning feedback.
+This project was completed at the University of Cincinnati as a part of [Cooperative Distributed Systems Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html). The objective of the project was to develop a robot to assist first responders in search and rescue missions in the post-disaster scenarios. The robot was designed and developed to fly in the cluttered indoor environment without GPS or any external positioning feedback.
 
-For obstacle avoidance, laser sensors as well as sonar sensors were used. Robot was equiped with a camera in order to do object detection. For object detection, [YOLO](https://pjreddie.com/darknet/yolo/) was used.
+For obstacle avoidance, laser sensors, as well as sonar sensors, were used. The robot was equipped with a camera to do object detection. For object detection, [YOLO](https://pjreddie.com/darknet/yolo/) was used.
 
 Video Links:
 * [Pixhawk for Quadcopter Waypoint Navigation using External Position Estimation](https://youtu.be/U_rrq_xeDkc)
