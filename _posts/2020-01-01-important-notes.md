@@ -18,22 +18,33 @@ $$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 
 Rotate $$A$$ to $$B$$ by rotation of angle $$\theta$$ around vector $$r^{A}$$.
 
-Quaternion describing this orientation is $$q^{A}_{B}$$:  
+**Quaternion describing this orientation is $$q^{A}_{B}$$**:  
 $$q^{A}_{B} = [q_1, q_2, q_3, q_4] = [cos(\frac{\theta}{2}), -r^{A}_{x} sin(\frac{\theta}{2}), -r^{A}_{y} sin(\frac{\theta}{2}), -r^{A}_{z} sin(\frac{\theta}{2})]$$
 
 $$q^{A}_{B}$$ describes the orientation of frame $$B$$ relative to frame $$A$$.
 
-Conjugate quaternion:  
+**Conjugate quaternion**:  
 $$^{*}q^{A}_{B} = q^{B}_{A} = [q_1, -q_2, -q_3, -q_4]$$
 
-Compound orientations using quaternions:
+**Compound orientations using quaternions**:
 Let $$q^{A}_{B}$$ and $$q^{B}_{C}$$ be two quaternions.
 $$q^{A}_{B}$$ - orientation of $$B$$ w.r.t. $$A$$.  
 $$q^{B}_{C}$$ - orientation of $$C$$ w.r.t. $$B$$.  
 
 The compound orientation $$q^{A}_{C}$$ is defined as:  
-$$q^{A}_{C} = q^{B}_{C} q^{A}_{B}$$  
-$$q^{A}_{C}$$ - orientation of $$C$$ w.r.t. $$A$$.
+$$q^{A}_{C} = q^{B}_{C} \bigotimes q^{A}_{B}$$  
+$$q^{A}_{C}$$ - orientation of $$C$$ w.r.t. $$A$$.  
+$$\bigotimes$$ represents quaternion product. This product is not commutative, i.e., $$q^{B}_{C} \bigotimes q^{A}_{B} \ne $$q^{A}_{B} \bigotimes q^{B}_{C}$$.
+
+
+**Quaternion Product**:  
+$$p \bigotimes q = [p_1, p_2, p_3, p_4] \bigotimes [q_1, q_2, q_3, q_4]$$  
+$$p \bigotimes q = \begin{pmatrix}
+p_1 q_1 - p_2 q_2 - p_3 q_3 - p_4 q_4 \\
+p_1 q_2 + p_2 q_1 + p_3 q_4 - p_4 q_3 \\
+p_1 q_3 - p_2 q_4 + p_3 q_1 + p_4 q_2 \\
+p_1 q_4 + p_2 q_3 - p_3 q_2 + p_4 q_1
+\end{pmatrix} $$
 
 
 References
