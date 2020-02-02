@@ -34,7 +34,7 @@ $$q^{B}_{C}$$ - orientation of $$C$$ w.r.t. $$B$$.
 The compound orientation $$q^{A}_{C}$$ is defined as:  
 $$q^{A}_{C} = q^{B}_{C} \bigotimes q^{A}_{B}$$  
 $$q^{A}_{C}$$ - orientation of $$C$$ w.r.t. $$A$$.  
-$$\bigotimes$$ represents quaternion product. This product is not commutative, i.e., $$q^{B}_{C} \bigotimes q^{A}_{B} \ne $$q^{A}_{B} \bigotimes q^{B}_{C}$$.
+$$\bigotimes$$ represents quaternion product.
 
 
 **Quaternion Product**:  
@@ -44,7 +44,9 @@ p_1 q_1 - p_2 q_2 - p_3 q_3 - p_4 q_4 \\
 p_1 q_2 + p_2 q_1 + p_3 q_4 - p_4 q_3 \\
 p_1 q_3 - p_2 q_4 + p_3 q_1 + p_4 q_2 \\
 p_1 q_4 + p_2 q_3 - p_3 q_2 + p_4 q_1
-\end{pmatrix} $$
+\end{pmatrix}^T $$  
+Quaternion product is not commutative, i.e., $$p \bigotimes q \ne q \bigotimes p$$.  
+
 
 
 References
