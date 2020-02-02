@@ -11,6 +11,9 @@ These are some of the important notes which I make for reference.
 Quaternions
 ======
 
+Let there be two coordinate frames:  
+Frame $$A$$ and $$B$$
+
 $$^{a}r$$
 
 
