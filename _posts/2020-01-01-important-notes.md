@@ -18,7 +18,7 @@ $$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 
 Rotate $$A$$ to $$B$$ by rotation of angle $$\theta$$ around vector $$r^{A}$$.
 
-<img src="./../images/quaternion_rotation_1.png"
+<img src="://images/quaternion_rotation_1.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
