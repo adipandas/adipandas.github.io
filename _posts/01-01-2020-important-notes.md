@@ -1,7 +1,7 @@
 ---
 title: 'Important Notes'
-date: 2020-02-01
-permalink: /posts/2020/02/important-notes/
+date: 2020-01-01
+permalink: /posts/2020/01/important-notes/
 tags:
   - Quaternions
 ---
