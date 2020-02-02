@@ -23,6 +23,10 @@ $$q^{A}_{B} = [q_1, q_2, q_3, q_4] = [cos(\frac{\theta}{2}), -r^{A}_{x} sin(\fra
 
 $$q^{A}_{B}$$ describes the orientation of frame $$B$$ relative to frame $$A$$.
 
+**Quaternion arthematic requires the quaternion describing orientation to be of unit length.**  
+Therefore, quaternions are first normalized to have a magnitude of 1.  
+$$\parallel q \parallel_2 = 1$$
+
 **Conjugate quaternion**:  
 $$^{*}q^{A}_{B} = q^{B}_{A} = [q_1, -q_2, -q_3, -q_4]$$
 
@@ -38,6 +42,7 @@ $$\bigotimes$$ represents quaternion product.
 
 
 **Quaternion Product**:  
+Let $$p$$ and $$q$$ be two quaternions. Then the product of these two quaternions is given as follows:  
 $$p \bigotimes q = [p_1, p_2, p_3, p_4] \bigotimes [q_1, q_2, q_3, q_4]$$  
 $$p \bigotimes q = \begin{pmatrix}
 p_1 q_1 - p_2 q_2 - p_3 q_3 - p_4 q_4 \\
