@@ -9,17 +9,33 @@ tags:
 These are some of the important notes which I make for reference.
 
 Quaternions
-======
+------------
 
 Let there be two coordinate frames: Frames $$A$$ and $$B$$.  
+
 There is a vector $$r^{A}$$ defined in Frame $$A$$.   
+$$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 
 Rotate $$A$$ to $$B$$ by rotation of angle $$\theta$$ around vector $$r^{A}$$.
 
-Quaternion describing this orientation is $$q^{A}_{B}$$
-
+Quaternion describing this orientation is $$q^{A}_{B}$$:  
 $$q^{A}_{B} = [q_1, q_2, q_3, q_4] = [cos(\frac{\theta}{2}), -r^{A}_{x} sin(\frac{\theta}{2}), -r^{A}_{y} sin(\frac{\theta}{2}), -r^{A}_{z} sin(\frac{\theta}{2})]$$
+
+$$q^{A}_{B}$$ describes the orientation of frame $$B$$ relative to frame $$A$$.
+
+Conjugate quaternion:  
+$$^{*}q^{A}_{B} = q^{B}_{A} = [q_1, -q_2, -q_3, -q_4]$$
+
+Compound orientations using quaternions:
+Let $$q^{A}_{B}$$ and $$q^{B}_{C}$$ be two quaternions.
+$$q^{A}_{B}$$ - orientation of $$B$$ w.r.t. $$A$$.  
+$$q^{B}_{C}$$ - orientation of $$C$$ w.r.t. $$B$$.  
+
+The compound orientation $$q^{A}_{C}$$ is defined as:  
+$$q^{A}_{C} = q^{B}_{C} q^{A}_{B}$$  
+$$q^{A}_{C}$$ - orientation of $$C$$ w.r.t. $$A$$.
 
 
 References
-------
+-------------
+1. Madgwick, S. (2010). An efficient orientation filter for inertial and inertial/magnetic sensor arrays. Report x-io and University of Bristol (UK), 25, 113-118. [[link](https://www.x-io.co.uk/res/doc/madgwick_internal_report.pdf)]
