@@ -41,8 +41,10 @@ Let $$q^{A}_{B}$$ and $$q^{B}_{C}$$ be two quaternions.
 $$q^{A}_{B}$$ - orientation of $$B$$ w.r.t. $$A$$.  
 $$q^{B}_{C}$$ - orientation of $$C$$ w.r.t. $$B$$.  
 
-The compound orientation $$q^{A}_{C}$$ is defined as:  
+The compound orientation $$q^{A}_{C}$$ is defined as:
+
 $$q^{A}_{C} = q^{B}_{C} \bigotimes q^{A}_{B}$$  
+
 $$q^{A}_{C}$$ - orientation of $$C$$ w.r.t. $$A$$.  
 $$\bigotimes$$ represents quaternion product.
 
