@@ -19,17 +19,21 @@ $$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 Rotate $$A$$ to $$B$$ by rotation of angle $$\theta$$ around vector $$r^{A}$$.
 
 <img src="/images/quaternion_rotation_1.png" alt="Quaternion Rotation"/>
-
+  
+  
 **Quaternion describing this orientation is $$q^{A}_{B}$$**:  
+
 $$q^{A}_{B} = [q_1, q_2, q_3, q_4] = [cos(\frac{\theta}{2}), -r^{A}_{x} sin(\frac{\theta}{2}), -r^{A}_{y} sin(\frac{\theta}{2}), -r^{A}_{z} sin(\frac{\theta}{2})]$$
 
 $$q^{A}_{B}$$ describes the orientation of frame $$B$$ relative to frame $$A$$.
 
 **Quaternion arthematic requires the quaternion describing orientation to be of unit length.**  
 Therefore, quaternions are first normalized to have a magnitude of 1.  
+
 $$\parallel q \parallel_2 = 1$$
 
 **Conjugate quaternion**:  
+
 $$^{*}q^{A}_{B} = q^{B}_{A} = [q_1, -q_2, -q_3, -q_4]$$
 
 **Compound orientations using quaternions**:
@@ -45,13 +49,16 @@ $$\bigotimes$$ represents quaternion product.
 
 **Quaternion Product**:  
 Let $$p$$ and $$q$$ be two quaternions. Then the product of these two quaternions is given as follows:  
+
 $$p \bigotimes q = [p_1, p_2, p_3, p_4] \bigotimes [q_1, q_2, q_3, q_4]$$  
+
 $$p \bigotimes q = \begin{pmatrix}
 p_1 q_1 - p_2 q_2 - p_3 q_3 - p_4 q_4 \\
 p_1 q_2 + p_2 q_1 + p_3 q_4 - p_4 q_3 \\
 p_1 q_3 - p_2 q_4 + p_3 q_1 + p_4 q_2 \\
 p_1 q_4 + p_2 q_3 - p_3 q_2 + p_4 q_1
 \end{pmatrix}^T $$  
+
 Quaternion product is not commutative, i.e., $$p \bigotimes q \ne q \bigotimes p$$.  
 
 
