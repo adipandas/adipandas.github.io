@@ -8,16 +8,17 @@ tags:
 
 These are some of the important notes which I make for reference.
 
-Quaternions
-------------
+## Quaternions
 
-Let there be two coordinate frames: Frames $$A$$ and $$B$$.  
+Quaternions are a number system that extends complex numbers. A quaternion provides a convenient mathematical notation for representing orientations and rotations of an object in three dimensions. This section discusses some of the useful properties and operations which are used in quaternion rotation.
 
-There is a vector $$r^{A}$$ defined in Frame $$A$$.   
+Let there be two coordinate frames in a 3-dimensional space, $$A$$ and $$B$$. There is a vector $$r^{A}$$ defined in Frame $$A$$ as shown in figure below.   
+
 $$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 
-Rotate $$A$$ to $$B$$ by rotation of angle $$\theta$$ around vector $$r^{A}$$.
-
+Using **Quaternions** we can rotate from frame $$A$$ to $$B$$ by angle $$\theta$$ around vector $$r^{A}$$.
+  
+  
 <img src="/images/quaternion_rotation_1.png" alt="Quaternion Rotation"/>
   
   
@@ -50,7 +51,7 @@ $$\bigotimes$$ represents quaternion product.
 
 
 **Quaternion Product**:  
-Let $$p$$ and $$q$$ be two quaternions. Then the product of these two quaternions is given as follows:  
+Let $$p$$ and $$q$$ be two quaternions. Then the product of these two quaternions is:  
 
 $$p \bigotimes q = [p_1, p_2, p_3, p_4] \bigotimes [q_1, q_2, q_3, q_4]$$  
 
