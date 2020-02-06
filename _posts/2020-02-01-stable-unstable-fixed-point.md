@@ -37,7 +37,7 @@ In other words, one can also think of a stable fixed point as the attractor and 
 
 ### Mathematical Intuition:
 
-For a dynamical system, $$\dot x = f(x)$$ a fixed point is $$f(x) = 0$$.
+For a dynamical system, $$\dot x = f(x)$$, a fixed point is $$f(x) = 0$$.
 
 If $$f^{\prime}(x) \gt 0$$, we have magnitude of $$f(x)$$ increasing at x. This can be represented as $$f(x - \delta) \lt 0 \lt f(x + \delta)$$ for a sufficiently small value of $$\delta \gt 0$$.
 
