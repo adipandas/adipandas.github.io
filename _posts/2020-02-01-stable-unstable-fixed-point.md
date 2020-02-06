@@ -61,7 +61,7 @@ Therefore, $$x$$ is **unstable** when $$k$$ is *even*, and **stable** if $$k$$ i
 
 ## Reference:
 
-Strogatz, S. H. (2018). Nonlinear dynamics and chaos: with applications to physics, biology, chemistry, and engineering. CRC press. [(book)[http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf]]
+Strogatz, S. H. (2018). Nonlinear dynamics and chaos: with applications to physics, biology, chemistry, and engineering. CRC press. [[book](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf)]
 
 
 
