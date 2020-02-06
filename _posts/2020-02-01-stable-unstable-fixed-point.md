@@ -51,7 +51,7 @@ Therefore, if $$f^{\prime} (x)>0$$, we have an **unstable fixed point** and vice
 
 ## Intuitive Example:
 
-For the diferential equation **$$x^{\prime} = sin(x)$$**:
+For the differential equation **$$x^{\prime} = sin(x)$$**:
 
 <img src="/images/sin_x_feb2020.png" alt="Stable and Unstable fixed points on $$x=sin(x)$$"/>
 
