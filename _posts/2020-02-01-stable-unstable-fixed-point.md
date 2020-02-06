@@ -53,11 +53,16 @@ Therefore, if $$f^{\prime} (x)>0$$, we have an **unstable fixed point** and vice
 
 For the diferential equation **$$x^{\prime} = sin(x)$$**:
 
+<img src="/images/sin_x_feb2020.png" alt="Stable and Unstable fixed points on $$x=sin(x)$$"/>
+
 Using linear stability analysis, fixed points occurs when $$f(x)=sin(x)=0$$ or $$x=kπ$$ where $$k$$ is integer.
 
 $$f^{\prime}(x)=cos(kπ)=1$$ if $$k$$ is even. and $$f^{\prime}(x)=cos(kπ)=−1$$ if $$k$$ is odd.
 
 Therefore, $$x$$ is **unstable** when $$k$$ is *even*, and **stable** if $$k$$ is *odd*.
+
+
+
 
 ## Reference:
 
