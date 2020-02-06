@@ -39,13 +39,13 @@ In other words, one can also think of a stable fixed point as the attractor and 
 
 For a dynamical system, $$\dot x = f(x)$$ a fixed point is $$f(x) = 0$$.
 
-If $$f^{\prime}(x) &gt; 0$$, we have magnitude of $$f(x)$$ increasing at x. This can be represented as $$f(x - \delta) &lt; 0 &lt; f(x + \delta)$$ for a sufficiently small value of $$\delta &gt; 0$$.
+If $$f^{\prime}(x) \gt 0$$, we have magnitude of $$f(x)$$ increasing at x. This can be represented as $$f(x - \delta) \lt 0 \lt f(x + \delta)$$ for a sufficiently small value of $$\delta \gt 0$$.
 
 Thus, if we start from $$x+\delta$$ which is "close" $$x$$, the ODE from equation (1) will keep on increasing the value of $x$. And it we start from $$x-\delta$$ which is "close" $$x$$, equation (1) will move the particle way from $$x$$ by decreasing the value of $$x$$.
 
-Therefore, if $$f^{\prime} (x) &gt; 0$$, we have an **unstable fixed point** and vice versa.
+Therefore, if $$f^{\prime} (x) \gt 0$$, we have an **unstable fixed point** and vice versa.
 
-**Note**: The condition of $$f^{\prime} (x) &lt 0$$ or $$f^{\prime} (x) &gt 0$$ are sufficient conditions to guarantee fixed point stability or unstability respectively. These are not the necessary conditions, i.e., it is possible to have stable and unstable fixed points where $$f^{\prime} (x) = 0$$.
+**Note**: The condition of $$f^{\prime} (x) \lt 0$$ or $$f^{\prime} (x) \gt 0$$ are sufficient conditions to guarantee fixed point stability or unstability respectively. These are not the necessary conditions, i.e., it is possible to have stable and unstable fixed points where $$f^{\prime} (x) = 0$$.
 
 ## Intuitive Example:
 
