@@ -9,7 +9,7 @@ tags:
   - Calculus
 ---
 
-Stability theory is used to address the stability of solutions of differential equations. A dynamical system can be represented by a differential equation. Stablity of the trajectories of this system under perturbations of its initial conditions can also be addressed using the stability theory.
+Stability theory is used to address the stability of solutions of differential equations. A dynamical system can be represented by a differential equation. The stability of the trajectories of this system under perturbations of its initial conditions can also be addressed using the stability theory.
 
 
 ## Fixed Point
@@ -28,12 +28,12 @@ Therefore, $$f(x) = 0$$ or roots of the function $$f(x)$$ form the fixed points 
 
 In layman's terms, you can say the following about stable and unstable fixed points.
 
-**Stable Fixed Point**: Put a system to an initial value which is "close" to its fixed point. The trajectory of the solution of the differential equation $$\dot x = f(x)$$ will stay close to this fixed point.
+**Stable Fixed Point**: Put a system to an initial value that is "close" to its fixed point. The trajectory of the solution of the differential equation $$\dot x = f(x)$$ will stay close to this fixed point.
 
-**Unstable Fixed Point**: Again, start the system with initial value "close" to its fixed point. If the fixed point is unstable, there exists a solution which starts at this initial value but the trajectory of the solution will move away from the this fixed point.
+**Unstable Fixed Point**: Again, start the system with initial value "close" to its fixed point. If the fixed point is unstable, there exists a solution that starts at this initial value but the trajectory of the solution will move away from this fixed point.
 
 
-In other words, one can also think of stable fixed point as the attractor and unstable fixed point as the repeller. A partical motion governed by $$\dot x = f(x)$$, a stable fixed point will force a particle to move towards itself. On the other hand, an unstable fixed point will force a particle away from itself.
+In other words, one can also think of a stable fixed point as the attractor and unstable fixed point as the repeller. A particle governed by $$\dot x = f(x)$$, a stable fixed point will force this particle to move towards itself. On the other hand, an unstable fixed point will force a particle away from itself.
 
 ### Mathematical Intuition:
 
