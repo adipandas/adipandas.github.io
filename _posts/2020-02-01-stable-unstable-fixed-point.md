@@ -39,9 +39,7 @@ In other words, one can also think of a stable fixed point as the attractor and 
 
 For a dynamical system, $$\dot x = f(x)$$ a fixed point is $$f(x) = 0$$.
 
-If $$f^{\prime}(x) > 0$$, we have $$f(x)$$ increasing at x, i.e., for a sufficiently small value of $$\delta > 0$$: 
-
-$$f(x - \delta) < 0 < f(x + \delta)$$
+If $$f^{\prime}(x) > 0$$, we have magnitude of $$f(x)$$ increasing at x. This can be represented as $$f(x - \delta) < 0 < f(x + \delta)$$ for a sufficiently small value of $$\delta > 0$$.
 
 Thus, if we start from $$x+\delta$$ which is "close" $$x$$, the ODE from equation (1) will keep on increasing the value of $x$. And it we start from $$x-\delta$$ which is "close" $$x$$, equation (1) will move the particle way from $$x$$ by decreasing the value of $$x$$.
 
