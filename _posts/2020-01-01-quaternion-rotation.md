@@ -1,7 +1,7 @@
 ---
-title: 'Quaternions Rotation'
+title: 'Quaternion Rotation'
 date: 2020-01-01
-permalink: /posts/2020/01/quaternions-rotation/
+permalink: /posts/2020/01/quaternion-rotation/
 tags:
   - quaternion
   - quaternion-product
