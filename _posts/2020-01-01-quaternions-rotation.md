@@ -1,10 +1,11 @@
 ---
-title: 'Quaternions'
+title: 'Quaternions Rotation'
 date: 2020-01-01
-permalink: /posts/2020/01/quaternions/
+permalink: /posts/2020/01/quaternions-rotation/
 tags:
   - quaternion
   - quaternion-product
+  - rotation
 ---
 
 Quaternions are a number system that extends complex numbers. A quaternion provides a convenient mathematical notation for representing orientations and rotations of an object in three dimensions. This section discusses some of the useful properties and operations which are used in quaternion rotation.
