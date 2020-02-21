@@ -24,7 +24,17 @@ The most important thing you must remember before reading further about transfor
   <li>Euler angles are specified by the <b>three angles</b>, viz., <b>$$\psi$$, $$\theta$$, $$\phi$$</b>.</li>
   <li>Euler angles represent three consecutive rotations in the order of <b>$$\psi$$, $$\theta$$, $$\phi$$</b> so that one coordinate axes system is made to coincide with another system.</li>
   <li>Again, the <b><i>order of rotation</i></b>, i.e., $$\psi$$, $$\theta$$, $$\phi$$, is very very important.</li>
+  <li>$$\psi$$ - Angle to be rotated about <i>current</i> frame's <b>Z-axis</b>.</li>
+  <li>$$\theta$$ - Angle to be rotated about <i>current</i> frame's <b>Y-axis</b>.</li>
+  <li>$$\phi$$ - Angle to be rotated about <i>current</i> frame's <b>X-axis</b>.</li>
 </ol>
 
 
+### Sequence of rotation of three euler angles:
+Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with current frame, i.e., **frame 1**.
+<ol type="i">
+  <li><b>$$\psi$$</b> is the rotation about <b>$$Oz_{1}$$</b>.</li>
+  <li>Euler angles represent three consecutive rotations in the order of <b>$$\psi$$, $$\theta$$, $$\phi$$</b> so that one coordinate axes system is made to coincide with another system.</li>
+  <li>Again, the <b><i>order of rotation</i></b>, i.e., $$\psi$$, $$\theta$$, $$\phi$$, is very very important.</li>
+</ol>
 
