@@ -8,7 +8,7 @@ tags:
   - Rotation Matrix
 ---
 
-I have always found rotation using euler angles confusing. The following is just a simple note to maintain my sanity while performing rigid body transformations using rotational matrices.
+I have always found rotation using euler angles confusing. This post is just a simple note to maintain my sanity while performing rigid body transformations using euler angles and rotational matrices.
 
 # Rotation
 
