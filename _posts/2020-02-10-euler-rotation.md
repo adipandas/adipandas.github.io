@@ -33,7 +33,7 @@ The most important thing you must remember before reading further about transfor
 ### Sequence of rotation of three euler angles:
 Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with current frame, i.e., **frame 1**.
 <ol type="i">
-  <li><b>$\psi$</b> is the rotation about <b>$Oz_{1}$</b>.
+  <li>Angle <strong>$\psi$</strong> is the rotation about <b>$Oz_{1}$</b>.
     <ul>
       <li>Hello</li>
       <li>Hello</li>
