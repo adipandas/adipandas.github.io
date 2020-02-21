@@ -18,8 +18,8 @@ Rotational matrices are special orthogonal matrices. I am not going to discuss a
 The most important thing you must remember before reading further about transformations using euler angles is:  
 **The order of matrix multiplication of rotational matrices is of extreme importance.**
 
-i. Euler angles are used to specify the orientation of one reference frame relative to another reference frame.
-ii. Euler angles are specified by the **three angles**, viz., **$$\psi$$, $$\theta$$, $$\phi$$**.
-iii. Euler angles represent three consecutive rotations in the order of **$$\psi$$, $$\theta$$, $$\phi$$** so that one coordinate axes system is made to coincide with another system.
+    i. Euler angles are used to specify the orientation of one reference frame relative to another reference frame.
+    ii. Euler angles are specified by the **three angles**, viz., **$$\psi$$, $$\theta$$, $$\phi$$**.
+    iii. Euler angles represent three consecutive rotations in the order of **$$\psi$$, $$\theta$$, $$\phi$$** so that one coordinate axes system is made to coincide with another system.
 
 
