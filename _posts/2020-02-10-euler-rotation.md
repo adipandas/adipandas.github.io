@@ -50,8 +50,19 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
       <li>$Ox_{1}^{\prime}$ is rotated to $Ox_{1}^{\prime\prime}$.</li>
       <li>$Oy_{1}^{\prime}$ is rotated to $Oy_{1}^{\prime\prime}$. The axes $Oy_{1}^{\prime}$ and $Oy_{1}^{\prime\prime}$ overlap on each other.</li>
       <li>$Oz_{1}^{\prime}$ is rotated to $Oz_{1}^{\prime\prime}$.</li>
-      <li>$Ox_{1}^{\prime\prime}$ now coincides with the axes $Ox_{2}$ and $Oz_{1}^{\prime\prime}$ now falls in the plane $Oy_{2}z_{2}$. The axes $Ox_{2}$ and the plane $Oy_{2}z_{2}$ are in the <b>target</b> frame of reference.</li>
+      <li>$Ox_{1}^{\prime\prime}$ now coincides with the axes $Ox_{2}$ and $Oz_{1}^{\prime\prime}$ now falls in the plane $Oy_{2}z_{2}$. The axis $Ox_{2}$ and the plane $Oy_{2}z_{2}$ are in the <b>target</b> frame of reference.</li>
     </ul>
   </li>
+  
+  <li>Angle $\phi$ is rotation about $Ox_{1}^{\prime\prime}$.
+    <ul>
+      <li>This transformation takes frame $Ox_{1}^{\prime\prime}y_{1}^{\prime\prime}z_{1}^{\prime\prime}$ to frame $Ox_{1}^{\prime\prime\prime}y_{1}^{\prime\prime\prime}z_{1}^{\prime\prime\prime}$. The resulting frame $Ox_{1}^{\prime\prime\prime}y_{1}^{\prime\prime\prime}z_{1}^{\prime\prime\prime}$ is also the target frame $Ox_{2}y_{2}z_{2}$.</li>
+      <li>$Ox_{1}^{\prime\prime}$ is rotated to $Ox_{1}^{\prime\prime\prime}$ ($Ox_{2}$).</li>
+      <li>$Oy_{1}^{\prime\prime}$ is rotated to $Oy_{1}^{\prime\prime\prime}$ ($Oy_{2}$).</li>
+      <li>$Oz_{1}^{\prime\prime}$ is rotated to $Oz_{1}^{\prime\prime\prime}$ ($Oz_{2}$).</li>
+      <li>$Oy_{1}^{\prime\prime\prime}$ now coincides with the axes $Oy_{2}$ and $Oz_{1}^{\prime\prime\prime}$ coincides with the axis $Oz_{2}$. The axes $Oy_{2}$ and $Oz_{2}$ are in the <b>target</b> frame of reference.</li>
+    </ul>
+  </li>
+  
 </ol>
 
