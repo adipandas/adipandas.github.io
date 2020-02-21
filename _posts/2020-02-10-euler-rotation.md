@@ -21,8 +21,8 @@ The most important thing you must remember before reading further about transfor
 
 <ol type="i">
   <li>Euler angles are used to specify the orientation of one reference frame relative to another reference frame.</li>
-  <li>Euler angles are specified by the <b>three angles</b>, viz., <b>$$\psi$$, $$\theta$$, $$\phi$$</b>.</li>
-  <li>Euler angles represent three consecutive rotations in the order of <b>$$\psi$$, $$\theta$$, $$\phi$$</b> so that one coordinate axes system is made to coincide with another system.</li>
+  <li>Euler angles are specified by the <b>three angles</b>, viz., <equation-inline>$$\psi$$, $$\theta$$, $$\phi$$</equation-inline>.</li>
+  <li>Euler angles represent three consecutive rotations in the order of $$\psi$$, $$\theta$$, $$\phi$$ so that one coordinate axes system is made to coincide with another system.</li>
   <li>Again, the <b><i>order of rotation</i></b>, i.e., $$\psi$$, $$\theta$$, $$\phi$$, is very very important.</li>
   <li>$$\psi$$ - Angle to be rotated about <i>current</i> frame's <b>Z-axis</b>.</li>
   <li>$$\theta$$ - Angle to be rotated about <i>current</i> frame's <b>Y-axis</b>.</li>
@@ -39,7 +39,7 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
       <li>Hello</li>
     </ul>
   </li>
-  <li>Euler angles represent three consecutive rotations in the order of <b>$$\psi$$, $$\theta$$, $$\phi$$</b> so that one coordinate axes system is made to coincide with another system.</li>
+  <li>Euler angles represent three consecutive rotations in the order of <equation-inline><b>$$\psi$$, $$\theta$$, $$\phi$$</b></equation-inline> so that one coordinate axes system is made to coincide with another system.</li>
   <li>Again, the <b><i>order of rotation</i></b>, i.e., $$\psi$$, $$\theta$$, $$\phi$$, is very very important.</li>
 </ol>
 
