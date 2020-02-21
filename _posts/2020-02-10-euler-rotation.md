@@ -23,6 +23,7 @@ The most important thing you must remember before reading further about transfor
   <li>Euler angles are used to specify the orientation of one reference frame relative to another reference frame.</li>
   <li>Euler angles are specified by the **three angles**, viz., **$$\psi$$, $$\theta$$, $$\phi$$**.</li>
   <li>Euler angles represent three consecutive rotations in the order of **$$\psi$$, $$\theta$$, $$\phi$$** so that one coordinate axes system is made to coincide with another system.</li>
+  <li>Again, the **__order of rotation__**, i.e., $$\psi$$, $$\theta$$, $$\phi$$, is very very important.</li>
 </ol>
 
 
