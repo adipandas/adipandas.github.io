@@ -66,3 +66,13 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
   
 </ol>
 
+
+## Constrains on three euler angles:
+Euler angle rotation using rotation matrices face the issue of singularity or gimbal lock. These angle rotations are constraint to avoid ambiguities. The limits are as follows:
+
+$$-\pi \le \psi \le \pi$$
+
+$$-\frac{\pi}{2} \le \theta \le \frac{\pi}{2}$$
+
+$$-\pi \le \phi \le \pi$$
+
