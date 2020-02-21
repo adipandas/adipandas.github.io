@@ -12,7 +12,7 @@ I have always found rotation using euler angles confusing. This post is just a s
 
 # Rotation
 
-Rotational matrices are special orthogonal matrices. I am not going to discuss any property of these matrices over here. But this post is just a snippet for quick reference. For further details, you can refer [this](https://en.wikipedia.org/wiki/Rotation_matrix).
+Rotational matrices are special orthogonal matrices. I am not going to discuss any property of these matrices over here. But this post a quick reference for rotation using **z-y-x euler angles**. For further details, you can refer [this](https://en.wikipedia.org/wiki/Rotation_matrix).
 
 ## Euler Angle Transformation
 The most important thing you must remember before reading further about transformations using euler angles is:  
