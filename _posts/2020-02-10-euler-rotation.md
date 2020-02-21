@@ -33,8 +33,8 @@ The most important thing you must remember before reading further about transfor
 ### Sequence of rotation of three euler angles:
 Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with current frame, i.e., **frame 1**.
 <ol type="i">
-  <li>Original Frame: $Ox_{1}y_{1}z_{1}$<li>
-  <li>Target Frame: $Ox_{2}y_{2}z_{2}$<li>
+  <li>Original Frame: $Ox_{1}y_{1}z_{1}$</li>
+  <li>Target Frame: $Ox_{2}y_{2}z_{2}$</li>
   <li>Angle <strong>$\psi$</strong> is the rotation about <b>$Oz_{1}$</b>.
     <ul>
       <li>This transformation takes frame $Ox_{1}y_{1}z_{1}$ to frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$</li>
@@ -43,7 +43,5 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
       <li>One should note, $Oy_{1}^{\prime}$ now falls in the plane $Oy_{2}z_{2}$ and $Ox_{1}^{\prime}$ now falls in the plane $Ox_{2}z_{2}$. These two planes are in the <b>target</b> frame of reference.</li>
     </ul>
   </li>
-  <li>Euler angles represent three consecutive rotations in the order of <equation-inline><b>$\psi$, $\theta$, $\phi$</b></equation-inline> so that one coordinate axes system is made to coincide with another system.</li>
-  <li>Again, the <b><i>order of rotation</i></b>, i.e., $\psi$, $\theta$, $\phi$, is very very important.</li>
 </ol>
 
