@@ -24,9 +24,9 @@ The most important thing you must remember before reading further about transfor
   <li>Euler angles are specified by the <b>three angles</b>, viz., <b>$\psi$, $\theta$, $\phi$</b>.</li>
   <li>Euler angles represent three consecutive rotations in the order of $\psi$, $\theta$, $\phi$ so that one coordinate axes system is made to coincide with another system.</li>
   <li>Again, the <b><i>order of rotation</i></b>, i.e., $\psi$, $\theta$, $\phi$, is very very important.</li>
-  <li>$\psi$ - Angle to be rotated about <i>current</i> frame's <b>Z-axis</b>.</li>
-  <li>$\theta$ - Angle to be rotated about <i>current</i> frame's <b>Y-axis</b>.</li>
-  <li>$\phi$ - Angle to be rotated about <i>current</i> frame's <b>X-axis</b>.</li>
+  <li>Angle <strong>$\psi$</strong> - Angle to be rotated about <i>current</i> frame's <b>Z-axis</b>.</li>
+  <li>Angle <strong>$\theta$</strong> - Angle to be rotated about <i>current</i> frame's <b>Y-axis</b>.</li>
+  <li>Angle <strong>$\phi$</strong> - Angle to be rotated about <i>current</i> frame's <b>X-axis</b>.</li>
 </ol>
 
 
