@@ -35,12 +35,22 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
 <ol type="i">
   <li>Original Frame: $Ox_{1}y_{1}z_{1}$</li>
   <li>Target Frame: $Ox_{2}y_{2}z_{2}$</li>
-  <li>Angle <strong>$\psi$</strong> is the rotation about <b>$Oz_{1}$</b>.
+  <li>Angle $\psi$ is the rotation about $Oz_{1}$.
     <ul>
       <li>This transformation takes frame $Ox_{1}y_{1}z_{1}$ to frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$</li>
       <li>$Ox_{1}$ is rotated to $Ox_{1}^{\prime}$</li>
       <li>$Oy_{1}$ is rotated to $Oy_{1}^{\prime}$</li>
+      <li>$Oz_{1}$ is rotated to $Oz_{1}^{\prime}$. The axes $Oz_{1}$ and $Oz_{1}^{\prime}$ overlap on each other.</li>
       <li>One should note, $Oy_{1}^{\prime}$ now falls in the plane $Oy_{2}z_{2}$ and $Ox_{1}^{\prime}$ now falls in the plane $Ox_{2}z_{2}$. These two planes are in the <b>target</b> frame of reference.</li>
+    </ul>
+  </li>
+  <li>Angle $\theta$ is rotation about $Oy_{1}^{\prime}$.
+    <ul>
+      <li>This transformation takes frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$ to frame $Ox_{1}^{\prime\prime}y_{1}^{\prime\prime}z_{1}^{\prime\prime}$.</li>
+      <li>$Ox_{1}^{\prime}$ is rotated to $Ox_{1}^{\prime\prime}$.</li>
+      <li>$Oy_{1}^{\prime}$ is rotated to $Oy_{1}^{\prime\prime}$. The axes $Oy_{1}^{\prime}$ and $Oy_{1}^{\prime\prime}$ overlap on each other.</li>
+      <li>$Oz_{1}^{\prime}$ is rotated to $Oz_{1}^{\prime\prime}$.</li>
+      <li>$Ox_{1}^{\prime\prime}$ now coincides with the axes $Ox_{2}$ and $Oz_{1}^{\prime\prime}$ now falls in the plane $Oy_{2}z_{2}$. The axes $Ox_{2}$ and the plane $Oy_{2}z_{2}$ are in the <b>target</b> frame of reference.</li>
     </ul>
   </li>
 </ol>
