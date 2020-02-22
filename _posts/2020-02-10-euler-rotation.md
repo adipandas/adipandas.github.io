@@ -8,14 +8,14 @@ tags:
   - Rotation Matrix
 ---
 
-I have always found rotation using euler angles confusing. This post is just a simple note to maintain my sanity while performing rigid body transformations using euler angles and rotational matrices.
+I have always found rotation using Euler angles confusing. This post is just a simple note to maintain my sanity while performing rigid body transformations using Euler angles and rotational matrices.
 
 # Rotation
 
-Rotational matrices are special orthogonal matrices. I am not going to discuss any property of these matrices over here. But this post a quick reference for rotation using **z-y-x euler angles**. For further details, you can refer [this](https://en.wikipedia.org/wiki/Rotation_matrix).
+Rotational matrices are special orthogonal matrices. I am not going to discuss any property of these matrices over here. But this post is a quick reference for rotation using **z-y-x Euler angles**. For further details, you can refer to [this](https://en.wikipedia.org/wiki/Rotation_matrix).
 
 ## Euler Angle Transformation
-The most important thing you must remember before reading further about transformations using euler angles is:  
+The most important thing you must remember before reading further about transformations using Euler angles is:  
 **The order of matrix multiplication of rotational matrices is of extreme importance.**
 
 
@@ -24,14 +24,14 @@ The most important thing you must remember before reading further about transfor
   <li>Euler angles are specified by the <b>three angles</b>, viz., <strong>$\psi$, $\theta$, $\phi$</strong>.</li>
   <li>Euler angles represent three consecutive rotations in the order of $\psi$, $\theta$, $\phi$ so that one coordinate axes system is made to coincide with another system.</li>
   <li>Again, the <b><i>order of rotation</i></b>, i.e., $\psi$, $\theta$, $\phi$, is very very important.</li>
-  <li>Angle <strong>$\psi$</strong> - Angle to be rotated about <i>current</i> frame's <b>Z-axis</b>.</li>
-  <li>Angle <strong>$\theta$</strong> - Angle to be rotated about <i>current</i> frame's <b>Y-axis</b>.</li>
-  <li>Angle <strong>$\phi$</strong> - Angle to be rotated about <i>current</i> frame's <b>X-axis</b>.</li>
+  <li>Angle <strong>$\psi$</strong> - Angle to be rotated about the <i>current</i> frame's <b>Z-axis</b>.</li>
+  <li>Angle <strong>$\theta$</strong> - Angle to be rotated about the <i>current</i> frame's <b>Y-axis</b>.</li>
+  <li>Angle <strong>$\phi$</strong> - Angle to be rotated about the <i>current</i> frame's <b>X-axis</b>.</li>
 </ol>
 
 
-### Sequence of rotation of three euler angles:
-Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with current frame, i.e., **frame 1**.
+## Sequence of rotation of three Euler angles:
+Let's say one has to go from **frame 1** to **frame 2** using Euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with the current frame, i.e., **frame 1**.
 <ol type="i">
   <li>Original Frame: $Ox_{1}y_{1}z_{1}$</li>
   <li>Target Frame: $Ox_{2}y_{2}z_{2}$</li>
@@ -40,7 +40,7 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
       <li>This transformation takes frame $Ox_{1}y_{1}z_{1}$ to frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$</li>
       <li>$Ox_{1}$ is rotated to $Ox_{1}^{\prime}$</li>
       <li>$Oy_{1}$ is rotated to $Oy_{1}^{\prime}$</li>
-      <li>$Oz_{1}$ is rotated to $Oz_{1}^{\prime}$. The axes $Oz_{1}$ and $Oz_{1}^{\prime}$ overlap on each other.</li>
+      <li>$Oz_{1}$ is rotated to $Oz_{1}^{\prime}$. The axes $Oz_{1}$ and $Oz_{1}^{\prime}$ overlap with each other.</li>
       <li>One should note, $Oy_{1}^{\prime}$ now falls in the plane $Oy_{2}z_{2}$ and $Ox_{1}^{\prime}$ now falls in the plane $Ox_{2}z_{2}$. These two planes are in the <b>target</b> frame of reference.</li>
     </ul>
   </li>
@@ -48,7 +48,7 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
     <ul>
       <li>This transformation takes frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$ to frame $Ox_{1}^{\prime\prime}y_{1}^{\prime\prime}z_{1}^{\prime\prime}$.</li>
       <li>$Ox_{1}^{\prime}$ is rotated to $Ox_{1}^{\prime\prime}$.</li>
-      <li>$Oy_{1}^{\prime}$ is rotated to $Oy_{1}^{\prime\prime}$. The axes $Oy_{1}^{\prime}$ and $Oy_{1}^{\prime\prime}$ overlap on each other.</li>
+      <li>$Oy_{1}^{\prime}$ is rotated to $Oy_{1}^{\prime\prime}$. The axes $Oy_{1}^{\prime}$ and $Oy_{1}^{\prime\prime}$ overlap with each other.</li>
       <li>$Oz_{1}^{\prime}$ is rotated to $Oz_{1}^{\prime\prime}$.</li>
       <li>$Ox_{1}^{\prime\prime}$ now coincides with the axes $Ox_{2}$ and $Oz_{1}^{\prime\prime}$ now falls in the plane $Oy_{2}z_{2}$. The axis $Ox_{2}$ and the plane $Oy_{2}z_{2}$ are in the <b>target</b> frame of reference.</li>
     </ul>
@@ -69,8 +69,8 @@ Lets say one has to go from **frame 1** to **frame 2** using euler angle $$\psi$
 <p style="text-align:center;"><img src="/images/euler_rotation/euler_rotation_diagram.png" alt="euler-rotation-sequence"/></p>
 
 
-## Constrains on three euler angles:
-Euler angle rotation using rotation matrices face the issue of singularity or gimbal lock. These angle rotations are constraint to avoid ambiguities. The limits are as follows:
+## Constrains on three Euler angles:
+Euler angle rotation using rotation matrices faces the issue of singularity or gimbal lock. These angle rotations are constraint to avoid ambiguities. The limits are as follows:
 
 $$-\pi \le \psi \le \pi$$
 
@@ -84,9 +84,9 @@ Let there be two frames defined as **start** frame and **target** frame.
 
 * **Start Frame**: $$Ox_{1}y_{1}z_{1}$$
 * **Target Frame**: $$Ox_{2}y_{2}z_{2}$$
-* A point **$$p$$** is defined in start and target frames as **$$p^{1}$$** and **$$p^{2}$$** respectively.
+* A point **$$p$$** is defined in the start and target frames as **$$p^{1}$$** and **$$p^{2}$$** respectively.
 
-Now, with the help of euler angles, transform the point given in **start** frame to the corresponding point in **target** frame.
+Now, with the help of Euler angles, transform the point given in the **start** frame to the corresponding point in the **target** frame.
 
 **Note: Order of transformation is: (1) Angle $$\psi$$ along $$Oz_{1}$$; (2) Angle $$\theta$$ along $$Oy_{1}^{\prime}$$; (3) Angle $$\phi$$ along $$Ox_{1}^{\prime\prime}$$.**
 
