@@ -90,8 +90,7 @@ Now, with the help of Euler angles, transform the point given in the **start** f
 
 **Note: Order of transformation is: (1) Angle $$\psi$$ along $$Oz_{1}$$; (2) Angle $$\theta$$ along $$Oy_{1}^{\prime}$$; (3) Angle $$\phi$$ along $$Ox_{1}^{\prime\prime}$$.**
 
-* Rotation by $$\psi$$ along $$Oz_{1}$$
-    * Transform point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
+* Rotation by $$\psi$$ along $$Oz_{1}$$: This transforms point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
 
 <p style="text-align:center;"><img src="/images/euler_rotation/Ryaw12.gif" alt="Ryaw"/></p>
 
