@@ -97,7 +97,7 @@ $$p^{1^{\prime}} = \begin{bmatrix}
 0 & 0 & 1
 \end{bmatrix} p^{1}$$
 
-$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
+$$\begin{pmatrix}a \& b\\\ c \& d\end{pmatrix}$$
 
 $$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
 
