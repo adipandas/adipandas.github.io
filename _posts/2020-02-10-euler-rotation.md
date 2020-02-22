@@ -117,7 +117,7 @@ $$p^2 = R_1^2 p^1$$
 
 ## Code
 
-The code for euler angle transformation is available on Google Colab  
+The code for euler angle transformation is available on Google Colab: 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Ua6puurb9OuODAlMWJmVArg8dYh8OUTH)
 
 You can also find the corresponding notebook on github:
