@@ -108,3 +108,6 @@ $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} p^{1^{\prime\prime}}$$
 Therefore, the resultant transformation matrix for going from Frame $$Ox_{1}y_{1}z_{1}$$ to Frame $$Ox_{2}y_{2}z_{2}$$ is:
 
 $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} R_{1^{\prime}_{y=\theta}}^{1^{\prime\prime}} R_{1_{z=\psi}}^{1^{\prime}} p^{1}$$
+
+<p style="text-align:center;"><img src="/images/euler_rotation/R12_z-y-x-euler.png" alt="R-z-y-x-euler"/></p>
+
