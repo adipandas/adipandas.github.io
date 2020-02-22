@@ -113,5 +113,6 @@ $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} R_{1^{\prime}_{y=\theta}}^{1^{\prime
 
 $$p^2 = R_1^2 p^1$$
 
-
+## References
+* Pamadi, B. N. (2004). Performance, stability, dynamics, and control of airplanes. American Institute of aeronautics and astronautics.
 
