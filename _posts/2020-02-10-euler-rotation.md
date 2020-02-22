@@ -92,12 +92,11 @@ Now, with the help of euler angles, transform the point given in **start** frame
     * Transform point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
 
 $$p^{1^{\prime}} = \begin{bmatrix}
-\cos\psi & \sin\psi & 0 \\\
--\sin\psi & \cos\psi & 0 \\\
-0 & 0 & 1
+\cos\psi \sin\psi 0 \\\
+-\sin\psi \cos\psi 0 \\\
+0 0 1
 \end{bmatrix} p^{1}$$
 
-$$\begin{pmatrix}a \& b\\\ c \& d\end{pmatrix}$$
 
 $$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
 
