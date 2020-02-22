@@ -91,17 +91,17 @@ Now, with the help of euler angles, transform the point given in **start** frame
 * Rotation by $$\psi$$ along $$Oz_{1}$$
     * Transform point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
 
-<img src="/images/euler_rotation/Ryaw12.gif" alt="Ryaw"/>
+<img src="/images/euler_rotation/Ryaw12.gif" alt="Ryaw" class="center"/>
 
 $$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
 
 * The above transformation is followed by $$\theta$$ around $$Oy_{1}^{\prime}$$ and then by $$\phi$$ around $$Ox_{1}^{\prime\prime}$$.
 
-<img src="/images/euler_rotation/Rpitch12.gif" alt="Rpitch"/>
+<img src="/images/euler_rotation/Rpitch12.gif" alt="Rpitch" class="center"/>
 
 $$p^{1^{\prime\prime}} = R_{1^{\prime}_{y=\theta}}^{1^{\prime\prime}} p^{1^{\prime}}$$
 
-<img src="/images/euler_rotation/Rroll12.gif" alt="Rroll"/>
+<img src="/images/euler_rotation/Rroll12.gif" alt="Rroll" class="center"/>
 
 $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} p^{1^{\prime\prime}}$$
 
