@@ -111,3 +111,7 @@ $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} R_{1^{\prime}_{y=\theta}}^{1^{\prime
 
 <p style="text-align:center;"><img src="/images/euler_rotation/R12_z-y-x-euler.png" alt="R-z-y-x-euler"/></p>
 
+$$p^2 = R_1^2 p^1$$
+
+
+
