@@ -92,9 +92,9 @@ Now, with the help of euler angles, transform the point given in **start** frame
     * Transform point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
 
 $$p^{1^{\prime}} = \begin{bmatrix}
-\cos\psi  \sin\psi  0 \\
--\sin\psi  \cos\psi  0 \\
-0  0  1
+\cos\psi && \sin\psi && 0 \\
+-\sin\psi && \cos\psi && 0 \\
+0 && 0 && 1
 \end{bmatrix} p^{1}$$
 
 $$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
@@ -120,14 +120,3 @@ $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} p^{1^{\prime\prime}}$$
 Therefore, the resultant transformation matrix for going from Frame $$Ox_{1}y_{1}z_{1}$$ to Frame $$Ox_{2}y_{2}z_{2}$$ is:
 
 $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} R_{1^{\prime}_{y=\theta}}^{1^{\prime\prime}} R_{1_{z=\psi}}^{1^{\prime}} p^{1}$$
-
-
-<mrow>
-   <mo> ( </mo>
-   <mtable>
-      <mtr> <mn>1</mn> <mn>0</mn> <mn>0</mn> </mtr>
-      <mtr> <mn>0</mn> <mn>1</mn> <mn>0</mn> </mtr>
-      <mtr> <mn>0</mn> <mn>0</mn> <mn>1</mn> </mtr>
-   </mtable>
-   <mo> ) </mo>
-</mrow>
