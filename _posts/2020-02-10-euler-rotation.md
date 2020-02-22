@@ -93,29 +93,29 @@ Now, with the help of euler angles, transform the point given in **start** frame
 
 $$p^{1^{\prime}} = R_{1}^{1^{\prime}} p^{1}$$
 
-$$p^{1^{\prime}} = \begin{bmatrix}
+$$p^{1^{\prime}} = \begin{pmatrix}
 \cos \psi & \sin \psi & 0\\
 -\sin \psi & \cos \psi & 0\\
 0 & 0 & 1
-\end{bmatrix} p^{1}$$
+\end{pmatrix} p^{1}$$
 
 $$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
 
 * The above transformation is followed by $$\theta$$ around $$Oy_{1}^{\prime}$$ and $$\phi$$ around $$Ox_{1}^{\prime\prime}$$.
 
-$$p^{1^{\prime\prime}} = \begin{bmatrix}
+$$p^{1^{\prime\prime}} = \begin{pmatrix}
 \cos \theta & 0 & -\sin \theta\\
 0 & 1 & 0\\
 \sin \theta & 0 & \cos \theta
-\end{bmatrix} p^{1^{\prime}}$$
+\end{pmatrix} p^{1^{\prime}}$$
 
 $$p^{1^{\prime\prime}} = R_{1^{\prime}_{y=\theta}}^{1^{\prime\prime}} p^{1^{\prime}}$$
 
-$$p^{2} = \begin{bmatrix}
+$$p^{2} = \begin{pmatrix}
 1 & 0 & 0\\
 0 & \cos \phi & \sin \phi\\
 0 & -\sin \phi & \cos \phi
-\end{bmatrix} p^{1^{\prime\prime}}$$
+\end{pmatrix} p^{1^{\prime\prime}}$$
 
 $$p^{2} = R_{1^{\prime\prime}_{x=\phi}}^{2} p^{1^{\prime\prime}}$$
 
