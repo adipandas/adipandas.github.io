@@ -105,9 +105,8 @@ Note: Jacobian has the dimensions of $$m \times n$$.
 
 ## Hessian matrix
 
-A scalar-valued function or scalar field is:
+A scalar-valued function or scalar field given by \eqref(scalar-func). Hessian matrix is a square matrix of **second order partial derivatives** of this scalar-valued function.
 
-$$y= f(\mathbf{x})$$
+<img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{H}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}^2}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{n}}\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}x_{1}}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}^2}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}x_{1}}&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}^2}&space;\end{bmatrix}" title="\large \mathbf{H} = \begin{bmatrix} \frac{\partial ^{2} f }{\partial x_{1}^2}& \frac{\partial ^{2} f }{\partial x_{1} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{1} x_{n}}\\ \frac{\partial ^{2} f }{\partial x_{2}x_{1}}& \frac{\partial ^{2} f }{\partial x_{2}^2} & \cdots & \frac{\partial ^{2} f }{\partial x_{2} x_{n}}\\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial ^{2} f }{\partial x_{n}x_{1}} & \frac{\partial ^{2} f }{\partial x_{n} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{n}^2} \end{bmatrix}" />
 
-Hessian matrix is a square matrix of **second order partial derivatives** of this scalar-valued function.
 
