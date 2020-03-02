@@ -88,13 +88,9 @@ $$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\
 
 ## Derivative of Vector-valued Function
 
-$$\mathbf{f}:\Re^n \rightarrow \Re^m \label{vec-func-1}$$
+Derivative of $$\mathbf{f}$$ in equation \eqref{eq5} linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
 
-$$\mathbf{x} \mapsto \mathbf{y}=\mathbf{f}(\mathbf{x})\label{vec-func-2}$$
-
-Derivative of $$\mathbf{f}$$ linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
-
-First order-partial derivative of vector-valued function forms the **Jacobian** matrix.
+First order-partial derivative of vector-valued function forms the **Jacobian** matrix. We will denote the Jacobian by the notation $$\mathbf{J}$$
 
 <p style="text-align:center;">
 <img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{J}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{n}}&space;\end{bmatrix}" title="\large \mathbf{J} = \begin{bmatrix} \frac{\partial \mathbf{f}}{\partial x_{1}} & \frac{\partial \mathbf{f}}{\partial x_{2}} & \cdots & \frac{\partial \mathbf{f}}{\partial x_{n}} \end{bmatrix}" /></p>
