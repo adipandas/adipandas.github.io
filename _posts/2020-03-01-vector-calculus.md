@@ -15,16 +15,16 @@ This post contains some of the important notes which come in handy while working
 ## Vector Space
 A vector space is a collection of objects called vectors, which may be added together and multiplied/scaled by scalars. Scalars are often taken to be real numbers.
 
-$$\mathbf{x} = (x_{1}, x_{2}, ..., x_{n}) \tag{1}$$
+$$\mathbf{x} = (x_{1}, x_{2}, ..., x_{n})$$
 
 $$\mathbf{x}$$ is a vector of $$n$$ dimensions.
 
 ## Function
 A function is relationship between two sets. It associates an element from frist set to exactly one element of second set.
 
-$$f: \mathit{X} \rightarrow \mathit{Y} \tag{2} \label{eq1}$$
+$$f: \mathit{X} \rightarrow \mathit{Y} \label{eq1}$$
 
-$$\mathbf{x} \mapsto	f(\mathbf{x}) \tag{3} \label{eq2}$$
+$$\mathbf{x} \mapsto	f(\mathbf{x}) \label{eq2}$$
 
 In equation \eqref{eq1}, the set represented by $$\mathit{X}$$ is called **domain** of function $$f$$ and $$\mathit{Y}$$ is called **codomain** of function $$f$$. This notation can be read as '*the function $$f$$ mapping elements of set $$\mathit{X}$$ to elements of set $$\mathit{Y}$$*'. Similarly, \eqref{eq2} can be read as '*$$f$$ maps \mathbf{x} to $$f(x)$$*'.
 
