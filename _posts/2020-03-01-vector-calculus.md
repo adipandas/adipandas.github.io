@@ -72,7 +72,7 @@ At each point of a scalar-valued function, the gardient is a tangent vector, whi
 
 Derivative at each point of scalar-valued function is a co-tangent vector, a linear form which expresses how much the scalar output of a function changes for a given infinitesimal change in input vector. Derivative of a scalar valued function is represented as a row vector.
 
-<p style="text-align:center;"><img src="/images/vector_calculus/derivative_f.png" alt="derivative of f"/></p> $$\label{eq-derivative1}$$
+<p style="text-align:center;"><img src="/images/vector_calculus/derivative_f.png" alt="derivative of f"/></p> $$& \label{eq-derivative1}$$
 
 
 **Note: derivative is just a transpose of gradient.**
