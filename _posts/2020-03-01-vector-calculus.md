@@ -35,7 +35,7 @@ $$f:\Re^n \rightarrow \Re \label{eq3}$$
 
 $$ y = f(\mathbf{x}) \label{scalar-func}$$
 
-Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a *scalar-valued function*. $$y$$ is a scalar in \eqref{scalar-func} and $$\mathbf{x}$$ is a vector of $$n$$-dimensions.
+Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a *scalar-valued function*. $$y$$ is a scalar and $$\mathbf{x}$$ is a vector of $$n$$-dimensions in \eqref{scalar-func}.
 
 ## Vector-valued function
 The function which maps one vector space to another vector space.
