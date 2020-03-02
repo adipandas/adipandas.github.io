@@ -26,14 +26,16 @@ $$f: \mathit{X} \rightarrow \mathit{Y} \label{eq1}$$
 
 $$\mathbf{x} \mapsto	f(\mathbf{x}) \label{eq2}$$
 
-In equation \eqref{eq1}, the set represented by $$\mathit{X}$$ is called **domain** of function $$f$$ and $$\mathit{Y}$$ is called **codomain** of function $$f$$. This notation can be read as '*the function $$f$$ mapping elements of set $$\mathit{X}$$ to elements of set $$\mathit{Y}$$*'. Similarly, \eqref{eq2} can be read as '*$$f$$ maps \mathbf{x} to $$f(x)$$*'.
+In equation \eqref{eq1}, the set represented by $$\mathit{X}$$ is called **domain** of function $$f$$ and $$\mathit{Y}$$ is called **codomain** of function $$f$$. This notation can be read as '*the function $$f$$ mapping elements of set $$\mathit{X}$$ to elements of set $$\mathit{Y}$$*'. Similarly, \eqref{eq2} can be read as '*$$f$$ maps $$\mathbf{x}$$ to $$f(\mathbf{x})$$*'.
 
 ## Scalar-valued function or Scalar field
 The function which maps a vector to a scalar value.
 
 $$f:\Re^n \rightarrow \Re \label{eq3}$$
 
-Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a *scalar-valued function*.
+$$ y = f(\mathbf{x}) \label{scalar-func}$$
+
+Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a *scalar-valued function*. $$y$$ is a scalar in \eqref{scalar-func} and $$\mathbf{x}$$ is a vector of $$n$$-dimensions.
 
 ## Vector-valued function
 The function which maps one vector space to another vector space.
