@@ -15,15 +15,16 @@ This post contains some of the important notes which come in handy while working
 ## Vector Space
 A vector space is a collection of objects called vectors, which may be added together and multiplied/scaled by scalars. Scalars are often taken to be real numbers.
 
-$$x=(x_{1}, x_{2}, ..., x_{n}) \label(eq1)$$
+$$x=(x_{1}, x_{2}, ..., x_{n}) \tag(eq1)$$
 
 $$x$$ is a vector of $$n$$ dimensions.
 
 ## Function
 A function is relationship between two sets. It associates an element from frist set to exactly one element of second set.
 
-$$f: X \rightarrow Y \label{eq2}$$
-$$x \mapsto	f(x) \label{eq3}$$
+$$f: X \rightarrow Y \tag{eq2}$$
+
+$$x \mapsto	f(x) \tag{eq3}$$
 
 In the above equation, the set represented by $$X$$ is called **domain** of function $$f$$ and $$Y$$ is called **codomain** of function $$f$$.
 
