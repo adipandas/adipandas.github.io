@@ -46,5 +46,6 @@ $$ \mathbf{y} = f(\mathbf{x}) \label{eq5}$$
 
 Equation \eqref{eq4} maps an $$n$$-dimensional vector to a vector of $$m$$-dimensions. It is a *vector-valued function*. The output value $$\mathbf{y}$$ in \eqref{eq5} is of $$m$$-dimensions and the corresponding input value $$\mathbf{x}$$ is of $$n$$-dimensions.
 
+## Gradient
 
 
