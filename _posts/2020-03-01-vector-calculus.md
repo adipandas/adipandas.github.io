@@ -73,7 +73,7 @@ At each point of a scalar-valued function, the gardient is a tangent vector, whi
 Derivative at each point of scalar-valued function is a co-tangent vector, a linear form which expresses how much the scalar output of a function changes for a given infinitesimal change in input vector. Derivative of a scalar valued function is represented as a row vector.
 
 $$df(\mathbf{x}) = \begin{bmatrix}
-\frac{\partial f}{\partial x_{1}} &amp; \frac{\partial f}{\partial x_{2}} &amp; \cdots &amp; \frac{\partial f}{\partial x_{n}}
+\frac{\partial f}{\partial x_{1}} %26 \frac{\partial f}{\partial x_{2}} %26 \cdots %26 \frac{\partial f}{\partial x_{n}}
 \end{bmatrix} \label{eq-derivative1}$$
 
 **Note: derivative is just a transpose of gradient.**
@@ -81,6 +81,11 @@ $$df(\mathbf{x}) = \begin{bmatrix}
 $$df(\mathbf{x}) = \bigtriangledown f(\mathbf{x})^{T} \label{eq-derivative2}$$
 
 
+## Linear approximation of a scalar-valued function
+
+Linear approximation of a function $$f(\mathbf{x})$$ at a point $$\mathbf{x_{0}} \in \Re^{n}$$:
+
+$$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\mathbf{x} - \mathbf{x_0})$$
 
 
 
