@@ -9,5 +9,5 @@ tags:
   - Calculus
 ---
 
-These contains some of the important notes which come in handy while working with vector-calculus.
+This post contains some of the important notes which come in handy while working with vector-calculus.
 
