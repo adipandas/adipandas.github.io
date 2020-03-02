@@ -46,9 +46,9 @@ Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a
 ## Vector-valued function
 The function which maps one vector space to another vector space.
 
-$$f: \Re^n \rightarrow \Re^m \label{eq4}$$
+$$\mathbf{f}: \Re^n \rightarrow \Re^m \label{eq4}$$
 
-$$ \mathbf{y} = f(\mathbf{x}) \label{eq5}$$
+$$ \mathbf{y} = \mathbf{f}(\mathbf{x}) \label{eq5}$$
 
 Equation \eqref{eq4} maps an $$n$$-dimensional vector to a vector of $$m$$-dimensions. It is a *vector-valued function*. The output value $$\mathbf{y}$$ in \eqref{eq5} is of $$m$$-dimensions and the corresponding input value $$\mathbf{x}$$ is of $$n$$-dimensions.
 
@@ -87,8 +87,27 @@ Linear approximation of a function $$f(\mathbf{x})$$ at a point $$\mathbf{x_{0}}
 $$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\mathbf{x} - \mathbf{x_0})$$
 
 
+## Derivative of Vector-valued Function
 
+$$\mathbf{f}:\Re^n \rightarrow \Re^m \label{vec-func-1}$$
 
+$$\mathbf{x} \mapsto \mathbf{y}=\mathbf{f}(\mathbf{x})\label{vec-func-2}$$
 
+Derivative of $$\mathbf{f}$$ linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
 
+First order-partial derivative of vector-valued function forms the **Jacobian** matrix.
+
+<p style="text-align:center;"><img src="/images/vector_calculus/jacobian_f1.png" alt="derivative of f"/></p> $$& \label{eq-derivative1}$$
+
+<p style="text-align:center;"><img src="/images/vector_calculus/jacobian_f2.png" alt="derivative of f"/></p> $$& \label{eq-derivative1}$$
+
+Note: Jacobian has the dimensions of $$m \times n$$.
+
+## Hessian matrix
+
+A scalar-valued function or scalar field is:
+
+$$y= f(\mathbf{x})$$
+
+Hessian matrix is a square matrix of **second order partial derivatives** of this scalar-valued function.
 
