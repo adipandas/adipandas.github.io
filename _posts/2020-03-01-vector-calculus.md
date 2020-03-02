@@ -47,5 +47,16 @@ $$ \mathbf{y} = f(\mathbf{x}) \label{eq5}$$
 Equation \eqref{eq4} maps an $$n$$-dimensional vector to a vector of $$m$$-dimensions. It is a *vector-valued function*. The output value $$\mathbf{y}$$ in \eqref{eq5} is of $$m$$-dimensions and the corresponding input value $$\mathbf{x}$$ is of $$n$$-dimensions.
 
 ## Gradient
+Gradient of scalar-valued differentiable function is a vector field or vector-valued function.
 
+$$\bigtriangledown f: \Re^n \rightarrow \Re^n \label{eq-grad1}$$
+
+Gradient of vector-valued function at a point $$\mathbf{x}$$ in domain $$\mathit{X} \in \Re^n$$ is:
+
+$$\bigtriangledown f(\mathbf{x}) =  \begin{bmatrix}
+\frac{\partial f}{\partial x_{1}} \\ 
+\frac{\partial f}{\partial x_{2}} \\ 
+\vdots \\
+\frac{\partial f}{\partial x_{n}}
+\end{bmatrix}\label{eq-grad2}$$
 
