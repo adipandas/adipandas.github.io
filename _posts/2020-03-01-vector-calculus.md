@@ -22,12 +22,12 @@ $$x$$ is a vector of $$n$$ dimensions.
 ## Function
 A function is relationship between two sets. It associates an element from frist set to exactly one element of second set.
 
-$$f: X \rightarrow Y \tag{2}$$
+$$f: X \rightarrow Y \tag{2} \label{eq1}$$
 
-$$x \mapsto	f(x) \tag{3}$$
+$$x \mapsto	f(x) \tag{3} \label{eq2}$$
 
 In the above equation, the set represented by $$X$$ is called **domain** of function $$f$$ and $$Y$$ is called **codomain** of function $$f$$.
 
-This notation in \ref{2} can be read as *the function $$f$$ mapping elements of set $$X$$ to elements of set $$Y$$*. Similarly, \ref{3} can be read as *$$f$$ maps x to $$f(x)$$*.
+This notation in \eqref{eq1} can be read as *the function $$f$$ mapping elements of set $$X$$ to elements of set $$Y$$*. Similarly, \eqref{eq2} can be read as *$$f$$ maps x to $$f(x)$$*.
 
 
