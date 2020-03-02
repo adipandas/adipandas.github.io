@@ -46,7 +46,7 @@ Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a
 ## Vector-valued function
 The function which maps one vector space to another vector space.
 
-$$\mathbf{f}: \Re^n \rightarrow \Re^<img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{H}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}^2}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{n}}\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}x_{1}}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}^2}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}x_{1}}&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}^2}&space;\end{bmatrix}" title="\large \mathbf{H} = \begin{bmatrix} \frac{\partial ^{2} f }{\partial x_{1}^2}& \frac{\partial ^{2} f }{\partial x_{1} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{1} x_{n}}\\ \frac{\partial ^{2} f }{\partial x_{2}x_{1}}& \frac{\partial ^{2} f }{\partial x_{2}^2} & \cdots & \frac{\partial ^{2} f }{\partial x_{2} x_{n}}\\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial ^{2} f }{\partial x_{n}x_{1}} & \frac{\partial ^{2} f }{\partial x_{n} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{n}^2} \end{bmatrix}" />m \label{eq4}$$
+$$\mathbf{f}: \Re^n \rightarrow \Re^m \label{eq4}$$
 
 $$ \mathbf{y} = \mathbf{f}(\mathbf{x}) \label{eq5}$$
 
@@ -64,13 +64,7 @@ $$\bigtriangledown f(\mathbf{x}) =  \begin{bmatrix}
 \frac{\partial f}{\partial x_{2}} \\ 
 \vdots \\
 \frac{\partial f}{\partial x_{n}}
-\end{bmatrix}\label{eq-grad2}$$​
-110
-<img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{H}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}^2}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{n}}\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}x_{1}}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}^2}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}x_{1}}&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}^2}&space;\end{bmatrix}" title="\large \mathbf{H} = \begin{bmatrix} \frac{\partial ^{2} f }{\partial x_{1}^2}& \frac{\partial ^{2} f }{\partial x_{1} x_{2}} & \cdots &A scalar-valued function or scalar field given by \eqref(scalar-func). Hessian matrix is a square matrix of second order partial derivatives of this scalar-valued function.
-111
-​
-112
- \frac{\partial ^{2} f }{\partial x_{1} x_{n}}\\ \frac{\partial ^{2} f }{\partial x_{2}x_{1}}& \frac{\partial ^{2} f }{\partial x_{2}^2} & \cdots & \frac{\partial ^{2} f }{\partial x_{2} x_{n}}\\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial ^{2} f }{\partial x_{n}x_{1}} & \frac{\partial ^{2} f }{\partial x_{n} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{n}^2} \end{bmatrix}" />
+\end{bmatrix}\label{eq-grad2}$$
 
 At each point of a scalar-valued function, the gardient is a tangent vector, which represents an **infinitesimal change** in vector input. Notice that the gradient is represented as a column vector.
 
@@ -86,6 +80,8 @@ Derivative at each point of scalar-valued function is a co-tangent vector, a lin
 $$df(\mathbf{x}) = \bigtriangledown f(\mathbf{x})^{T} \label{eq-derivative2}$$
 
 <img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{H}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}^2}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{1}&space;x_{n}}\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}x_{1}}&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}^2}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{2}&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}x_{1}}&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;^{2}&space;f&space;}{\partial&space;x_{n}^2}&space;\end{bmatrix}" title="\large \mathbf{H} = \begin{bmatrix} \frac{\partial ^{2} f }{\partial x_{1}^2}& \frac{\partial ^{2} f }{\partial x_{1} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{1} x_{n}}\\ \frac{\partial ^{2} f }{\partial x_{2}x_{1}}& \frac{\partial ^{2} f }{\partial x_{2}^2} & \cdots & \frac{\partial ^{2} f }{\partial x_{2} x_{n}}\\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial ^{2} f }{\partial x_{n}x_{1}} & \frac{\partial ^{2} f }{\partial x_{n} x_{2}} & \cdots & \frac{\partial ^{2} f }{\partial x_{n}^2} \end{bmatrix}" />
+
+
 ## Linear approximation of a scalar-valued function
 
 Linear approximation of a function $$f(\mathbf{x})$$ at a point $$\mathbf{x_{0}} \in \Re^{n}$$:
