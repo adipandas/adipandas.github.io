@@ -15,7 +15,12 @@ This post contains some of the important notes which come in handy while working
 ## Vector Space
 A vector space is a collection of objects called vectors, which may be added together and multiplied/scaled by scalars. Scalars are often taken to be real numbers.
 
-$$\mathbf{x} = (x_{1}, x_{2}, ..., x_{n})$$
+$$\mathbf{x} =  \begin{bmatrix}
+ x_{1} \\ 
+x_{2} \\ 
+\vdots \\
+x_{n}
+\end{bmatrix}$$
 
 $$\mathbf{x}$$ is a vector of $$n$$ dimensions.
 
