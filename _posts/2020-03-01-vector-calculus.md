@@ -97,9 +97,9 @@ Derivative of $$\mathbf{f}$$ linearly maps tangent space $$T_{\mathbf(x)}$$ to t
 
 First order-partial derivative of vector-valued function forms the **Jacobian** matrix.
 
-<p style="text-align:center;"><img src="/images/vector_calculus/jacobian_f1.png" alt="derivative of f"/></p> $$& \label{eq-derivative1}$$
+<img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{J}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;\mathbf{f}}{\partial&space;x_{n}}&space;\end{bmatrix}" title="\large \mathbf{J} = \begin{bmatrix} \frac{\partial \mathbf{f}}{\partial x_{1}} & \frac{\partial \mathbf{f}}{\partial x_{2}} & \cdots & \frac{\partial \mathbf{f}}{\partial x_{n}} \end{bmatrix}" />
 
-<p style="text-align:center;"><img src="/images/vector_calculus/jacobian_f2.png" alt="derivative of f"/></p> $$& \label{eq-derivative1}$$
+<img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{J}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;f_{1}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;f_{1}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;f_{1}}{\partial&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots\\&space;\frac{\partial&space;f_{m}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;f_{m}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;f_{m}}{\partial&space;x_{n}}&space;\end{bmatrix}" title="\large \mathbf{J} = \begin{bmatrix} \frac{\partial f_{1}}{\partial x_{1}} & \frac{\partial f_{1}}{\partial x_{2}} & \cdots & \frac{\partial f_{1}}{\partial x_{n}}\\ \vdots & \vdots & \ddots & \vdots\\ \frac{\partial f_{m}}{\partial x_{1}} & \frac{\partial f_{m}}{\partial x_{2}} & \cdots & \frac{\partial f_{m}}{\partial x_{n}} \end{bmatrix}" />
 
 Note: Jacobian has the dimensions of $$m \times n$$.
 
