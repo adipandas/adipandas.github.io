@@ -13,9 +13,9 @@ redirect_from:
 
 Education
 ====
-* B.E. in Mechanical, University of Pune, 2014
-* M.S. in Mechanical, University of Cincinnati, 2017
-* Ph.D. in Robotics, University of Cincinnati (on-going)
+* Ph.D. in Mechanical Engineering (Robotics), University of Cincinnati (on-going)
+* M.S. in Mechanical Engineering, University of Cincinnati, 2017
+* B.E. in Mechanical Engineering, University of Pune, 2014
 
 Work experience
 ======
@@ -44,7 +44,7 @@ Publications
 Skills
 ======
 * Programming: Python, MATLAB, Julia programming language
-* Software: PyTorch, Tensorflow, OpenCV, ROS, Gazebo sim, Mujoco, Pybullet
+* Software: PyTorch, Tensorflow, OpenCV, ROS, Gazebo Sim, Mujoco, Pybullet
 * Hardware: PixHawk Autopilot, Arduino, Raspberry Pi, Nvidia Jetson
 
 Teaching
@@ -58,4 +58,3 @@ Talks
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-
