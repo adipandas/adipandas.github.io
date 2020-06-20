@@ -67,5 +67,5 @@ Quaternion product is not commutative, i.e., $$p \bigotimes q \ne q \bigotimes p
 References
 -------------
 1. Madgwick, S. (2010). An efficient orientation filter for inertial and inertial/magnetic sensor arrays. Report x-io and University of Bristol (UK), 25, 113-118. [[link](https://www.x-io.co.uk/res/doc/madgwick_internal_report.pdf)]
-2. Zhang, F. Quaternion Conventions: Hamilton and JPL. (2017). [[link](https://fzheng.me/2017/11/12/quaternion_conventions_en/)]
+2. Zhang, F. (2017). Quaternion Conventions: Hamilton and JPL. [[link](https://fzheng.me/2017/11/12/quaternion_conventions_en/)]
 
