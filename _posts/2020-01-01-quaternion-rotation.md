@@ -62,7 +62,7 @@ p_1 q_4 + p_2 q_3 - p_3 q_2 + p_4 q_1
 
 Quaternion product is not commutative, i.e., $$p \bigotimes q \ne q \bigotimes p$$.  
 
-**NOTE: I know there may be lot of confusion in Quaternion mathematics. The [blogpost by Fan Zheng](https://fzheng.me/2017/11/12/quaternion_conventions_en/) provides an excellent overiveiw of conventions used in Quaternion representions.**
+**NOTE: I know there may be a lot of confusion in Quaternion mathematics. The [blogpost by Fan Zheng](https://fzheng.me/2017/11/12/quaternion_conventions_en/) provides an excellent overview of conventions used in Quaternion representations.**
 
 References
 -------------
