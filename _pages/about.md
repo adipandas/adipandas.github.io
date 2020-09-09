@@ -21,8 +21,6 @@ Research Interests
 Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Robotics, Swarm and Multi-robot systems, Flying Robots, IoT
 
 <br>
-<br>
-<br>
 
 <div style="width:200px; margin-left: 30px;">
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=RomffCBzeTvdhyrehWJhIAqA83-h6kNUj-rSlcO6ryE"></script>
