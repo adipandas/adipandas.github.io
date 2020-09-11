@@ -22,6 +22,6 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 
 <br>
 
-<div style="width:200px; margin-left: 30px;">
+<!-- <div style="width:200px; margin-left: 30px;">
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=RomffCBzeTvdhyrehWJhIAqA83-h6kNUj-rSlcO6ryE"></script>
-</div>
+</div> -->
