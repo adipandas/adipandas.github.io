@@ -4,10 +4,12 @@ collection: IEEE
 permalink:
 excerpt: ---
 date: 2018-06-27
-venue: '2018 Annual American Control Conference (ACC)'
+venue:
 paperurl:
 citation:
 ---
+
+#### Published in 2018 Annual American Control Conference (ACC), 2018
 
 Multi-robot systems have an innate advantage of enhancing system robustness in situations where the chances for noise in sensory data or faults in robotic agents are high. The distribution of the task at hand among multiple robots and coordination among these robotic agents can also make these systems more efficient. The formation problem for a multi-robot system is defined as the coordination of multiple robots to form and maintain a specific geometric pattern such as circle, line, or square. This paper focuses on circular pattern formation through self-organization in multi-robot systems. A detailed algorithm for circle formation around an unknown target using exceptionally simple robots is presented along with the results. In this algorithm, we adopt a communication-based multi-agent model where each robotic agent interacts through minimal, though explicit, communication within very limited range and with limited capabilities. This algorithm is entirely distributed and does not require any manual intervention or centralized information. Extensive numerical results have demonstrated the stability and robustness in generating the formations.
 
