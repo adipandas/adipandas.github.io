@@ -2,7 +2,7 @@
 title: "Self-Organized Circle Formation around an Unknown Target by a Multi-Robot Swarm using a Local Communication Strategy"
 collection: IEEE
 permalink:
-excerpt:
+excerpt: ---
 date: 2018-06-27
 venue: '2018 Annual American Control Conference (ACC)'
 paperurl:
