@@ -15,6 +15,10 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 
+{% for post in site.talks reversed %}
+  {% include archive-single-talk.html %}
+{% endfor %}
+
 {% for post in site.portfolio %}
   {% include archive-single.html %}
 {% endfor %}
