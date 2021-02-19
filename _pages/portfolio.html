@@ -7,20 +7,20 @@ author_profile: true
 
 {% include base_path %}
 
-Publications
----
+<h2>Publications</h2>
+
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
 
-Teaching
----
+<h2>Teaching</h2>
 {% for post in site.teaching reversed %}
   {% include archive-single.html %}
 {% endfor %}
 
-Talks and Projects
----
+
+<h2>Talks and Projects</h2>
+
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
