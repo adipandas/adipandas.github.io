@@ -1,6 +1,7 @@
 ---
 title: "Autonomous Flying Robot"
 excerpt: ---
+date: 2018-09-10
 tags:
   - px4
   - autopilot
@@ -14,7 +15,6 @@ tags:
   - deep learning
   - YOLO
   - Movidius
-  
 collection: portfolio
 ---
 
