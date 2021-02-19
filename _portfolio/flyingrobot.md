@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Flying Robot"
-excerpt: "Demonstration of autonomous quadrotor robot developed at the University of Cincinnati to assist in search and rescue missions in the post-disaster scenarios. Click [here](https://adipandas.github.io/portfolio/flyingrobot/) to know more."
+excerpt: ---
 tags:
   - px4
   - autopilot
