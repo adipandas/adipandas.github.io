@@ -22,11 +22,15 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 </div> -->
 
 ## Research
-|  |  |
-|:----------:|:----------:|
-| value | <p>value 1<br>value 2</p> |
-| value | <p>value 1<br>value 2</p> |
+* [One-Shot Recognition of Manufacturing Defects in Steel Surfaces](https://adipandas.github.io/one-shot-steel-surfaces/)
+* [Self-Organized Circle Formation around an Unknown Target by a Multi-Robot Swarm using a Local Communication Strategy](https://adipandas.github.io/publications/2018-06-27-self-organized/)
+* [Robot swarm for efficient area coverage inspired by ant foraging: The case of adaptive switching between brownian motion and lévy flight](https://adipandas.github.io/publications/2017-10-11-antlevy/)
+* [Constraint handling in firefly algorithm](https://adipandas.github.io/publications/2013-06-13-firefly/)
+
 
 ## Teaching
+* [Spring 2019: MECH5132/MECH6032 - Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1)
 
-## Some project work
+## Talks and Demos
+* [Multi-object trackers in Python](https://adipandas.github.io/multi-object-tracker/)
+* [Autonomous Flying Robot](https://adipandas.github.io/portfolio/flyingrobot/)
