@@ -22,10 +22,10 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 </div> -->
 
 ## Research
-  |  
-:----------:|----------  
- value | <p>value 1<br>value 2</p> 
- value | <p>value 1<br>value 2</p> 
+|  |  |
+|:----------:|:----------:|
+| value | <p>value 1<br>value 2</p> |
+| value | <p>value 1<br>value 2</p> |
 
 ## Teaching
 
