@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Hello World!! :smiley:"
-excerpt: "---"
+title: "Aditya M. Deshpande"
+excerpt: "Ph.D. Student in Robotics"
 author_profile: true
 redirect_from:
   - /about/
