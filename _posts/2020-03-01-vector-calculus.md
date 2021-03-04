@@ -88,7 +88,7 @@ Linear approximation of a function $$f(\mathbf{x})$$ at a point $$\mathbf{x_{0}}
 $$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\mathbf{x} - \mathbf{x_0})$$
 
 
-## Derivative of Vector-valued Function (Jacobian)
+## Jacobian (a.k.a. derivative of Vector-valued Function)
 
 Derivative of $$\mathbf{f}$$ in equation \eqref{eq5} linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
 
@@ -100,7 +100,9 @@ First order-partial derivative of vector-valued function forms the **Jacobian** 
 <p style="text-align:center;">
 <img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{150}&space;\large&space;\mathbf{J}&space;=&space;\begin{bmatrix}&space;\frac{\partial&space;f_{1}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;f_{1}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;f_{1}}{\partial&space;x_{n}}\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots\\&space;\frac{\partial&space;f_{m}}{\partial&space;x_{1}}&space;&&space;\frac{\partial&space;f_{m}}{\partial&space;x_{2}}&space;&&space;\cdots&space;&&space;\frac{\partial&space;f_{m}}{\partial&space;x_{n}}&space;\end{bmatrix}" title="\large \mathbf{J} = \begin{bmatrix} \frac{\partial f_{1}}{\partial x_{1}} & \frac{\partial f_{1}}{\partial x_{2}} & \cdots & \frac{\partial f_{1}}{\partial x_{n}}\\ \vdots & \vdots & \ddots & \vdots\\ \frac{\partial f_{m}}{\partial x_{1}} & \frac{\partial f_{m}}{\partial x_{2}} & \cdots & \frac{\partial f_{m}}{\partial x_{n}} \end{bmatrix}" /> </p>
 
-Note: Jacobian has the dimensions of $$m \times n$$.
+**Note: Jacobian has the dimensions of $$m \times n$$.**
+
+A Jacobian is the vertical stack of derivative vectors corresponding to each output element of vector $$\mathbf{y}$$, i.e., row of the matrix. This definition makes sense, and we can relate it to the derivative of a scalar-valued function defined above. The derivative of a scalar-valued function, $$m=1$$, is a row vector.
 
 ## Hessian matrix
 
