@@ -89,6 +89,7 @@ $$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\
 
 
 ## Jacobian (a.k.a. derivative of Vector-valued Function)
+<a name="jacobian"></a>
 
 Derivative of $$\mathbf{f}$$ in equation \eqref{eq5} linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
 
