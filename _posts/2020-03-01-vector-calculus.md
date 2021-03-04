@@ -102,7 +102,7 @@ First order-partial derivative of vector-valued function forms the **Jacobian** 
 
 **Note: Jacobian has the dimensions of $$m \times n$$.**
 
-A Jacobian is the vertical stack of derivative vectors corresponding to each output element of vector $$\mathbf{y}$$, i.e., row of the matrix. This definition makes sense, and we can relate it to the derivative of a scalar-valued function defined above. The derivative of a scalar-valued function, $$m=1$$, is a row vector.
+A Jacobian is the vertical stack of derivative vectors corresponding to each output element of vector $$\mathbf{y}$$ (i.e., row of the Jacobian matrix). This definition makes sense, and we can relate it to the derivative of a scalar-valued function defined above. The derivative of a scalar-valued function, $$m=1$$, is a row vector.
 
 ## Hessian matrix
 
