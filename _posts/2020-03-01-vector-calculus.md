@@ -8,6 +8,8 @@ tags:
   - Geometry
   - Calculus
   - Gradient
+  - Jacobian
+  - Hessian
 ---
 
 This post contains some of the important notes which come in handy while working with vector-calculus.
@@ -44,7 +46,7 @@ $$ y = f(\mathbf{x}) \label{scalar-func}$$
 Equation \eqref{eq3} maps an $$n$$-dimensional vector to a scalar value. It is a *scalar-valued function*. $$y$$ is a scalar and $$\mathbf{x}$$ is a vector of $$n$$-dimensions in \eqref{scalar-func}.
 
 ## Vector-valued function
-The function which maps one vector space to another vector space.
+A **vector-valued function** maps one vector space to another vector space.
 
 $$\mathbf{f}: \Re^n \rightarrow \Re^m \label{eq4}$$
 
@@ -53,7 +55,7 @@ $$ \mathbf{y} = \mathbf{f}(\mathbf{x}) \label{eq5}$$
 Equation \eqref{eq4} maps an $$n$$-dimensional vector to a vector of $$m$$-dimensions. It is a *vector-valued function*. The output value $$\mathbf{y}$$ in \eqref{eq5} is of $$m$$-dimensions and the corresponding input value $$\mathbf{x}$$ is of $$n$$-dimensions.
 
 ## Gradient
-Gradient of scalar-valued differentiable function is a vector field or vector-valued function.
+The **gradient** of a scalar-valued differentiable function is also referred to as vector field or vector-valued function.
 
 $$\bigtriangledown f: \Re^n \rightarrow \Re^n \label{eq-grad1}$$
 
@@ -66,11 +68,11 @@ $$\bigtriangledown f(\mathbf{x}) =  \begin{bmatrix}
 \frac{\partial f}{\partial x_{n}}
 \end{bmatrix}\label{eq-grad2}$$
 
-At each point of a scalar-valued function, the gardient is a tangent vector, which represents an **infinitesimal change** in vector input. Notice that the gradient is represented as a column vector.
+At each point of a scalar-valued function, a gradient is a tangent vector representing an **infinitesimal change** in vector input. Notice that here a column vector is used to represent the gradient of the function at point $$x$$.
 
 ## Derivative
 
-Derivative at each point of scalar-valued function is a co-tangent vector, a linear form which expresses how much the scalar output of a function changes for a given infinitesimal change in input vector. Derivative of a scalar valued function is represented as a row vector.
+Derivative at each point of the scalar-valued function is a co-tangent vector, a linear form that expresses how much the scalar output of a function changes for a given infinitesimal change in the input vector. Notice, we represent the derivative of a scalar-valued function as a row vector. This is unlike the gradient vector (that used column vector).
 
 <p style="text-align:center;"><img src="/images/vector_calculus/derivative_f.png" alt="derivative of f"/></p> $$ \label{eq-derivative1}$$
 
@@ -86,7 +88,7 @@ Linear approximation of a function $$f(\mathbf{x})$$ at a point $$\mathbf{x_{0}}
 $$f(\mathbf{x}) \approx f(\mathbf{x_0}) + (\bigtriangledown f)_{\mathbf{x_0}} (\mathbf{x} - \mathbf{x_0})$$
 
 
-## Derivative of Vector-valued Function
+## Derivative of Vector-valued Function (Jacobian)
 
 Derivative of $$\mathbf{f}$$ in equation \eqref{eq5} linearly maps tangent space $$T_{\mathbf(x)}$$ to tanget space $$T_{\mathbf(y)}$$.
 
