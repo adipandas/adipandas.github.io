@@ -11,12 +11,12 @@ tags:
   - Machine Learning
 ---
 
-Gaussian Processes allow the incorporation of prior knowledge about the data while making predictions. These are a very powerful tool for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commonality of Randomness/Stochasticity. While working with a RL agent, the stochasticity in the MDP is not about a single step in the agent’s life, but over the entire period, the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real-life scenario or task. The observations are made a timespan and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
+Gaussian Processes allow the incorporation of prior knowledge about the data while making predictions. These are very powerful tools for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commonality of Randomness/Stochasticity. While working with an RL agent, the stochasticity in the MDP is not about a single step in the agent’s life, but over the entire period, the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real-life scenario or task. The observations are made in a timespan and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
 
-Let us start thinking about it in terms of mathematics. A random variable holds the outcome of a random experiment. For example, several people standing in front of you right now. Randomly speaking, the number can be anything from the set of natural numbers $$N \equiv \{0, 1, 2, 3, ...\}$$ at the instance of observation. But this random experiment is over once you observe its outcome. Let's say, you observed 3 people standing in from of you.
+Let us start thinking about it in terms of mathematics. A random variable holds the outcome of a random experiment. For example, several people standing in front of you right now. This number can be anything from the set of natural numbers $$N \equiv \{0, 1, 2, 3, ...\}$$ at the instance of observation. But once you observe the true value, this random experiment is over. Let's say, you observed 3 people standing in from of you.
 Let's complicate our experiment. *What is the number of people standing in front of you over time in a day?* Now, the random variable which holds a value from set $$N$$ will take different values at each instance of observation. You will need to observe multiple instances for the entire day. Not just that, the set of observations you make will vary each day. It will not be the same. If you count the people standing in front of you for each instance of today, it will just be a *single realization* of all the possibilities of observations on different days. To understand this stochasticity over time, one needs to understand the **Random Processes**.
 
-The rest of the page formalizes the idea of Random Processes.
+The rest of the page tries to formalizes the idea of Random Processes.
 
 Random Experiment
 ===
@@ -42,7 +42,6 @@ $$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$. Note, how $$\xi$$ is
 
 The random variable in the case of the above example of a random experiment can take only discrete values. Thus, $$X$$ is called a discrete random variable. It is also possible for a random variable to take continuous values. For example, it the random experiment is measuring the height of an individual, the height is not a discrete number, it can take any value in the interval $$[0, \infty)$$.
 
-
 Once, we observe the outcome of our experiment, there is no more randomness involved. For example, we observe a $$H$$ in a coin toss and thus, we have the information of the exact state of the experiment. More formally, this is known as **realization** of the random variable. In this case, $$X(H)=1$$ is one realization of the random variable $$X$$ and $$X(T)=0$$ is another.
 
 Random Processes
@@ -53,16 +52,15 @@ In many stochastic processes, the indexing variable which will represent some in
 ### Definition:
 The random process is an infinite indexed collection of random variables defined over a common probability space.  
 Random process: $$\{X(t): t\in T\}$$  
-This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is drawn from an index set $$T$$. The index set $$T$$ can be discrete where it make take values as $$\{1, 2, 3, ...\}$$. In continuous case it may take value in a range, for example, the time of the experiment may fall in the interval $$[5, 10]$$.  
-Here, the index parameter is typically a variable that accounts for time. But this value can also represent indexing of a spatial domain.
+This can be read as $$X(t)$$ is the random variable at index $$t$$ and $$t$$ is drawn from an index set $$T$$. The index set $$T$$ can be discrete where it make take values as $$\{1, 2, 3, ...\}$$. In continuous case, it may take value in a range, for example, the time of the experiment may fall in the interval $$[5, 10]$$. Here, the index parameter typically represents temporal domain. But this value can also represent indexing of a spatial domain.
 
 A more intuitive way to understand this definition is as follows -  
 Random process: $$X(\xi, t)$$ or $$X_{t}(\xi)$$  or $$X_{t}$$  
-It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. Unless otherwise stated, a random process is represented by one of the above notations. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation in $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
+It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation in $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
 
 **Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant speed from point A to point B on a road.
-  * This IMU is measuring acceleration, its outcome at anytime can be written as $$a_{x}(t) = X(t)$$. Since the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in the x-direction at time $$t$$ maybe some non-zero random value.
+  * This IMU is measuring acceleration, its outcome at anytime can be written as $$a_{x}(t) = X(t)$$. Since the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in the $$x$$-direction at time $$t$$ maybe some non-zero random value.
 2. The price of stock recorded every day.
   * Stock prices vary every day, and the variation if observed seems random. 
 
@@ -73,8 +71,5 @@ It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. U
   * Random process is $$X(\xi, t)$$ where $$\xi \in \{H, T\}$$ and $$t \in \{1, 2, 3, 4\}$$.  
 
 
-As explained before, random process $$X(\xi, t)$$ an be understood as a function of two variables, $$\xi \in \Xi$$ and $$t \in T$$. Here, $$\Xi$$ is the sample space of random experiment underlying this random process and $$T$$ is the index set.  
-
-
-
+As explained before, random process $$X(\xi, t)$$ can be understood as a function of two variables, $$\xi \in \Xi$$ and $$t \in T$$. Here, $$\Xi$$ is the sample space of random experiment underlying this random process and $$T$$ is the index set.  
 
