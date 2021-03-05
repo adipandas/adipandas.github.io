@@ -110,17 +110,22 @@ But, we know at fixed points, equation $\eqref{eq:5}$ holds and thus, $\eqref{eq
 
 $$
 \begin{align}
-\mathbf{\dot {\delta x}} 
-&= \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x_{eq}}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots \\
-&= \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} + \mathbf{H.O.T.} \label{eq:8}
+\mathbf{
+\delta \dot x = f^{\prime}(x_{eq}) \delta x + f^{\prime\prime}(x_{eq}) \frac{\delta x^2}{2!} + \dots}
 \end{align}
+$$
+
+$$
+\mathbf{
+\delta \dot x = f^{\prime}(x_{eq}) \delta x + H.O.T.
+\label{eq:8}}
 $$
 
 We can ignore the higher order terms $\mathbf{H.O.T.}$ for values of $\mathbf{\delta{x}}$ close to $\mathbf{0}$, resulting in equation $\eqref{eq:9}$.
 
 $$
 \begin{align}
-\mathbf{\dot {\delta x}} = \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} \label{eq:9}
+\mathbf{\delta \dot x = f^{\prime}(x_{eq}) \delta x \label{eq:9}}
 \end{align}
 $$
 
