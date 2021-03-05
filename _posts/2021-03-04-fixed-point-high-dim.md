@@ -96,10 +96,10 @@ $$
 
 
 Using Taylor expansion on $\eqref{eq:6}$:
+
 $$
-\begin{align}
-\mathbf{\dot x_{eq}} + \mathbf{\dot {\delta x}} = \mathbf{f}(\mathbf{x_{eq}}) + \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x_{eq}}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots \label{eq:7}
-\end{align}
+\mathbf{\dot x_{eq}} + \mathbf{\dot {\delta x}} = \mathbf{f}(\mathbf{x_{eq}}) + \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x_{eq}}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots 
+\label{eq:7}
 $$
 
 
@@ -146,8 +146,6 @@ $$
 
 
 Using this Jacobian, equation $\eqref{eq:12}$, at our fixed point $\mathbf{x_{eq}}$ for the dynamical system under consideration, we can calculate its [**eigenvalues**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and interpret the results of the fixed point.
-
-
 
 Therefore, we find the eigenvalues for equation $\eqref{eq:13}$,
 
