@@ -66,7 +66,7 @@ The roots of $\eqref{eq:5}$ will give us the value of $\mathbf{x}_{eq}$, i.e., f
 
 We analyzed the system in a one-dimensional case ([here](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)) using a small perturbation $\delta$ at the equilibrium condition of the system. We will follow the similar procedure here as well.
 
-We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x}\_{eq}$ to see if our fixed point is stable or unstable. In case of one-dimensional system, it was easy since  $f^{\prime}(x_{eq})>0$ is unstable fixed point $x_{eq}$  while it is stable when $f^{\prime}(x_{eq})<0$. In case of high-dimensional system, we cannot do this.
+We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x}_{eq}$ to see if our fixed point is stable or unstable. In case of one-dimensional system, it was easy since  $f^{\prime}(x_{eq})>0$ is unstable fixed point $x_{eq}$  while it is stable when $f^{\prime}(x_{eq})<0$. In case of high-dimensional system, we cannot do this.
 
 To analyze the behavior of our $n$-dimensional system at $\mathbf{x}_{eq}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x}_{eq}$. Thus, we end up with the following:
 
@@ -110,7 +110,8 @@ $$
 &=
 \left[
 \frac{\partial\mathbf{f}}{\partial x_{1}}, \frac{\partial\mathbf{f}}{\partial x_{2}}, \dots, \frac{\partial\mathbf{f}}{\partial x_{n}}
-\right] \label{eq:11}\\
+\right]
+\label{eq:11}\\
 \mathbf{f}^{\prime}\mathbf{(x)} &=
 \begin{bmatrix}
 \frac{\partial{f_{1}}}{\partial x_{1}} & \frac{\partial{f_{2}}}{\partial x_{2}} & \dots & \frac{\partial{f_{n}}}{\partial x_{n}}\\
@@ -133,7 +134,7 @@ $$
 Here, $\lambda$ denotes the eigenvalue of the system. The roots of $\eqref{eq:13}$ are the eigenvalues the dynamical system at the fixed point ${\mathbf{x}=\mathbf{x}_{eq}}$.
 
 
-##### Eigenvalue interpretation <a name='eigen_value_interpretation'></a>
+**Eigenvalue interpretation** <a name='eigen_value_interpretation'></a>
 
 For a continuous-time nonlinear dynamical system given by $\eqref{eq:3}$, the eigenvalues $\lambda$ that are found as roots of equation $\eqref{eq:13}$ can be interpreted as:  
 * If any of the eigenvalues have a real part $Re(\lambda)>0$: $\mathbf{x}_{eq}$ is an unstable fixed point.
