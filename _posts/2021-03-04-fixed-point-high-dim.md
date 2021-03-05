@@ -102,18 +102,7 @@ Using Taylor expansion on $\eqref{eq:6}$:
 
 $$
 \begin{align}
-\mathbf{\dot x_{eq} + \dot{\delta x}}
-=
-\mathbf{f(x_{eq})} 
-+ 
-\mathbf{f}^{\prime}(\mathbf{x_{eq}})
-\mathbf{{\delta x}}
-+
-\mathbf{f}^{\prime\prime}(\mathbf{x_{eq}})
-\frac{\mathbf{{\delta x}}^2}{2!}
-+
-\dots 
-\label{eq:7}
+\mathbf{\dot x_{eq} + \delta \dot x = f(x_{eq}) + f^{\prime}(x_{eq}) \delta x + f^{\prime \prime}(x_{eq}) \frac{\delta x^2}{2!} + \dots} \label{eq:7}
 \end{align}
 $$
 
