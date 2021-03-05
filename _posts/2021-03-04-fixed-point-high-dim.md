@@ -90,7 +90,10 @@ To analyze the behavior of our $n$-dimensional system at $\mathbf{x_{eq}}$, we w
 
 $$
 \begin{align}
-\mathbf{\dot x_{eq} } + \mathbf{\dot {\delta x}} &= \mathbf{f} (\mathbf{x_{eq}} + \mathbf{\delta x}) \label{eq:6}
+\mathbf{\dot x_{eq} + \dot {\delta x}}
+&=
+\mathbf{f(x_{eq}+\delta x)}
+\label{eq:6}
 \end{align}
 $$
 
@@ -98,13 +101,23 @@ $$
 Using Taylor expansion on $\eqref{eq:6}$:
 
 $$
-\mathbf{\dot x_{eq}} + \mathbf{\dot {\delta x}} = \mathbf{f}(\mathbf{x_{eq}}) + \mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x_{eq}}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots 
+\begin{align}
+\mathbf{\dot x_{eq} + \dot{\delta x}}
+=
+\mathbf{f(x_{eq})} 
++ 
+\mathbf{f}^{\prime}(\mathbf{x_{eq}})
+\mathbf{{\delta x}}
++
+\mathbf{f}^{\prime\prime}(\mathbf{x_{eq}})
+\frac{\mathbf{{\delta x}}^2}{2!}
++
+\dots 
 \label{eq:7}
+\end{align}
 $$
 
-
 But, we know at fixed points, equation $\eqref{eq:5}$ holds and thus, $\eqref{eq:7}$ reduces to $\eqref{eq:8}$.
-
 
 $$
 \begin{align}
@@ -114,9 +127,7 @@ $$
 \end{align}
 $$
 
-
 We can ignore the higher order terms $\mathbf{H.O.T.}$ for values of $\mathbf{\delta{x}}$ close to $\mathbf{0}$, resulting in equation $\eqref{eq:9}$.
-
 
 $$
 \begin{align}
