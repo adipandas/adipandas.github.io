@@ -66,7 +66,7 @@ The roots of $\eqref{eq:5}$ will give us the value of $\mathbf{x}_{eq}$, i.e., f
 
 We analyzed the system in a one-dimensional case ([here](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)) using a small perturbation $\delta$ at the equilibrium condition of the system. We will follow the similar procedure here as well.
 
-We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x}_{eq}$, to see if our fixed point is stable or unstable. For one-dimensional system, it was easy since $f^{\prime}(x_{eq})>0$ with unstable fixed point and $f^{\prime}(x_{eq})<0$ with a stable fixed point. In case of high-dimensional system, we cannot do this. To analyze the behavior of our $n$-dimensional system at $\mathbf{x}_{eq}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x}_{eq}$. Thus, we end up with the following:
+We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x_{eq}}$, to see if our fixed point is stable or unstable. For one-dimensional system, it was easy since $f^{\prime}(x_{eq})>0$ with unstable fixed point and $f^{\prime}(x_{eq})<0$ with a stable fixed point. In case of high-dimensional system, we cannot do this. To analyze the behavior of our $n$-dimensional system at $\mathbf{x_{eq}}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x_{eq}}$. Thus, we end up with the following:
 
 $$
 \begin{align}
