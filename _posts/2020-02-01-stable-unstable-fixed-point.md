@@ -60,12 +60,14 @@ $$f^{\prime}(x)=cos(kπ)=1$$ if $$k$$ is even. and $$f^{\prime}(x)=cos(kπ)=−1
 Therefore, $$x$$ is **unstable** when $$k$$ is *even*, and **stable** if $$k$$ is *odd*.
 
 
+### High Dimensional Dynamical Systems
 
+This post discussed the definition of a fixed point of a dynamical system. A simple one-dimensional dynamical system is used as an illustration to explain the concept. A more detailed discussion on general nonlinear, continuous-time, multi-dimensional dynamical systems and their fixed points is provided in my [next post](https://adipandas.github.io/posts/2021/03/fixed-point-high-dim/).
 
-## Reference:
+## Reference and Further Readings:
 
-Strogatz, S. H. (2018). Nonlinear dynamics and chaos: with applications to physics, biology, chemistry, and engineering. CRC press. [[book](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf)]
-
+* Strogatz, S. H. (2018). Nonlinear dynamics and chaos: with applications to physics, biology, chemistry, and engineering. CRC press. [[book](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf)]
+* Deshpande, A. M. (2021). Stability of Fixed Points of High Dimensional Dynamical Systems.[[web](https://adipandas.github.io/posts/2021/03/fixed-point-high-dim/)]
 
 
 
