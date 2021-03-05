@@ -66,9 +66,7 @@ The roots of $\eqref{eq:5}$ will give us the value of $\mathbf{x}_{eq}$, i.e., f
 
 We analyzed the system in a one-dimensional case ([here](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)) using a small perturbation $\delta$ at the equilibrium condition of the system. We will follow the similar procedure here as well.
 
-We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x}_{eq}$ to see if our fixed point is stable or unstable. In case of one-dimensional system, it was easy since  $f^{\prime}(x_{eq})>0$ is unstable fixed point $x_{eq}$  while it is stable when $f^{\prime}(x_{eq})<0$. In case of high-dimensional system, we cannot do this.
-
-To analyze the behavior of our $n$-dimensional system at $\mathbf{x}_{eq}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x}_{eq}$. Thus, we end up with the following:
+We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x}_{eq}$, to see if our fixed point is stable or unstable. For one-dimensional system, it was easy since $f^{\prime}(x_{eq})>0$ with unstable fixed point and $f^{\prime}(x_{eq})<0$ with a stable fixed point. In case of high-dimensional system, we cannot do this. To analyze the behavior of our $n$-dimensional system at $\mathbf{x}_{eq}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x}_{eq}$. Thus, we end up with the following:
 
 $$
 \begin{align}
@@ -89,8 +87,12 @@ But, we know at fixed points, equation $\eqref{eq:5}$ holds and thus, $\eqref{eq
 $$
 \begin{align}
 \mathbf{\dot {\delta x}} 
-&= \mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x}_{eq}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots \\
-&= \mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} + \mathbf{H.O.T.} \label{eq:8}
+&=
+\mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} + \mathbf{f}^{\prime\prime}(\mathbf{x}_{eq}) \frac{\mathbf{{\delta x}}^{2}}{2!} + \dots \\
+\mathbf{\dot {\delta x}} 
+&=
+\mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} + \mathbf{H.O.T.} 
+\label{eq:8}
 \end{align}
 $$
 
@@ -98,7 +100,10 @@ We can ignore the higher order terms $\mathbf{H.O.T.}$ for values of $\mathbf{\d
 
 $$
 \begin{align}
-\mathbf{\dot {\delta x}} = \mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} \label{eq:9}
+\mathbf{\dot {\delta x}}
+&=
+\mathbf{f}^{\prime}(\mathbf{x}_{eq}) \mathbf{{\delta x}} 
+\label{eq:9}
 \end{align}
 $$
 
