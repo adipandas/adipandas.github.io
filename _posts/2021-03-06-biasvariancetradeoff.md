@@ -17,4 +17,10 @@ This post is a quick note to myself regarding bias-variance trade-off. The note 
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
 
+#### Note
+If you come across any errors, please let me know. I will be happy to fix it.  
+Happy reading!! :smiley:
+
+## References
+* Andrew Ng, Machine Learning, Coursera. [[coursera](https://www.coursera.org/lecture/machine-learning/diagnosing-bias-vs-variance-yCAup)][[youtube](https://youtu.be/fZ1T7xWkImE)]
 
