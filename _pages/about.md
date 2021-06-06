@@ -36,5 +36,7 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 * Spring 2019: MECH5132/MECH6032 - [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1)
 
 ## Talks and Demos
+* indoor_bot - Autonomous indoor robot. [[webpage](https://adipandas.github.io/indoor_bot/)] 
 * Multi-object trackers in Python. [[webpage](https://adipandas.github.io/multi-object-tracker/)]
 * Autonomous Flying Robot. [[webpage](https://adipandas.github.io/portfolio/flyingrobot/)]
+
