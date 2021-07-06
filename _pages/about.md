@@ -35,8 +35,10 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 ## Teaching
 * Spring 2019: MECH5132/MECH6032 - [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1)
 
-## Talks and Demos
-* `indoor_bot` - Simple autonomous indoor robot. [[webpage](https://adipandas.github.io/indoor_bot/)] 
-* Multi-object trackers in Python. [[webpage](https://adipandas.github.io/multi-object-tracker/)]
-* Autonomous Flying Robot. [[webpage](https://adipandas.github.io/portfolio/flyingrobot/)]
+## Projects
 
+* ``pyneat`` - NeuroEvolution of Augmenting Topologies (NEAT) [[GitHub](https://github.com/adipandas/pycpg)]
+* ``torch_shnet`` - Stacked HourGlass Networks for Human Pose Estimation [[GitHub](https://github.com/adipandas/torch_shnet)] 
+*  ``indoor_bot`` - Simple autonomous indoor robot [[webpage](https://adipandas.github.io/indoor_bot/)]
+* Multi-object trackers in Python [[webpage](https://adipandas.github.io/multi-object-tracker/)]
+* Autonomous Flying Robot [[webpage](https://adipandas.github.io/portfolio/flyingrobot/)]
