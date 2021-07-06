@@ -37,7 +37,7 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 
 ## Projects
 
-* ``pyneat`` - NeuroEvolution of Augmenting Topologies (NEAT) [[GitHub](https://github.com/adipandas/pycpg)]
+* ``pyneat`` - NeuroEvolution of Augmenting Topologies (NEAT) [[GitHub](https://github.com/adipandas/pyneat)]
 * ``torch_shnet`` - Stacked HourGlass Networks for Human Pose Estimation [[GitHub](https://github.com/adipandas/torch_shnet)] 
 *  ``indoor_bot`` - Simple autonomous indoor robot [[webpage](https://adipandas.github.io/indoor_bot/)]
 * Multi-object trackers in Python [[webpage](https://adipandas.github.io/multi-object-tracker/)]
