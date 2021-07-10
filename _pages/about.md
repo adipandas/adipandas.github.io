@@ -22,14 +22,18 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 </div> -->
 
 ## Research
+* Developmental reinforcement learning of control policy of a quadcopter UAV with thrust vectoring rotors.  
+  [[arxiv](https://arxiv.org/abs/2007.07793)][[paper](https://asmedigitalcollection.asme.org/DSCC/proceedings/DSCC2020/84287/V002T36A011/1096589)]
+* Computer Vision Toolkit for Non-invasive Monitoring of Factory Floor Artifacts.  
+  [[paper](https://www.sciencedirect.com/science/article/pii/S2351978920315936)]
 * One-Shot Recognition of Manufacturing Defects in Steel Surfaces.  
-  [[link](https://adipandas.github.io/one-shot-steel-surfaces/)]
+  [[website](https://adipandas.github.io/one-shot-steel-surfaces/)][[code](https://github.com/adipandas/one-shot-steel-surfaces)][[arxiv](https://arxiv.org/abs/2005.05815)][[paper](https://www.sciencedirect.com/science/article/pii/S2351978920315985?via%3Dihub)]
 * Self-Organized Circle Formation around an Unknown Target by a Multi-Robot Swarm using a Local Communication Strategy.  
-  [[link](https://adipandas.github.io/publications/2018-06-27-self-organized/)]
+  [[paper](https://adipandas.github.io/publications/2018-06-27-self-organized/)]
 * Robot swarm for efficient area coverage inspired by ant foraging: The case of adaptive switching between brownian motion and lévy flight.  
-  [[link](https://adipandas.github.io/publications/2017-10-11-antlevy/)]
+  [[paper](https://adipandas.github.io/publications/2017-10-11-antlevy/)]
 * Constraint handling in firefly algorithm.  
-  [[link](https://adipandas.github.io/publications/2013-06-13-firefly/)]
+  [[paper](https://adipandas.github.io/publications/2013-06-13-firefly/)]
 
 
 ## Teaching
