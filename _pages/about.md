@@ -23,7 +23,7 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 
 ## Research
 * Developmental reinforcement learning of control policy of a quadcopter UAV with thrust vectoring rotors.  
-  [[arxiv](https://arxiv.org/abs/2007.07793)][[paper](https://asmedigitalcollection.asme.org/DSCC/proceedings/DSCC2020/84287/V002T36A011/1096589)]
+  [[arxiv](https://arxiv.org/abs/2007.07793)][[paper](https://asmedigitalcollection.asme.org/DSCC/proceedings/DSCC2020/84287/V002T36A011/1096589)][[code](https://github.com/adipandas/gym_multirotor)]
 * Computer Vision Toolkit for Non-invasive Monitoring of Factory Floor Artifacts.  
   [[paper](https://www.sciencedirect.com/science/article/pii/S2351978920315936)]
 * One-Shot Recognition of Manufacturing Defects in Steel Surfaces.  
