@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in [CDS Lab](https://ceas.uc.edu/research/centers-labs/cooperative-distributed-systems-lab.html) at [University of Cincinnati](https://www.uc.edu/) advised by [Dr. Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Dr. Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My research is focused on embodied intelligence in robots.
+I recieved my PhD in Mechanical Engineering from the [University of Cincinnati](https://www.uc.edu/) working with Profs. [Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My PhD research was focused on embodied intelligence in robots.
 
 Curriculum Vitae: [PDF](https://adipandas.github.io/files/aditya-cv-web.pdf)
 
