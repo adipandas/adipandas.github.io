@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google" # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : UA-90024709-2
 
@@ -82,11 +82,11 @@ author:
   name             : "Aditya M. Deshpande"
   avatar           : "profile.png"
   bio              : "Roboticist"
-  location         : "Cincinnati"
+  location         : "Earth"
   employer         :
-  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=MHFiZZsAAAAJ&hl=en"
-  email            : # "adityadeshpande2010 _at_ gmail _dot_ com"
+  email            :
   researchgate     :  "https://www.researchgate.net/profile/Aditya_Deshpande8" # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : 
   bitbucket        :
@@ -104,7 +104,7 @@ author:
   orcid            : "https://orcid.org/0000-0003-0387-4304"
   pinterest        :
   soundcloud       :
-  stackoverflow    : "https://stackoverflow.com/users/4772009/aditya-deshpande"
+  stackoverflow    :
   steam            :
   tumblr           :
   twitter          :
