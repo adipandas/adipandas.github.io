@@ -22,6 +22,10 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 </div> -->
 
 ## Research
+* DeepCPG Policies for Robot Locomotion.  
+  [[arxiv](https://arxiv.org/abs/2302.13191)][[paper](https://doi.org/10.1109/TCDS.2023.3250393)][[Media](https://youtu.be/QHT_sm7OgWY)]
+* Robust deep reinforcement learning for quadcopter control.  
+  [[arxiv](https://arxiv.org/abs/2111.03915)][[paper](https://doi.org/10.1016/j.ifacol.2021.11.158)][[code](https://github.com/adipandas/gym_multirotor)]
 * Developmental reinforcement learning of control policy of a quadcopter UAV with thrust vectoring rotors.  
   [[arxiv](https://arxiv.org/abs/2007.07793)][[paper](https://asmedigitalcollection.asme.org/DSCC/proceedings/DSCC2020/84287/V002T36A011/1096589)][[code](https://github.com/adipandas/gym_multirotor)]
 * Computer Vision Toolkit for Non-invasive Monitoring of Factory Floor Artifacts.  
