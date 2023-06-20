@@ -76,6 +76,8 @@ analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : UA-90024709-2
+  google4:
+    tracking_id          : G-8YHW2F51K4         # google analytics 4 - MEASUREMENT ID
 
 # Site Author
 author:
