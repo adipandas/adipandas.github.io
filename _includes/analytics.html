@@ -1,6 +1,8 @@
 {% if site.analytics.provider and page.analytics != false %}
 
 {% case site.analytics.provider %}
+{% when "ga4" %}
+  {% include /analytics-providers/ga4_tracking.html %}
 {% when "google" %}
   {% include /analytics-providers/google.html %}
 {% when "google-universal" %}
