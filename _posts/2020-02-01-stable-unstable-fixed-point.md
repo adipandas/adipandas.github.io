@@ -2,6 +2,8 @@
 title: 'Stablility of Fixed Point of a Dynamical System'
 date: 2020-02-01
 permalink: /posts/2020/02/stable-unstable-fixed-point/
+header:
+  teaser: thumbnails/stable-unstable-fixed-point.svg
 tags:
   - Dynamical-Systems
   - Ordinary-Differential-Equations
@@ -51,7 +53,7 @@ Therefore, if $$f^{\prime} (x) \gt 0$$, we have an **unstable fixed point** and 
 
 For the differential equation **$$x^{\prime} = sin(x)$$**:
 
-<img src="/images/sin_x_feb2020.png" alt="Stable and Unstable fixed points on $$x=sin(x)$$"/>
+<img src="/images/stable_unstable_fixed_point/sin_x_feb2020.png" alt="Stable and Unstable fixed points on $$x=sin(x)$$"/>
 
 Using linear stability analysis, fixed points occurs when $$f(x)=sin(x)=0$$ or $$x=kπ$$ where $$k$$ is integer.
 
