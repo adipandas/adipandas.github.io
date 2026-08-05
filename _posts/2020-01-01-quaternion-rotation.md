@@ -2,6 +2,8 @@
 title: 'Quaternion Rotation'
 date: 2020-01-01
 permalink: /posts/2020/01/quaternion-rotation/
+header:
+  teaser: thumbnails/quaternion-rotation.svg
 tags:
   - quaternion
   - quaternion-product
@@ -17,7 +19,7 @@ $$r^{A} = (r^{A}_{x}, r^{A}_{y}, r^{A}_{z})$$
 Using **Quaternions** we can rotate from frame $$A$$ to $$B$$ by angle $$\theta$$ around vector $$r^{A}$$.
   
   
-<img src="/images/quaternion_rotation_1.png" alt="Quaternion Rotation"/>
+<img src="/images/quaternion_rotation/quaternion_rotation_1.png" alt="Quaternion Rotation"/>
   
   
 **Quaternion describing this orientation is $$q^{A}_{B}$$**:  
