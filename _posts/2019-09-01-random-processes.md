@@ -3,6 +3,8 @@ title: 'Random Processes'
 date: 2019-09-01
 excerpt: The post explains the basics of **Random Processes**. Click [here](https://adipandas.github.io/posts/2019/09/random-processes/) to read further.
 permalink: /posts/2019/09/random-processes/
+header:
+  teaser: thumbnails/random-processes.svg
 tags:
   - Random Process
   - Stochastic Process
@@ -10,6 +12,10 @@ tags:
   - Probability
   - Machine Learning
 ---
+
+<style>
+.page__content p:not(:has(br)) { text-align: justify; }
+</style>
 
 Gaussian Processes allow the incorporation of prior knowledge about the data while making predictions. These are very powerful tools for regression as well as classification problems. Similarly, Reinforcement Learning (RL) also has Markov Processes and Markov Decision Processes (MDP) as its fundamental components. Both the topics have a commonality of Randomness/Stochasticity. While working with an RL agent, the stochasticity in the MDP is not about a single step in the agent’s life, but over the entire period, the agent performs its actions. For each episode, it may take different actions to perform the same task because of the stochasticity involved in the process. Thus, the trajectories of this agent may differ for each episode. One can also think about any real-life scenario or task. The observations are made in a timespan and they may be influenced by random effects. Here, the stochasticity is not just at a single instant but throughout the time interval.
 
@@ -40,7 +46,13 @@ Thus, we can write it as follows:
 $$X(H) = 1$$ and $$X(T)=0$$  
 $$X(\xi)=x$$ where $$x\in\{0, 1\}$$ and $$\xi\in\{T, H\}$$. Note, how $$\xi$$ is a parameter to the function $$X$$ and the outcome is the value $$x$$.
 
+<p style="text-align:center;"><img src="/images/random_processes/rv_mapping.png" alt="Diagram: a random variable maps outcomes H and T to the numbers 1 and 0" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 1. A random variable is a rule (a deterministic function) that assigns a number to each outcome — here H → 1 and T → 0. The outcomes {H, T} form the sample space; the numbers {0, 1} are the values the rule can produce.</em></p>
+
 The random variable in the case of the above example of a random experiment can take only discrete values. Thus, $$X$$ is called a discrete random variable. It is also possible for a random variable to take continuous values. For example, if the random experiment is measuring the height of an individual, the height is not a discrete number, it can take any value in the interval $$(0, \infty)$$.
+
+<p style="text-align:center;"><img src="/images/random_processes/discrete_vs_continuous.png" alt="Left: coin PMF bar chart; right: height PDF curve with shaded area" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 6. Two kinds of random variable — a discrete one (the coin), described by a probability mass function (PMF), and a continuous one (height), described by a probability density function (PDF) where probabilities are areas under the curve.</em></p>
 
 Once we observe the outcome of our experiment, there is no more randomness involved. For example, we observe a $$H$$ in a coin toss and thus, we have the information of the exact state of the experiment. More formally, this is known as **realization** of the random variable. In this case, $$X(H)=1$$ is one realization of the random variable $$X$$ and $$X(T)=0$$ is another.
 
@@ -58,11 +70,20 @@ A more intuitive way to understand this definition is as follows -
 Random process: $$X(\xi, t)$$ or $$X_{t}(\xi)$$  or $$X_{t}$$  
 It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. The variable $$\xi$$ is omitted and the indexing is represented as the subscript for convenience of presentation in $$X_{t}$$. This page follows one of the conventions mentioned above unless otherwise stated.  
 
+<p style="text-align:center;"><img src="/images/random_processes/ensemble_sample_paths.png" alt="Plot: several realizations of a random process with a vertical slice at t0" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 2. A random process is a whole family of realizations indexed by t. Reading down the dashed line at a fixed index t₀ gives a single random variable X(t₀) (its value varies across realizations); following one curve gives a single realization.</em></p>
+
 **Example of Random Process with temporal indexing:**
 1. Noise in an IMU (inertial measurement unit) sensor which is moving at a constant velocity from point A to point B on a road.
   * This IMU is measuring acceleration, its outcome at anytime can be written as $$a_{x}(t) = X(t)$$. Since the velocity is constant, the experiment should result in perfect zeros. But as the sensor is noisy, the value in the $$x$$-direction at time $$t$$ may be some non-zero random value.
 2. The price of stock recorded every day.
   * Stock prices vary every day, and the variation if observed seems random. 
+
+<p style="text-align:center;"><img src="/images/random_processes/imu_noise.png" alt="Plot: accelerometer x-axis reading fluctuating around zero over time" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 3. One realization of an accelerometer's reading aₓ(t) while moving at constant velocity: the true value is zero, but sensor noise makes each measurement a non-zero random value.</em></p>
+
+<p style="text-align:center;"><img src="/images/random_processes/stock_price.png" alt="Plot: a daily stock price path over 250 days" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 4. A daily stock price is one realization of a random process — each day's price is a random variable, and the whole path would differ on another run of the world.</em></p>
 
 **Example of Random Process with spatial indexing:**
 1. Flipping of 4 unbiased coins at 4 different locations.
@@ -70,6 +91,9 @@ It is a function of the outcome of a random experiment $$\xi$$ at index $$t$$. T
   * All the coins are unbiased and the sample space for each coin toss is $$\{H, T\}$$. Each outcome is equally probable.
   * Random process is $$X(\xi, t)$$ where $$\xi \in \{H, T\}$$ and $$t \in \{1, 2, 3, 4\}$$.  
 
+
+<p style="text-align:center;"><img src="/images/random_processes/spatial_coins.png" alt="Diagram: four coins at four locations showing H, T, H, H" style="width:100%; max-width:600px;"/></p>
+<p style="text-align:center; font-size:0.9em; color:#555;"><em>Figure 5. Spatial indexing: an independent coin flip at each of four locations, indexed by T = {1, 2, 3, 4}.</em></p>
 
 As explained before, random process $$X(\xi, t)$$ can be understood as a function of two variables, $$\xi \in \Xi$$ and $$t \in T$$. Here, $$\Xi$$ is the sample space of random experiment underlying this random process and $$T$$ is the index set.  
 
