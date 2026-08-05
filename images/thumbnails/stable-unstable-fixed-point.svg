@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ball resting at a stable equilibrium">
+  <rect width="120" height="120" fill="#eef2ff"/>
+  <path d="M20 34 Q60 104 100 34" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 40 L60 30 L70 40" fill="none" stroke="#94a3c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="60" cy="66" r="9" fill="#1e3a8a"/>
+</svg>

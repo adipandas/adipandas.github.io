@@ -2,6 +2,8 @@
 title: 'Bias, Variance and Trade-off'
 date: 2021-03-06
 permalink: /posts/2021/03/biasvariancetradeoff/
+header:
+  teaser: thumbnails/biasvariancetradeoff.svg
 tags:
   - Data Science
   - Bias

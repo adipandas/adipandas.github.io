@@ -2,6 +2,8 @@
 title: 'Rotation using Euler Angles'
 date: 2020-02-10
 permalink: /posts/2020/02/euler-rotation/
+header:
+  teaser: thumbnails/euler-rotation.svg
 tags:
   - Rotation
   - Euler Angles

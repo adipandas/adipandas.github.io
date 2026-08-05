@@ -2,6 +2,8 @@
 title: 'Stability of Fixed Points of High Dimensional Dynamical Systems'
 date: 2021-03-04
 permalink: /posts/2021/03/fixed-point-high-dim/
+header:
+  teaser: thumbnails/fixed-point-high-dim.svg
 tags:
   - Dynamical-Systems
   - Ordinary-Differential-Equations

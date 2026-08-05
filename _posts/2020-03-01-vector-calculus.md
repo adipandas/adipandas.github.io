@@ -2,6 +2,8 @@
 title: 'Notes on Vector Calculus'
 date: 2020-03-01
 permalink: /posts/2020/03/vector-calculus/
+header:
+  teaser: thumbnails/vector-calculus.svg
 tags:
   - Vector Calculus
   - Notes
