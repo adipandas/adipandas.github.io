@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Rotation of a sphere">
+  <rect width="120" height="120" fill="#eef2ff"/>
+  <circle cx="60" cy="64" r="28" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <ellipse cx="60" cy="64" rx="28" ry="10" fill="none" stroke="#334e68" stroke-width="2.5"/>
+  <ellipse cx="60" cy="64" rx="10" ry="28" fill="none" stroke="#334e68" stroke-width="2.5" opacity="0.55"/>
+  <path d="M34 30 A40 40 0 0 1 90 30" fill="none" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="90,30 82,26 86,37" fill="#1e3a8a"/>
+</svg>

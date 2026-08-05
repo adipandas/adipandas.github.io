@@ -401,3 +401,37 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/* Compact related-post cards */
+.page__related .grid__item {
+  .archive__item-teaser {
+    max-height: none;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .archive__item-title {
+    margin-top: 0.6em;
+    font-size: 0.85em;
+    line-height: 1.3;
+  }
+
+  .archive__item-excerpt {
+    display: none;
+  }
+
+  .page__meta,
+  .page__date {
+    margin: 0.2em 0 0;
+    font-size: $type-size-7;
+    text-align: left;
+  }
+}
