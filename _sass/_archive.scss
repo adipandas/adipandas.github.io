@@ -42,6 +42,16 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  font-weight: 700;
+  line-height: 1.3;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   a + a {
     opacity: 0.5;
@@ -58,12 +68,13 @@
 }
 
 .archive__item-excerpt {
-  text-align: justify;
-  margin-top: 0;
-  font-size: $type-size-6;
+  text-align: left;
+  margin-top: 0.25em;
+  font-size: $type-size-5;
+  color: $muted-text-color;
 
   & + p {
-    text-align: justify;
+    text-align: left;
     text-indent: 0;
   }
 }
@@ -92,6 +103,10 @@
    ========================================================================== */
 
 .list__item {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid $border-color;
+
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
   }

@@ -27,6 +27,11 @@
 
     a {
       text-decoration: none;
+      color: $masthead-link-color;
+
+      &:hover {
+        color: $masthead-link-color-hover;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Aditya M. Deshpande"
 title_separator          : "-"
 name                     : &name "Aditya M. Deshpande"
-description              : &description "Robotics Software Developer | Pythonista-Pythoneer |"
+description              : &description "Robotics Software Developer | Pythonista-Pythoneer"
 url                      : https://adipandas.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "adipandas/adipandas.github.io"
@@ -19,7 +19,6 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -30,22 +29,6 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 
@@ -74,8 +57,6 @@ social:
 # Analytics
 analytics:
   provider               : "ga4" # false (default), "google", "google-universal", "custom", "ga4"
-  google:
-    tracking_id          : UA-90024709-2
   google4:
     tracking_id          : G-8YHW2F51K4         # google analytics 4 - MEASUREMENT ID
 
@@ -127,6 +108,7 @@ exclude:
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
+  - .jekyll-cache
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/plugins
@@ -136,6 +118,7 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -145,6 +128,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - vendor
 keep_files:
   - .git
   - .svn
@@ -174,16 +158,7 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
@@ -208,24 +183,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: false
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: false
   # _portfolio
   - scope:
       path: ""
@@ -234,15 +191,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      comments: false
 
 # Sass/SCSS
 sass:
@@ -266,11 +215,6 @@ plugins:
   - jekyll-redirect-from
   - jemoji
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
 # mimic GitHub Pages with --safe
 whitelist:
 
