@@ -1,14 +1,14 @@
 ---
 permalink: /
 title: "Aditya M. Deshpande"
-excerpt: "Ph.D. Student in Robotics"
+excerpt: "Ph.D. in Robotics"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I recieved my PhD in Mechanical Engineering from the [University of Cincinnati](https://www.uc.edu/) working with Profs. [Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My PhD research was focused on embodied intelligence in robots.
+I received my PhD in Mechanical Engineering from the [University of Cincinnati](https://www.uc.edu/) working with Profs. [Manish Kumar](https://researchdirectory.uc.edu/p/kumarmu) and [Ali A. Minai](https://eecs.ceas.uc.edu/~aminai/). My PhD research was focused on embodied intelligence in robots.
 
 Curriculum Vitae: [PDF](https://adipandas.github.io/files/aditya-cv-web.pdf)
 
@@ -33,15 +33,15 @@ Embodied Intelligence, Evolutionary Approaches in robotics, Developmental Roboti
 * One-Shot Recognition of Manufacturing Defects in Steel Surfaces.  
   [[website](https://adipandas.github.io/one-shot-steel-surfaces/)][[code](https://github.com/adipandas/one-shot-steel-surfaces)][[arxiv](https://arxiv.org/abs/2005.05815)][[paper](https://www.sciencedirect.com/science/article/pii/S2351978920315985?via%3Dihub)]
 * Self-Organized Circle Formation around an Unknown Target by a Multi-Robot Swarm using a Local Communication Strategy.  
-  [[paper](https://adipandas.github.io/publications/2018-06-27-self-organized/)]
+  [[paper](https://ieeexplore.ieee.org/abstract/document/8431109)]
 * Robot swarm for efficient area coverage inspired by ant foraging: The case of adaptive switching between brownian motion and lévy flight.  
-  [[paper](https://adipandas.github.io/publications/2017-10-11-antlevy/)]
+  [[paper](https://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=2663543)]
 * Constraint handling in firefly algorithm.  
-  [[paper](https://adipandas.github.io/publications/2013-06-13-firefly/)]
+  [[paper](https://ieeexplore.ieee.org/document/6617447)]
 
 
 ## Teaching
-* Spring 2019: MECH5132/MECH6032 - [Robot Control Design](https://adipandas.github.io/teaching/2019-spring-teaching-1)
+* Spring 2019: MECH5132/MECH6032 - Robot Control Design, University of Cincinnati
 
 ## Projects
 
