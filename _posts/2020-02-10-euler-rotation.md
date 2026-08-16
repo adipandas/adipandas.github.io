@@ -33,7 +33,7 @@ The most important thing you must remember before reading further about transfor
 
 
 ## Sequence of rotation of three Euler angles:
-Let's say one has to go from **frame 1** to **frame 2** using Euler angle $$\psi$$, $$\theta$$, $$\phi$$. Lets start with the current frame, i.e., **frame 1**.
+Let's say one has to go from **frame 1** to **frame 2** using the Euler angles $$\psi$$, $$\theta$$, $$\phi$$. Let's start with the current frame, i.e., **frame 1**.
 <ol type="i">
   <li>Original Frame: $Ox_{1}y_{1}z_{1}$</li>
   <li>Target Frame: $Ox_{2}y_{2}z_{2}$</li>
@@ -43,7 +43,7 @@ Let's say one has to go from **frame 1** to **frame 2** using Euler angle $$\psi
       <li>$Ox_{1}$ is rotated to $Ox_{1}^{\prime}$</li>
       <li>$Oy_{1}$ is rotated to $Oy_{1}^{\prime}$</li>
       <li>$Oz_{1}$ is rotated to $Oz_{1}^{\prime}$. The axes $Oz_{1}$ and $Oz_{1}^{\prime}$ overlap with each other.</li>
-      <li>One should note, $Oy_{1}^{\prime}$ now falls in the plane $Oy_{2}z_{2}$ and $Ox_{1}^{\prime}$ now falls in the plane $Ox_{2}z_{2}$. These two planes are in the <b>target</b> frame of reference.</li>
+      <li>One should note, $Oy_{1}^{\prime}$ now falls in the plane $Oy_{2}z_{2}$, which is in the <b>target</b> frame of reference. The axis $Ox_{1}^{\prime}$, however, does <b>not</b> fall in the plane $Ox_{2}z_{2}$ in general. Its direction expressed in the target frame is $(\cos\theta, \; \sin\phi\sin\theta, \; \cos\phi\sin\theta)$, so it lies in the plane $Ox_{2}z_{2}$ only when $\theta = 0$ or $\phi = 0$. In general $Ox_{1}^{\prime}$ falls in the plane $Ox_{1}^{\prime\prime}z_{1}^{\prime\prime}$, i.e., the plane spanned by $Ox_{2}$ and $Oz_{1}^{\prime\prime}$ (the frame $Ox_{1}^{\prime\prime}y_{1}^{\prime\prime}z_{1}^{\prime\prime}$ is introduced in the next step).</li>
     </ul>
   </li>
   <li>Angle $\theta$ is rotation about $Oy_{1}^{\prime}$.
@@ -71,8 +71,8 @@ Let's say one has to go from **frame 1** to **frame 2** using Euler angle $$\psi
 <p style="text-align:center;"><img src="/images/euler_rotation/euler_rotation_diagram.png" alt="euler-rotation-sequence"/></p>
 
 
-## Constrains on three Euler angles:
-Euler angle rotation using rotation matrices faces the issue of singularity or gimbal lock. These angle rotations are constraint to avoid ambiguities. The limits are as follows:
+## Constraints on three Euler angles:
+Euler angle rotation using rotation matrices suffers from a singularity known as gimbal lock, which occurs at $$\theta = \pm\frac{\pi}{2}$$. The three angles are restricted to the ranges below so that, away from this singularity, every orientation corresponds to exactly one set of Euler angles. The restriction does not remove the singularity itself: at $$\theta = \pm\frac{\pi}{2}$$ we have $$\cos\theta = 0$$, and only the combination $$\phi - \psi$$ (when $$\theta = +\frac{\pi}{2}$$) or $$\phi + \psi$$ (when $$\theta = -\frac{\pi}{2}$$) can be recovered from the rotation matrix, so $$\psi$$ and $$\phi$$ remain individually ambiguous there. The limits are as follows:
 
 $$-\pi \le \psi \le \pi$$
 
@@ -92,11 +92,11 @@ Now, with the help of Euler angles, transform the point given in the **start** f
 
 **Note: Order of transformation is: (1) Angle $$\psi$$ along $$Oz_{1}$$; (2) Angle $$\theta$$ along $$Oy_{1}^{\prime}$$; (3) Angle $$\phi$$ along $$Ox_{1}^{\prime\prime}$$.**
 
-* Rotation by $$\psi$$ along $$Oz_{1}$$: This transforms point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$.
+* Rotation by $$\psi$$ along $$Oz_{1}$$: This transforms point **$$p^{1}$$** in frame $$Ox_{1}y_{1}z_{1}$$ to point **$$p^{1^{\prime}}$$** in frame $$Ox_{1}^{\prime}y_{1}^{\prime}z_{1}^{\prime}$$.
 
 <p style="text-align:center;"><img src="/images/euler_rotation/Ryaw12.gif" alt="Ryaw"/></p>
 
-$$p^{1^{\prime}} = R_{1_{z=\psi}}^{1\prime} p^{1}$$
+$$p^{1^{\prime}} = R_{1_{z=\psi}}^{1^{\prime}} p^{1}$$
 
 * The above transformation is followed by $$\theta$$ around $$Oy_{1}^{\prime}$$ and then by $$\phi$$ around $$Ox_{1}^{\prime\prime}$$.
 
@@ -125,5 +125,5 @@ You can also find the corresponding notebook on github:
 [![Github](https://img.shields.io/badge/GitHub-Euler-blue)](https://github.com/adipandas/adipandas.github.io/blob/master/files/_posts/code/euler-rotation/euler_rotation.ipynb)
 
 ## References
-* Pamadi, B. N. (2004). Performance, stability, dynamics, and control of airplanes. American Institute of aeronautics and astronautics.
+* Pamadi, B. N. (2004). *Performance, Stability, Dynamics, and Control of Airplanes* (2nd ed.). American Institute of Aeronautics and Astronautics.
 
