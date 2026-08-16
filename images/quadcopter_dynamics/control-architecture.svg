@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="320" viewBox="0 0 980 320" role="img" aria-label="Cascaded quadcopter control architecture: position PID, desired attitude, attitude PD, mixer, motors">
+  <defs>
+    <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="320" fill="#ffffff"/>
+
+  <!-- loop bands -->
+  <rect x="150" y="54" width="316" height="162" rx="12" fill="#eef2ff"/>
+  <rect x="478" y="54" width="312" height="162" rx="12" fill="#fff7ed"/>
+  <g font-family="Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">
+    <text x="308" y="76" fill="#4c63b6">outer loop &#8212; slow</text>
+    <text x="634" y="76" fill="#c2570c">inner loop &#8212; fast</text>
+  </g>
+
+  <g font-family="Georgia, serif" text-anchor="middle">
+    <!-- blocks -->
+    <rect x="16" y="112" width="118" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="75" y="138" font-size="15" fill="#1e3a8a" font-weight="bold">Setpoint</text>
+    <text x="75" y="160" font-size="14" fill="#334e68">x<tspan font-size="10" dy="3">d</tspan><tspan dy="-3">, </tspan>&#968;<tspan font-size="10" dy="3">d</tspan></text>
+
+    <rect x="162" y="112" width="120" height="64" rx="10" fill="#ffffff" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="222" y="138" font-size="15" fill="#1e3a8a" font-weight="bold">Position</text>
+    <text x="222" y="160" font-size="15" fill="#1e3a8a" font-weight="bold">PID</text>
+
+    <rect x="330" y="112" width="124" height="64" rx="10" fill="#ffffff" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="392" y="138" font-size="14" fill="#1e3a8a" font-weight="bold">Desired attitude</text>
+    <text x="392" y="160" font-size="13" fill="#334e68">+ total thrust</text>
+
+    <rect x="490" y="112" width="118" height="64" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+    <text x="549" y="138" font-size="15" fill="#9a3412" font-weight="bold">Attitude</text>
+    <text x="549" y="160" font-size="15" fill="#9a3412" font-weight="bold">PD</text>
+
+    <rect x="656" y="112" width="118" height="64" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+    <text x="715" y="138" font-size="15" fill="#9a3412" font-weight="bold">Mixer</text>
+    <text x="715" y="160" font-size="13" fill="#9a3412">(allocation)</text>
+
+    <rect x="810" y="112" width="154" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="887" y="138" font-size="15" fill="#1e3a8a" font-weight="bold">Motors &amp;</text>
+    <text x="887" y="160" font-size="15" fill="#1e3a8a" font-weight="bold">airframe</text>
+  </g>
+
+  <!-- forward arrows -->
+  <g stroke="#475569" stroke-width="2.2" fill="none" marker-end="url(#fa)">
+    <line x1="134" y1="144" x2="158" y2="144"/>
+    <line x1="282" y1="144" x2="326" y2="144"/>
+    <line x1="454" y1="144" x2="486" y2="144"/>
+    <line x1="608" y1="144" x2="652" y2="144"/>
+    <line x1="774" y1="144" x2="806" y2="144"/>
+  </g>
+
+  <!-- signal labels, placed below the blocks so nothing overlaps -->
+  <g font-family="Georgia, serif" font-size="14" fill="#475569" text-anchor="middle">
+    <text x="304" y="200">&#7821;<tspan font-size="10" dy="3">c</tspan></text>
+    <text x="470" y="200">&#966;<tspan font-size="10" dy="3">d</tspan><tspan dy="-3">, </tspan>&#952;<tspan font-size="10" dy="3">d</tspan><tspan dy="-3">, </tspan>&#8721;F<tspan font-size="10" dy="3">i</tspan></text>
+    <text x="630" y="200">&#7767;<tspan font-size="10" dy="3">c</tspan><tspan dy="-3">, q&#775;</tspan><tspan font-size="10" dy="3">c</tspan><tspan dy="-3">, </tspan>&#7769;<tspan font-size="10" dy="3">c</tspan></text>
+    <text x="790" y="200">F<tspan font-size="10" dy="3">1</tspan><tspan dy="-3"> &#8230; </tspan>F<tspan font-size="10" dy="3">4</tspan></text>
+  </g>
+
+  <!-- feedback -->
+  <g stroke="#475569" stroke-width="2.2" fill="none">
+    <path d="M 887 176 L 887 258 L 222 258 L 222 180" marker-end="url(#fa)"/>
+    <path d="M 549 258 L 549 180" marker-end="url(#fa)"/>
+  </g>
+  <circle cx="549" cy="258" r="3.6" fill="#475569"/>
+  <text x="560" y="286" font-family="Georgia, serif" font-size="14" fill="#475569" text-anchor="middle">state feedback:&#160; x, x&#775;, &#966;, &#952;, &#968;, p, q, r</text>
+</svg>
