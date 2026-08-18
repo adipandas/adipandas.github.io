@@ -13,19 +13,17 @@ tags:
   - Rotation
 ---
 
-The controller worked. That was the frustrating part.
+These are my notes on quadcopter dynamics and control, written in grad school while I was trying to understand a controller I could already fly but could not explain.
 
-I could fly the quadrotor and tune its gains, but *why* the control law had the shape it did stayed a mystery. The papers I turned to state the equations of motion and then jump, often in a single line, to a finished mixer matrix. The steps in between — where the small-angle approximation enters, why yaw is treated differently from roll and pitch, how four rotor thrusts fall out of four scalar demands — are left as an exercise, or omitted altogether.
+That was the annoying part. I could tune the gains and get the thing in the air, but the shape of the control law stayed a mystery. The papers I read state the equations of motion and then produce a finished mixer matrix a line or two later. The steps in between — where the small-angle approximation sneaks in, why yaw gets treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands — are left to the reader. So I worked through them and wrote out every line I had to do by hand. The notes then sat in a folder for years, which is the usual fate of such things.
 
-So I sat down and derived the whole thing from scratch, writing out every line I had to work out for myself. This post is that derivation. I wrote it during grad school, then filed it away and never published it — so here it is, finally seeing the light of day.
+One fact explains most of what follows: a quadcopter has six degrees of freedom and four actuators. It is underactuated, so translation has to be paid for with attitude. You cannot slide sideways without tipping over first.
 
-A quadcopter has six degrees of freedom but only four independent actuators. That single sentence explains almost everything about how these vehicles are modelled and flown: the system is **underactuated**, so translation has to be bought with attitude. You cannot slide sideways without first tipping over.
-
-This post derives the full rigid-body model of a quadrotor, then builds a cascaded position-and-attitude controller on top of it, and finishes with the **control allocation** (the "mixer") for both the `+` and the `X` rotor layouts.
+Below is the rigid-body model, then a cascaded position-and-attitude controller built on top of it, then the control allocation (the "mixer") for the `+` and `X` rotor layouts.
 
 ## Conventions used here
 
-Every sign in this post follows from the four choices below. Different textbooks pick differently, and mixing conventions is the single most common source of sign errors in quadrotor code — so it is worth fixing these in mind before reading on.
+Every sign below depends on the four choices here. Textbooks differ on all of them, and I have lost more time to mixed conventions than to any of the actual mathematics, so this bit is worth reading first.
 
 <ol type="i">
   <li>The world frame is <b>z-up</b> (an ENU-style frame). Gravity therefore acts along $-z_{world}$.</li>
@@ -34,7 +32,7 @@ Every sign in this post follows from the four choices below. Different textbooks
   <li>Angular velocity $\boldsymbol\omega = (p, q, r)^{T}$ is expressed in the <b>body</b> frame; the inertia tensor is written in the body frame too, which is what makes it constant.</li>
 </ol>
 
-If you use a NED frame (z-down, thrust along $$-z_{b}$$), several signs below flip. The physics does not change; the bookkeeping does.
+If you work in a NED frame (z-down, thrust along $$-z_{b}$$), a number of the signs below flip.
 
 ## Notation
 
@@ -50,9 +48,9 @@ If you use a NED frame (z-down, thrust along $$-z_{b}$$), several signs below fl
 | $$i_{xx}, i_{yy}, i_{zz}$$ | principal mass moments of inertia about the body $$x, y, z$$ axes |
 | $$\phi, \theta, \psi$$ | roll, pitch, yaw |
 | $$p, q, r$$ | body angular rates about $$x_b, y_b, z_b$$ |
-| $$\mathbf{x} = (x,y,z)^T$$ | position of the centre of mass in the world frame |
+| $$\mathbf{x} = (x,y,z)^T$$ | position of the center of mass in the world frame |
 
-The state is 12-dimensional: $$(\mathbf{x}, \dot{\mathbf{x}}, \phi, \theta, \psi, p, q, r)$$. The input is 4-dimensional: $$(\omega_1, \omega_2, \omega_3, \omega_4)$$. The gap between 6 and 4 is the underactuation.
+The state is 12-dimensional, $$(\mathbf{x}, \dot{\mathbf{x}}, \phi, \theta, \psi, p, q, r)$$, and the input is 4-dimensional, $$(\omega_1, \omega_2, \omega_3, \omega_4)$$.
 
 # 1. Rotations
 
@@ -88,7 +86,7 @@ Only the **third column** of $$R^{w}_{b}$$ ever appears in the translational dyn
 
 $$\hat{z}_b = (\, s_\phi s_\psi + s_\theta c_\phi c_\psi, \;\; -s_\phi c_\psi + s_\psi s_\theta c_\phi, \;\; c_\phi c_\theta \,)^{T} \tag{3}$$
 
-is the body $$z$$-axis expressed in world coordinates. **Steering a quadrotor is nothing more than pointing this unit vector.**
+is the body $$z$$-axis written in world coordinates. Steering a quadcopter amounts to pointing this one unit vector where you want to go.
 
 ## Euler rates and body rates are not the same thing
 
@@ -118,7 +116,7 @@ $$
 \begin{pmatrix} p \\ q \\ r \end{pmatrix} \tag{5}
 $$
 
-Note the $$1/\cos\theta$$ terms: equation $$(5)$$ blows up at $$\theta = \pm\pi/2$$. This is **gimbal lock**, and it is a defect of the Euler-angle *parameterisation*, not of the vehicle. It is the main reason aggressive-flight controllers use quaternions or rotation matrices instead. Near hover, $$W \approx I$$, so $$p \approx \dot\phi$$, $$q \approx \dot\theta$$, $$r \approx \dot\psi$$ — an approximation the controller below leans on heavily.
+Note the $$1/\cos\theta$$ terms: equation $$(5)$$ blows up at $$\theta = \pm\pi/2$$. This is gimbal lock. The vehicle is perfectly happy there; it is the Euler-angle parameterization that fails, which is why controllers meant for aggressive flight use quaternions or rotation matrices instead. Near hover $$W \approx I$$, so $$p \approx \dot\phi$$, $$q \approx \dot\theta$$, $$r \approx \dot\psi$$ — an approximation the controller below leans on quite hard.
 
 # 2. What a rotor produces
 
@@ -126,7 +124,7 @@ Each rotor, spinning at speed $$\omega_i$$, produces a thrust along $$+z_b$$ and
 
 $$F_{i} = k_f \omega_{i}^2, \qquad M_{i} = k_m \omega_{i}^2, \qquad \Longrightarrow \qquad M_{i} = \frac{k_m}{k_{f}} F_{i} \tag{6}$$
 
-The quadratic law comes from momentum theory; $$k_f$$ and $$k_m$$ are identified experimentally on a thrust stand. Because $$F_i = k_f\omega_i^2$$, thrust is always **non-negative** — a fixed-pitch rotor cannot push down. Remember this when you get to the mixer.
+The quadratic law comes from momentum theory; $$k_f$$ and $$k_m$$ are identified experimentally on a thrust stand. Since $$F_i = k_f\omega_i^2$$, thrust can never be negative — a fixed-pitch rotor cannot push down. This comes back to bite in §6.3.
 
 ### The yaw torque and its sign
 
@@ -134,7 +132,7 @@ To keep rotor $$i$$ spinning against aerodynamic drag, the motor applies a torqu
 
 > **The reaction torque on the airframe is opposite in sense to the rotor's own spin.** A rotor turning clockwise when viewed from above (i.e. in the $$-z_b$$ sense) yaws the airframe in the $$+z_b$$ sense.
 
-This is why the spin-direction column and the yaw-torque column in the table below have opposite signs. Conflating the two is a classic bug.
+This is why the spin-direction column and the yaw-torque column in the table below carry opposite signs. I have confused the two more than once.
 
 | Rotor | Spin (viewed from above) | Spin sense about $$z_b$$ | Contribution to yaw torque $$\tau_z$$ |
 |:---:|:---|:---:|:---:|
@@ -153,11 +151,11 @@ Two rotors spin each way so that, in level hover with equal thrusts, the four re
 
 <p style="text-align:center;"><img src="/images/quadcopter_dynamics/rotor-layouts.svg" alt="Plus and X quadcopter rotor layouts"/></p>
 
-Rotor $$i$$ sits at body-frame position $$(x_i, y_i, 0)$$ and pushes with $$\mathbf{F}_i = (0,0,F_i)^T$$. The moment it exerts about the centre of mass is
+Rotor $$i$$ sits at body-frame position $$(x_i, y_i, 0)$$ and pushes with $$\mathbf{F}_i = (0,0,F_i)^T$$. The moment it exerts about the center of mass is
 
 $$\mathbf{r}_i \times \mathbf{F}_i = (\, y_i F_i, \;\; -x_i F_i, \;\; 0 \,)^{T} \tag{8}$$
 
-so roll torque $$\tau_x = \sum_i y_i F_i$$ and pitch torque $$\tau_y = -\sum_i x_i F_i$$. Everything else follows mechanically.
+so roll torque $$\tau_x = \sum_i y_i F_i$$ and pitch torque $$\tau_y = -\sum_i x_i F_i$$. The rest is bookkeeping.
 
 **`+` layout** — rotors at $$(l,0), (0,l), (-l,0), (0,-l)$$, so here $$l$$ *is* the arm length:
 
@@ -167,15 +165,15 @@ $$\tau_x = l\,(F_2 - F_4), \qquad \tau_y = l\,(-F_1 + F_3) \tag{9}$$
 
 $$\tau_x = l\,(F_1 - F_2 - F_3 + F_4), \qquad \tau_y = l\,(-F_1 - F_2 + F_3 + F_4) \tag{10}$$
 
-> ### A trap worth flagging
+> ### One to watch out for
 >
-> In the `X` layout, $$l$$ is the **half-span**, *not* the arm length. The centre-to-rotor distance is $$L = l\sqrt{2}$$. If you take a `+` frame, rotate the electronics 45°, and reuse the same $$l$$, your roll and pitch gains will be off by $$\sqrt 2$$.
+> In the `X` layout $$l$$ is the half-span, not the arm length: the center-to-rotor distance is $$L = l\sqrt{2}$$. Take a `+` frame, rotate the electronics by 45°, reuse the same $$l$$, and your roll and pitch gains come out wrong by a factor of $$\sqrt 2$$.
 >
-> Comparing the two layouts *at equal centre-to-rotor distance $$L$$*, and perturbing each rotor by $$\Delta F$$: the `+` layout gets $$\tau_x = 2L\,\Delta F$$ from two rotors, while the `X` layout gets $$\tau_x = \tfrac{L}{\sqrt 2}\cdot 4\Delta F = 2\sqrt{2}\,L\,\Delta F$$ from all four. The `X` layout therefore has $$\sqrt{2} \approx 1.41\times$$ more roll and pitch authority — which is exactly why almost every modern airframe flies in `X`.
+> Compare the two layouts at equal center-to-rotor distance $$L$$. Perturb each rotor by $$\Delta F$$: the `+` layout gets $$\tau_x = 2L\,\Delta F$$ out of two rotors, while `X` gets $$\tau_x = \tfrac{L}{\sqrt 2}\cdot 4\Delta F = 2\sqrt{2}\,L\,\Delta F$$ out of all four. So `X` has about $$1.41\times$$ the roll and pitch authority, which is a good part of why most airframes now fly in that configuration.
 
 # 4. Equations of motion
 
-Two laws, no more. **Newton's second law** for the centre of mass, written in the world frame:
+Only two laws are needed. Newton's second law for the center of mass, written in the world frame:
 
 $$
 m \begin{pmatrix} \ddot x \\ \ddot y \\ \ddot z \end{pmatrix}
@@ -184,7 +182,7 @@ m \begin{pmatrix} \ddot x \\ \ddot y \\ \ddot z \end{pmatrix}
 + R^{w}_{b} \begin{pmatrix} 0 \\ 0 \\ \sum_{i=1}^{4} F_{i} \end{pmatrix} \tag{11}
 $$
 
-and **Euler's rotational equation** for a rigid body, written in the body frame (where $$I$$ is constant):
+and Euler's rotational equation for a rigid body, written in the body frame, where $$I$$ is constant:
 
 $$
 I \begin{pmatrix} \dot p \\ \dot q \\ \dot r \end{pmatrix}
@@ -193,9 +191,7 @@ I \begin{pmatrix} \dot p \\ \dot q \\ \dot r \end{pmatrix}
 I = \left[\begin{matrix} i_{xx} & 0 & 0 \\ 0 & i_{yy} & 0 \\ 0 & 0 & i_{zz} \end{matrix}\right] \tag{12}
 $$
 
-The $$-\boldsymbol\omega \times (I\boldsymbol\omega)$$ term is not a torque; it is the price of writing Newton's law in a rotating frame. It is what makes the rotational dynamics nonlinear and coupled.
-
-*(A common slip is to attribute the equations of motion to Newton's third law. The third law shows up only in the rotor reaction torque of §2 — the equations themselves are the second law plus Euler's equation.)*
+The $$-\boldsymbol\omega \times (I\boldsymbol\omega)$$ term is what you pay for writing the equation in a rotating frame rather than an inertial one. Nothing external produces it, and it is where the nonlinearity and the coupling between axes come from.
 
 ## Expanded, in scalars
 
@@ -225,7 +221,7 @@ Together with the kinematics $$(5)$$, equations $$(13)$$–$$(18)$$ are the comp
 
 <p style="text-align:center;"><img src="/images/quadcopter_dynamics/control-architecture.svg" alt="Cascaded quadcopter control architecture"/></p>
 
-Because the vehicle is underactuated, control is organised as a **cascade** that exploits a natural timescale separation — attitude responds far faster than position:
+Because the vehicle is underactuated, the controller is arranged as a cascade. This works because attitude settles far faster than position, so the two loops barely interfere with each other:
 
 1. **Outer loop (slow).** A position PID converts position error into a *commanded acceleration* $$\ddot{\mathbf{x}}_c$$.
 2. **Attitude/thrust extraction.** $$\ddot{\mathbf{x}}_c$$ is converted into a *desired tilt* $$(\phi_d, \theta_d)$$ and a *total thrust* $$\sum F_i$$. Yaw $$\psi_d$$ is free and commanded independently.
@@ -242,7 +238,7 @@ and solving for the commanded acceleration gives
 
 $$\ddot{\mathbf{x}}_{c} = \ddot{\mathbf{x}}_{d} + K_d \left(\dot{\mathbf{x}}_{d} - \dot{\mathbf{x}}\right) + K_p \left(\mathbf{x}_d - \mathbf{x}\right) + K_i \int \left(\mathbf{x}_d - \mathbf{x}\right) dt \tag{20}$$
 
-with diagonal gains $$K_p = \mathrm{diag}(k_{p_x}, k_{p_y}, k_{p_z})$$, and likewise $$K_d$$, $$K_i$$. For **station keeping** the feedforward term vanishes ($$\ddot{\mathbf{x}}_d = \mathbf{0}$$) and $$(20)$$ reduces to a plain PID; for **trajectory tracking** you keep $$\ddot{\mathbf{x}}_d$$ and $$\dot{\mathbf{x}}_d$$ as feedforward, which is what makes tracking accurate rather than merely stable.
+with diagonal gains $$K_p = \mathrm{diag}(k_{p_x}, k_{p_y}, k_{p_z})$$, and likewise $$K_d$$, $$K_i$$. For station keeping the feedforward term vanishes ($$\ddot{\mathbf{x}}_d = \mathbf{0}$$) and $$(20)$$ collapses to a plain PID. For trajectory tracking you keep $$\ddot{\mathbf{x}}_d$$ and $$\dot{\mathbf{x}}_d$$ as feedforward, which is what lets the vehicle follow a path instead of permanently chasing it.
 
 Componentwise:
 
@@ -257,7 +253,7 @@ k_{d_z} (\dot z_{d} - \dot z) + k_{p_z} (z_d - z) + k_{i_z} \int (z_d - z)\, dt
 \begin{pmatrix} \ddot x_c \\ \ddot y_c \\ \ddot z_c \end{pmatrix} \tag{21}
 $$
 
-The $$z$$ integrator is doing real work here: it absorbs the unavoidable error in $$m$$ and $$k_f$$ so the vehicle does not sit permanently below its altitude setpoint.
+The $$z$$ integrator earns its keep. Neither $$m$$ nor $$k_f$$ is ever known exactly, and without it the vehicle settles a little below its altitude setpoint and stays there.
 
 ## 5.2 From acceleration to attitude
 
@@ -270,13 +266,13 @@ s_\phi s_\psi + s_\theta c_\phi c_\psi &= \frac{m\, \ddot x_c}{\sum_i F_i} \tag{
 \end{align}
 $$
 
-Near hover the **tilt** angles are small, and the total thrust nearly balances weight:
+Near hover the tilt angles are small, and the total thrust nearly balances weight:
 
 - $$\phi \to 0$$, so $$\sin\phi \approx \phi$$ and $$\cos\phi \approx 1$$
 - $$\theta \to 0$$, so $$\sin\theta \approx \theta$$ and $$\cos\theta \approx 1$$
 - the rotors very nearly carry the weight, so $$\sum_i F_i \approx mg$$
 
-> **Yaw is *not* linearised.** $$\psi$$ can be anything — the vehicle is free to point wherever it likes while hovering. Only $$\phi$$ and $$\theta$$ are assumed small. Keeping $$\sin\psi$$ and $$\cos\psi$$ exact is precisely what makes the result below yaw-aware, and assuming $$\psi \to 0$$ as well would silently break it.
+> **Yaw is not linearized.** $$\psi$$ can be anything; a hovering vehicle is free to point wherever it likes, so only $$\phi$$ and $$\theta$$ are assumed small. Keeping $$\sin\psi$$ and $$\cos\psi$$ exact is what makes the result below work at any heading. Assume $$\psi \to 0$$ as well and it breaks quietly.
 
 With that, $$(22)$$ and $$(23)$$ become linear in $$\phi, \theta$$:
 
@@ -289,7 +285,7 @@ s_\psi & c_\psi \\
 = \frac{1}{g} \begin{pmatrix} \ddot x_c \\ \ddot y_c \end{pmatrix} \tag{24}
 $$
 
-That $$2\times2$$ matrix is a rotation-like matrix with determinant $$s_\psi^2 + c_\psi^2 = 1$$, so it is orthogonal and inverts by transposition — no singularity, ever:
+That $$2\times2$$ matrix has determinant $$s_\psi^2 + c_\psi^2 = 1$$, so it is orthogonal and inverts by transposition. No singularity to worry about:
 
 $$
 \begin{pmatrix} \phi_{d} \\ \theta_{d} \end{pmatrix}
@@ -305,11 +301,11 @@ $$
 
 Sanity check at $$\psi = 0$$: $$\theta_d = \ddot x_c / g$$ and $$\phi_d = -\ddot y_c / g$$. Pitching about $$+y$$ tilts the body $$z$$-axis toward $$+x$$, so positive pitch buys positive $$x$$-acceleration; rolling about $$+x$$ tilts it toward $$-y$$, hence the minus sign. Both agree with $$(3)$$.
 
-**Two practical refinements.** First, replace $$g$$ by the *commanded* specific thrust $$\ddot z_c + g$$, which is exact rather than a hover approximation and noticeably improves behaviour during climbs and descents:
+Two things are worth doing in practice. First, replace $$g$$ with the commanded specific thrust $$\ddot z_c + g$$. That is exact rather than a hover approximation, and it makes a visible difference during climbs and descents:
 
 $$\phi_d = \frac{\ddot x_c \sin\psi - \ddot y_c \cos\psi}{\ddot z_c + g}, \qquad \theta_d = \frac{\ddot x_c \cos\psi + \ddot y_c \sin\psi}{\ddot z_c + g} \tag{26}$$
 
-Second, **saturate** $$\phi_d$$ and $$\theta_d$$ (typically to $$25$$–$$35°$$). The small-angle inversion is what breaks first when a controller is pushed hard, and clamping the tilt is what stops a large position error from commanding a flip.
+Second, saturate $$\phi_d$$ and $$\theta_d$$, usually somewhere in the 25–35° range. The small-angle inversion is the first thing to break when the controller is pushed, and without a clamp a large position error will happily command a flip.
 
 ## 5.3 Total thrust
 
@@ -317,7 +313,7 @@ From $$(15)$$, with $$c_\phi c_\theta \approx 1$$ near hover:
 
 $$\sum_{i=1}^{4} F_{i} = m\left(\ddot z_c + g\right) \tag{27}$$
 
-For larger tilts, divide by $$c_\phi c_\theta$$ instead — the vehicle needs more thrust to hold altitude while banked, and this "tilt compensation" is why $$(27)$$ is usually written as $$\sum F_i = m(\ddot z_c + g)/(c_\phi c_\theta)$$ in real firmware.
+For larger tilts, divide by $$c_\phi c_\theta$$ instead, since a banked vehicle needs more thrust to hold altitude. That is the "tilt compensation" you see in real firmware, where $$(27)$$ is usually written $$\sum F_i = m(\ddot z_c + g)/(c_\phi c_\theta)$$.
 
 ## 5.4 Inner loop: attitude PD
 
@@ -330,9 +326,9 @@ K_{p}^{att} \begin{pmatrix} \phi_{d}-\phi \\ \theta_{d} - \theta \\ \psi_{d} - \
 + K_{d}^{att} \begin{pmatrix} p_{d}-p \\ q_{d} - q \\ r_{d} - r \end{pmatrix} \tag{28}
 $$
 
-with $$K_p^{att}$$ and $$K_d^{att}$$ diagonal. Note carefully what $$(28)$$ does: it pairs *Euler-angle* errors with *body-rate* errors. That is only legitimate because $$W \approx I$$ near hover, so $$p \approx \dot\phi$$, $$q \approx \dot\theta$$, $$r \approx \dot\psi$$, and $$(28)$$ really is a PD law on each angle. At large tilt this pairing stops being meaningful, and you should map the desired Euler rates through $$W$$ from $$(4)$$ — or drop Euler angles entirely in favour of a geometric $$SO(3)$$ controller.
+with $$K_p^{att}$$ and $$K_d^{att}$$ diagonal. Notice what $$(28)$$ quietly does: it pairs Euler-angle errors with body-rate errors. That is only legitimate because $$W \approx I$$ near hover, so $$p \approx \dot\phi$$, $$q \approx \dot\theta$$, $$r \approx \dot\psi$$, and $$(28)$$ really is a PD law on each angle. At large tilt the pairing stops meaning much, and you should map the desired Euler rates through $$W$$ from $$(4)$$, or give up on Euler angles altogether and use a geometric $$SO(3)$$ controller.
 
-Also, $$\psi_d - \psi$$ must be **wrapped** to $$(-\pi, \pi]$$. Without it, a yaw setpoint crossing $$\pm\pi$$ commands a full-circle spin the long way round.
+One more thing: wrap $$\psi_d - \psi$$ to $$(-\pi, \pi]$$. Forget it and a yaw setpoint that crosses $$\pm\pi$$ sends the vehicle spinning the long way round.
 
 ## 5.5 Simplifying the rotational dynamics
 
@@ -341,11 +337,11 @@ To turn $$(\dot p_c, \dot q_c, \dot r_c)$$ into torques, we use $$(16)$$–$$(18
 - The yaw rate is small, $$r \approx 0$$.
 - The airframe is symmetric about the body $$x$$ and $$y$$ axes, $$i_{xx} \approx i_{yy}$$.
 
-The first kills the $$qr$$ and $$pr$$ terms in $$(16)$$ and $$(17)$$; the second kills the $$pq$$ term in $$(18)$$. The gyroscopic coupling drops out entirely and the three axes decouple:
+The first removes the $$qr$$ and $$pr$$ terms in $$(16)$$ and $$(17)$$, the second removes the $$pq$$ term in $$(18)$$. The gyroscopic coupling drops out and what is left is three decoupled axes:
 
 $$\tau_x \approx i_{xx}\,\dot p_c, \qquad \tau_y \approx i_{yy}\,\dot q_c, \qquad \tau_z \approx i_{zz}\,\dot r_c \tag{29}$$
 
-(If you want the model to hold at high yaw rates, keep the full $$(16)$$–$$(18)$$ and simply *add back* the gyroscopic terms as feedforward — they are exactly known from the measured $$p, q, r$$.)
+(If you need the model to hold at high yaw rates, keep the full $$(16)$$–$$(18)$$ and add the gyroscopic terms back as feedforward. They are known exactly from the measured $$p, q, r$$.)
 
 # 6. Control allocation (the mixer)
 
@@ -367,7 +363,7 @@ m\left(\ddot z_c + g\right) \\[2pt]
 \end{matrix}\right] \tag{30}
 $$
 
-and the four thrusts are related to $$\mathbf{u}$$ by a constant **mixer matrix** $$\mathcal{M}$$, so that $$\mathcal{M}\,\mathbf{F} = \mathbf{u}$$ and $$\mathbf{F} = \mathcal{M}^{-1}\mathbf{u}$$. Only $$\mathcal{M}$$ changes between layouts.
+and the four thrusts relate to $$\mathbf{u}$$ through a constant mixer matrix $$\mathcal{M}$$, with $$\mathcal{M}\,\mathbf{F} = \mathbf{u}$$ and $$\mathbf{F} = \mathcal{M}^{-1}\mathbf{u}$$. Only $$\mathcal{M}$$ changes between layouts.
 
 ## 6.1 `+` layout
 
@@ -401,7 +397,7 @@ $$
 \end{matrix}\right] \tag{32}
 $$
 
-Read the structure off directly: rotors 2 and 4 (on the $$y$$-axis) carry **all** the roll authority with a $$\tfrac{1}{2}$$ weight and contribute nothing to pitch; rotors 1 and 3 do the mirror image. Roll and pitch are each produced by only half the fleet.
+The structure is easy to read off. Rotors 2 and 4, sitting on the $$y$$-axis, carry all of the roll authority at weight $$\tfrac{1}{2}$$ and do nothing for pitch; rotors 1 and 3 are the mirror image. Each of roll and pitch comes from only two motors.
 
 ## 6.2 `X` layout
 
@@ -416,7 +412,7 @@ $$
 = \mathbf{u} \tag{33}
 $$
 
-The matrix $$\mathcal{M}_{X}$$ has a rather pleasant property: its rows are mutually orthogonal and each has norm $$2$$. It is $$2 \times$$ an orthogonal matrix (a $$\pm 1$$ Hadamard-type matrix), so the inverse is just the scaled transpose, $$\mathcal{M}_{X}^{-1} = \tfrac{1}{4}\mathcal{M}_{X}^{T}$$:
+$$\mathcal{M}_{X}$$ has a nice property: its rows are mutually orthogonal and each has norm $$2$$. It is $$2 \times$$ an orthogonal matrix (a $$\pm 1$$ Hadamard-type matrix), so the inverse is just the scaled transpose, $$\mathcal{M}_{X}^{-1} = \tfrac{1}{4}\mathcal{M}_{X}^{T}$$:
 
 $$
 \mathcal{M}_{X}^{-1} =
@@ -440,9 +436,9 @@ $$
 \begin{pmatrix} \ddot z_c + g \\ \dot p_c \\ \dot q_c \\ \dot r_c \end{pmatrix} \tag{35}
 $$
 
-Here **every** rotor contributes to **every** channel with equal weight $$\tfrac{1}{4}$$ — the orthogonality made visible, and the reason the `X` layout spreads control effort so evenly.
+Every rotor now contributes to every channel at the same weight $$\tfrac{1}{4}$$, which is the orthogonality showing up in the arithmetic, and why `X` spreads control effort so evenly.
 
-Because $$\mathcal{M}$$ is constant and invertible, both mixers are just four multiply-accumulates per rotor. This is the cheapest part of the whole controller and it runs at the innermost loop rate.
+Since $$\mathcal{M}$$ is constant, both mixers reduce to four multiply-accumulates per rotor. That is convenient, given this is the piece that runs at the innermost loop rate.
 
 ## 6.3 From thrusts to motor commands
 
@@ -450,21 +446,21 @@ Finally, invert $$(6)$$:
 
 $$\omega_i = \sqrt{\frac{F_i}{k_f}} \tag{36}$$
 
-Two things must happen before that square root:
+Two things have to happen before that square root:
 
-- **Clip to $$F_i \ge 0$$.** A fixed-pitch rotor cannot produce negative thrust; $$(32)$$ and $$(35)$$ happily ask for it during aggressive manoeuvres.
-- **Clip to $$F_i \le F_{max}$$**, and think about *how* you clip. Naive per-motor saturation silently distorts the commanded torque direction. The usual fix is to prioritise the channels: preserve roll and pitch first (they keep you upright), then yaw, and let total thrust absorb the remainder. A quadrotor recovers from a momentary altitude error; it does not recover from an unintended flip.
+- Clip to $$F_i \ge 0$$. A fixed-pitch rotor cannot produce negative thrust, but $$(32)$$ and $$(35)$$ will cheerfully ask for it during an aggressive maneuver.
+- Clip to $$F_i \le F_{max}$$ as well, and think about how you do it. Saturating each motor on its own quietly distorts the direction of the commanded torque. The usual fix is to rank the channels: keep roll and pitch first, since they keep you upright, then yaw, and let total thrust absorb whatever is left over.
 
-# 7. What this model leaves out
+# 7. What the model leaves out
 
-The model above is standard and works well for hover and gentle flight. It is honest to be explicit about what it discards:
+This is the standard model and it holds up well for hover and gentle flight. It also throws away a fair amount:
 
-- **Rotor gyroscopic torque.** The spinning rotors have their own angular momentum; a body rotation produces $$-J_r\,\boldsymbol\omega \times \hat z_b\, \Omega_r$$ with $$\Omega_r = \omega_1 - \omega_2 + \omega_3 - \omega_4$$. Small, but real during fast rolls.
-- **Motor dynamics.** $$\omega_i$$ is treated as an instantaneous input. Real ESC + motor combinations have a time constant of tens of milliseconds, which sets a hard ceiling on inner-loop bandwidth.
-- **Aerodynamics.** Body drag (quadratic in airspeed), blade flapping, induced-velocity effects, and ground effect are all ignored. Blade flapping in particular produces a real velocity-dependent pitching moment in fast forward flight.
-- **Off-diagonal inertia.** $$I$$ is assumed diagonal, i.e. the body axes are the principal axes.
-- **Rigidity.** Frame flex and rotor–arm vibration couple into the gyro measurements and are usually dealt with by filtering rather than modelling.
-- **Battery sag.** $$k_f$$ effectively drifts as voltage drops, which the altitude integrator quietly compensates for.
+- Rotor gyroscopic torque. The rotors carry angular momentum of their own, so a body rotation produces $$-J_r\,\boldsymbol\omega \times \hat z_b\, \Omega_r$$ with $$\Omega_r = \omega_1 - \omega_2 + \omega_3 - \omega_4$$. Small, but not zero during a fast roll.
+- Motor dynamics. $$\omega_i$$ is treated as something you can set instantly. A real ESC and motor take tens of milliseconds, and that time constant puts a hard ceiling on inner-loop bandwidth.
+- Aerodynamics: body drag, blade flapping, induced velocity, ground effect. Flapping is the one I would worry about first, since it produces a genuine velocity-dependent pitching moment in fast forward flight.
+- Off-diagonal inertia, i.e. the assumption that the body axes are the principal axes.
+- Frame flex. Vibration from the arms couples into the gyros, and is usually filtered rather than modeled.
+- Battery sag, which drifts $$k_f$$ as the voltage drops. The altitude integrator quietly cleans this one up.
 
 # Summary
 
@@ -479,7 +475,11 @@ The model above is standard and works well for hover and gentle flight. It is ho
 | `X` mixer, eq. $$(33)$$ | rows $$(1,1,1,1)$$, $$(1,-1,-1,1)$$, $$(-1,-1,1,1)$$, $$(1,-1,1,-1)$$; $$\mathcal{M}_X^{-1} = \tfrac{1}{4}\mathcal{M}_X^{T}$$ |
 | Motor command | $$\omega_i = \sqrt{F_i / k_f}$$, after clipping $$F_i$$ to $$[0, F_{max}]$$ |
 
-The thread running through all of it: **thrust can only point along one body axis, so all horizontal motion is bought by tilting.** The outer loop decides where to point, the inner loop points there, and the mixer distributes the request across four rotors that can each only push one way.
+If there is one thing to carry away from all this, it is that thrust only ever points along one body axis, so every bit of horizontal motion has to be bought by tilting. The outer loop decides where to point, the inner loop points there, and the mixer splits the request across four rotors that can each only push one way.
+
+#### Note
+If you come across any errors, please let me know. I will be happy to fix it.  
+Happy reading!! :smiley:
 
 ## References
 
