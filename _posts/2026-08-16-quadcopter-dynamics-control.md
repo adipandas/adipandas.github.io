@@ -90,7 +90,8 @@ is the body $$z$$-axis written in world coordinates. Steering a quadcopter comes
 
 ## Euler rates and body rates are not the same thing
 
-The Euler rates $$(\dot\phi, \dot\theta, \dot\psi)$$ are rates of three angles measured about three *different, non-orthogonal* axes. The body rates $$(p,q,r)$$ are components of a single angular velocity vector resolved in one orthogonal frame. These are different objects, and the map between them is:
+Euler rates $$(\dot\phi, \dot\theta, \dot\psi)$$ are the time derivatives of orientation angles relative to an external/inertial reference frame. Body rates $$(p,q,r)$$ are true angular velocity components measured directly around a moving object's own local axes. These are different objects, and the map between them is:
+
 
 $$
 \begin{pmatrix} p \\ q \\ r \end{pmatrix}
@@ -455,7 +456,7 @@ Two things have to happen before that square root:
 
 This is the standard model, and it holds up well for hover and gentle flight. It also leaves out a fair amount:
 
-- Rotor gyroscopic torque. The rotors carry angular momentum of their own, so a body rotation produces $$-J_r\,\boldsymbol\omega \times \hat z_b\, \Omega_r$$ with $$\Omega_r = \omega_1 - \omega_2 + \omega_3 - \omega_4$$. The term is small, though not negligible during a fast roll.
+- Rotor gyroscopic torque. The rotors carry angular momentum of their own, so a body rotation produces $$-J_r \Omega_r\,\boldsymbol\omega \times \hat z_b$$, where $$J_r$$ is the rotor polar inertia and $$\Omega_r$$ is the net rotor spin resolved along $$+z_b$$. Under the convention used here, rotors 1 and 3 turn in the $$-z_b$$ sense and rotors 2 and 4 in the $$+z_b$$ sense, so $$\Omega_r = -\omega_1 + \omega_2 - \omega_3 + \omega_4$$. Much of the literature writes this with the signs reversed, which corresponds to the opposite spin assignment; note that $$\Omega_r$$ is opposite in sign to the yaw-torque pattern in $$(7)$$, since the reaction torque opposes the spin. The term is small, though not negligible during a fast roll.
 - Motor dynamics. $$\omega_i$$ is treated as something you can set instantly. A real ESC and motor take tens of milliseconds, and that time constant puts a hard ceiling on inner-loop bandwidth.
 - Aerodynamics: body drag, blade flapping, induced velocity, ground effect. Flapping is the one I would worry about first, since it produces a genuine velocity-dependent pitching moment in fast forward flight.
 - Off-diagonal inertia, i.e. the assumption that the body axes are the principal axes.
