@@ -15,9 +15,9 @@ tags:
 
 These are my notes on quadcopter dynamics and control. I wrote them in grad school, at a point where I could fly a controller that I was unable to explain.
 
-I could tune the gains well enough to get the thing in the air, but the shape of the control law stayed a mystery to me. Most papers state the equations of motion and then produce a finished mixer matrix a line or two later. The steps in between are left to the reader: where the small-angle approximation gets used, why yaw is treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands. I worked through those steps and wrote out every line I had to do by hand. The notes then sat in a folder for a few years.
+I could tune the gains to get the thing in the air, but the shape of the control law stayed a mystery to me. Most papers state the equations of motion and then produce a finished mixer matrix a line or two later. The steps in between are left to the reader: where the small-angle approximation gets used, why yaw is treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands. I worked through those steps and wrote out every line I had to do by hand. The notes then sat in a folder for a few years never to see the light of the day.
 
-Most of what follows comes out of one fact. A quadcopter has six degrees of freedom and four actuators, so it is underactuated, and translation has to be paid for with attitude. You cannot slide sideways without tipping over first.
+Most of what follows comes out of one fact. A quadcopter has six degrees of freedom and four actuators, so it is underactuated, and translation has to be paid for with attitude. This system cannot move without tipping over first.
 
 Below is the rigid-body model, then a cascaded position-and-attitude controller built on top of it, then the control allocation (the "mixer") for the `+` and `X` rotor layouts.
 
@@ -133,16 +133,16 @@ To keep rotor $$i$$ spinning against aerodynamic drag, the motor applies a torqu
 
 > **The reaction torque on the airframe is opposite in sense to the rotor's own spin.** A rotor turning clockwise when viewed from above (i.e. in the $$-z_b$$ sense) yaws the airframe in the $$+z_b$$ sense.
 
-This is why the spin-direction column and the yaw-torque column in the table below carry opposite signs. I have confused the two more than once.
+This is why the spin-direction column and the yaw-torque column in the table below carry opposite signs. This can be confusing.
 
 | Rotor | Spin (viewed from above) | Spin sense about $$z_b$$ | Contribution to yaw torque $$\tau_z$$ |
-|:---:|:---|:---:|:---:|
+|---|---|---|---|
 | 1 | clockwise | $$-$$ | $$+M_1$$ |
 | 2 | anti-clockwise | $$+$$ | $$-M_2$$ |
 | 3 | clockwise | $$-$$ | $$+M_3$$ |
 | 4 | anti-clockwise | $$+$$ | $$-M_4$$ |
 
-Hence
+Hence, using equation $$(6)$$,
 
 $$\tau_z = M_1 - M_2 + M_3 - M_4 = \frac{k_m}{k_f}\left(F_1 - F_2 + F_3 - F_4\right) \tag{7}$$
 
@@ -166,7 +166,7 @@ $$\tau_x = l\,(F_2 - F_4), \qquad \tau_y = l\,(-F_1 + F_3) \tag{9}$$
 
 $$\tau_x = l\,(F_1 - F_2 - F_3 + F_4), \qquad \tau_y = l\,(-F_1 - F_2 + F_3 + F_4) \tag{10}$$
 
-> ### One to watch out for
+> ### Watch out
 >
 > In the `X` layout $$l$$ is the half-span rather than the arm length. The center-to-rotor distance is $$L = l\sqrt{2}$$. If you take a `+` frame, rotate the electronics by 45° and reuse the same $$l$$, your roll and pitch gains come out wrong by a factor of $$\sqrt 2$$.
 >
@@ -174,7 +174,7 @@ $$\tau_x = l\,(F_1 - F_2 - F_3 + F_4), \qquad \tau_y = l\,(-F_1 - F_2 + F_3 + F_
 
 # 4. Equations of motion
 
-Only two laws are needed. Newton's second law for the center of mass, written in the world frame:
+Newton's second law for the center of mass, written in the world frame:
 
 $$
 m \begin{pmatrix} \ddot x \\ \ddot y \\ \ddot z \end{pmatrix}
@@ -194,7 +194,6 @@ $$
 
 The $$-\boldsymbol\omega \times (I\boldsymbol\omega)$$ term appears because the equation is written in a rotating frame instead of an inertial one. No external effect produces it, and it carries the nonlinearity and the coupling between the three axes.
 
-## Expanded, in scalars
 
 Substituting $$(3)$$ into $$(11)$$:
 
@@ -222,7 +221,7 @@ Together with the kinematics $$(5)$$, equations $$(13)$$–$$(18)$$ are the comp
 
 <p style="text-align:center;"><img src="/images/quadcopter_dynamics/control-architecture.svg" alt="Cascaded quadcopter control architecture"/></p>
 
-The controller is arranged as a cascade because the vehicle is underactuated. The arrangement works because attitude settles much faster than position, so the two loops interfere with each other very little.
+The controller is arranged as a cascade because the vehicle is underactuated. The arrangement works because attitude settles much faster than position, so the two loops have negligible interference.
 
 1. **Outer loop (slow).** A position PID converts position error into a *commanded acceleration* $$\ddot{\mathbf{x}}_c$$.
 2. **Attitude/thrust extraction.** $$\ddot{\mathbf{x}}_c$$ is converted into a *desired tilt* $$(\phi_d, \theta_d)$$ and a *total thrust* $$\sum F_i$$. Yaw $$\psi_d$$ is free and commanded independently.
