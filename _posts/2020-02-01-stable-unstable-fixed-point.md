@@ -39,15 +39,15 @@ In other words, one can also think of a stable fixed point as the attractor and 
 
 ### Mathematical Intuition:
 
-For a dynamical system, $$\dot x = f(x)$$, a fixed point is $$f(x) = 0$$.
+For the dynamical system in equation (1), write $$x^{*}$$ for a fixed point, so that $$f(x^{*}) = 0$$. The state of the particle is $$x$$, and it starts a small distance $$\delta \gt 0$$ away from $$x^{*}$$.
 
-If $$f^{\prime}(x) \gt 0$$, we have the value of $$f(x)$$ increasing at $$x$$. This can be represented as $$f(x - \delta) \lt 0 \lt f(x + \delta)$$ for a sufficiently small value of $$\delta \gt 0$$.
+Suppose $$f^{\prime}(x^{*}) \gt 0$$. Then $$f$$ is increasing as it crosses zero at $$x^{*}$$, which means $$f(x^{*} - \delta) \lt 0 \lt f(x^{*} + \delta)$$ for sufficiently small $$\delta$$.
 
-Thus, if we start from $$x+\delta$$ which is "close" to $$x$$, the ODE from equation (1) will keep on increasing the value of $$x$$. And if we start from $$x-\delta$$ which is "close" to $$x$$, equation (1) will move the particle away from $$x$$ by decreasing the value of $$x$$.
+Start the particle at $$x = x^{*} + \delta$$. Equation (1) gives $$\dot x = f(x) \gt 0$$, so $$x$$ grows and the particle moves further to the right of $$x^{*}$$. Start it instead at $$x = x^{*} - \delta$$. Now $$\dot x \lt 0$$, so $$x$$ shrinks and the particle moves further to the left. In both cases the particle leaves the neighborhood of $$x^{*}$$.
 
-Therefore, if $$f^{\prime} (x) \gt 0$$, we have an **unstable fixed point** and vice versa.
+Therefore, $$f^{\prime} (x^{*}) \gt 0$$ gives an **unstable fixed point**. $$f^{\prime} (x^{*}) \lt 0$$ gives a **stable fixed point**.
 
-**Note**: The conditions of $$f^{\prime} (x) \lt 0$$ or $$f^{\prime} (x) \gt 0$$ are sufficient conditions to guarantee fixed point stability or instability respectively. These are not the necessary conditions, i.e., it is possible to have stable and unstable fixed points where $$f^{\prime} (x) = 0$$.
+**Note**: The conditions $$f^{\prime} (x^{*}) \lt 0$$ and $$f^{\prime} (x^{*}) \gt 0$$ are sufficient to guarantee stability and instability respectively. They are not necessary, i.e., it is possible to have stable and unstable fixed points where $$f^{\prime} (x^{*}) = 0$$.
 
 ## Intuitive Example:
 
@@ -55,11 +55,11 @@ For the differential equation $$\dot x = \sin(x)$$:
 
 <img src="/images/stable_unstable_fixed_point/sin_x_feb2020.png" alt="Stable and Unstable fixed points on $$\dot x = sin(x)$$"/>
 
-Using linear stability analysis, fixed points occur when $$f(x)=\sin(x)=0$$ or $$x=k \pi $$ where $$k$$ is an integer.
+Using linear stability analysis, fixed points occur when $$f(x)=\sin(x)=0$$, that is at $$x^{*}=k \pi$$ where $$k$$ is an integer.
 
-$$f^{\prime}(x)=\cos(k \pi)=1$$ if $$k$$ is even and $$f^{\prime}(x)=\cos(k \pi)= - 1$$ if $$k$$ is odd.
+$$f^{\prime}(x^{*})=\cos(k \pi)=1$$ if $$k$$ is even and $$f^{\prime}(x^{*})=\cos(k \pi)= - 1$$ if $$k$$ is odd.
 
-Therefore, $$x$$ is **unstable** when $$k$$ is *even*, and **stable** if $$k$$ is *odd*.
+Therefore, $$x^{*}$$ is **unstable** when $$k$$ is *even*, and **stable** when $$k$$ is *odd*.
 
 
 ### High Dimensional Dynamical Systems
