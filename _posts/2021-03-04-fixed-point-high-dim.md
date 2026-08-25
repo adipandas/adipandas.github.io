@@ -44,9 +44,9 @@ $$
 
 ## Fixed points of Multi-dimensional system
 
-My [previous post](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/) only explained the definition of fixed point and provided an example with a scalar-valued dynamical system. Now, lets discuss a case of multi-dimensional ODE.
+My [previous post](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/) explained the definition of fixed point of dynamical system with an example of a scalar-valued dynamical system. 
 
-We will start with the system given by equation $\eqref{eq:3}$:
+Now, focusing on the multi-dimensional ODE $\eqref{eq:3}$:
 
 
 $$
@@ -59,7 +59,7 @@ where $\mathbf{f}$ is a vector-valued function, $\mathbf{x}$ and  $\mathbf{\dot 
 
 
 $$
-\mathbf{x, \dot x} \in \mathcal{R}^{n}
+\mathbf{x, \dot x} \in \mathbb{R}^{n}
 \label{eq:4}
 $$
 
@@ -79,16 +79,10 @@ The roots of $\eqref{eq:5}$ will give us the value of $\mathbf{x_{eq}}$, i.e., f
 
 ## Stable and Unstable Fixed Points
 
-We analyzed the system in a one-dimensional case ([here](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)) using a small perturbation $\delta$ at the equilibrium condition of the system. We will follow the similar procedure here as well. 
+Recall, in case of one-dimensional system: $x_{eq}$ is unstable fixed point when $f^{\prime}(x_{eq})>0$ and it is stable fixed point when $f^{\prime}(x_{eq})<0$.
 
 
-
-We evaluated $\mathbf{f}^{\prime}\mathbf{(x)}$ at $\mathbf{x_{eq}}$ to see if our fixed point is stable or unstable. In case of one-dimensional system, it was easy since  $f^{\prime}(x_{eq})>0$ is unstable fixed point $x_{eq}$  while it is stable when $f^{\prime}(x_{eq})<0$. In case of high-dimensional system, we cannot do this.
-
-
-
-To analyze the behavior of our $n$-dimensional system at $\mathbf{x_{eq}}$, we will introduce the perturbation $\mathbf{\delta x}$ at $\mathbf{x_{eq}}$. Thus, we end up with the following:
-
+In case of $n$-dimensional dynamical system, following the procedure similar to the case of [one-dimensional ODE](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/), introduce a small perturbation $\mathbf{\delta x}$ at the equilibrium condition $\mathbf{x_{eq}}$ of the system $\eqref{eq:3}$:
 
 $$
 \begin{align}
@@ -104,26 +98,21 @@ Using Taylor expansion on $\eqref{eq:6}$:
 
 $$
 \begin{align}
-\mathbf{\dot x_{eq} + \delta \dot x = f(x_{eq}) + f^{\prime}(x_{eq}) \delta x + f^{\prime \prime}(x_{eq}) \frac{\delta x^2}{2!} + \dots} \label{eq:7}
+\mathbf{\dot x_{eq} + \delta \dot x} = \mathbf{f(x_{eq})} + \mathbf{f^{\prime}(x_{eq})} \mathbf{\delta x} + \text{H.O.T.} \label{eq:7}
 \end{align}
 $$
+
+Here, $\text{H.O.T.}$ stands for the terms of second and higher order in $\mathbf{\delta x}$.
 
 But, we know at fixed points, equation $\eqref{eq:5}$ holds and thus, $\eqref{eq:7}$ reduces to $\eqref{eq:8}$.
 
 $$
 \begin{align}
-\mathbf{
-\delta \dot x = f^{\prime}(x_{eq}) \delta x + f^{\prime\prime}(x_{eq}) \frac{\delta x^2}{2!} + \dots}
+\mathbf{\delta \dot x} = \mathbf{f^{\prime}(x_{eq})} \mathbf{\delta x} + \text{H.O.T.} \label{eq:8}
 \end{align}
 $$
 
-$$
-\mathbf{
-\delta \dot x = f^{\prime}(x_{eq}) \delta x + H.O.T.
-\label{eq:8}}
-$$
-
-We can ignore the higher order terms $\mathbf{H.O.T.}$ for values of $\mathbf{\delta{x}}$ close to $\mathbf{0}$, resulting in equation $\eqref{eq:9}$.
+The higher order terms shrink faster than the linear term as $\mathbf{\delta x}$ approaches $\mathbf{0}$, so we drop them and obtain equation $\eqref{eq:9}$.
 
 $$
 \begin{align}
@@ -144,7 +133,7 @@ $$
 \right] \label{eq:11}\\
 \mathbf{f}^{\prime}\mathbf{(x)} &=
 \begin{bmatrix}
-\frac{\partial{f_{1}}}{\partial x_{1}} & \frac{\partial{f_{2}}}{\partial x_{2}} & \dots & \frac{\partial{f_{n}}}{\partial x_{n}}\\
+\frac{\partial{f_{1}}}{\partial x_{1}} & \frac{\partial{f_{1}}}{\partial x_{2}} & \dots & \frac{\partial{f_{1}}}{\partial x_{n}}\\
 \vdots & \ddots & \ddots & \vdots \\
 \frac{\partial{f_{n}}}{\partial x_{1}} & \frac{\partial{f_{n}}}{\partial x_{2}} & \dots & \frac{\partial{f_{n}}}{\partial x_{n}}\\
 \end{bmatrix} \label{eq:12}
@@ -154,28 +143,48 @@ $$
 
 Using this Jacobian, equation $\eqref{eq:12}$, at our fixed point $\mathbf{x_{eq}}$ for the dynamical system under consideration, we can calculate its [**eigenvalues**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and interpret the results of the fixed point.
 
-Therefore, we find the eigenvalues for equation $\eqref{eq:13}$,
+An eigenvalue $\lambda$ and its eigenvector $\mathbf{v} \ne \mathbf{0}$ of the Jacobian satisfy equation $\eqref{eq:13}$,
 
 
 $$
 \begin{align}
-\mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{x_{eq}} = \lambda \mathbf{x_{eq}} \label{eq:13}
+\mathbf{f}^{\prime}(\mathbf{x_{eq}}) \mathbf{v} = \lambda \mathbf{v} \label{eq:13}
 \end{align}
 $$
 
 
-Here, $\lambda$ denotes the eigenvalue of the system. The roots of $\eqref{eq:13}$ are the eigenvalues the dynamical system at the fixed point $\mathbf{x}=\mathbf{x_{eq}}$.
+Note that the eigenvector $\mathbf{v}$ is a direction of perturbation, not the fixed point itself. Rearranging $\eqref{eq:13}$ as $(\mathbf{f}^{\prime}(\mathbf{x_{eq}}) - \lambda \mathbf{I})\mathbf{v} = \mathbf{0}$, a nonzero solution $\mathbf{v}$ exists only when the matrix $(\mathbf{f}^{\prime}(\mathbf{x_{eq}}) - \lambda \mathbf{I})$ is singular. This gives the characteristic equation $\eqref{eq:14}$:
+
+
+$$
+\begin{align}
+\det \left( \mathbf{f}^{\prime}(\mathbf{x_{eq}}) - \lambda \mathbf{I} \right) = 0 \label{eq:14}
+\end{align}
+$$
+
+
+Here, $\mathbf{I}$ is the $n \times n$ identity matrix. The roots of $\eqref{eq:14}$ are the $n$ eigenvalues of the dynamical system at the fixed point $\mathbf{x}=\mathbf{x_{eq}}$.
 
 
 
 ### Eigenvalue interpretation <a name='eigen_value_interpretation'></a>
 
-For a continuous-time nonlinear dynamical system given by $\eqref{eq:3}$, the eigenvalues $\lambda$ that are found as roots of equation $\eqref{eq:13}$ can be interpreted as:
+For a continuous-time nonlinear dynamical system given by $\eqref{eq:3}$, the eigenvalues $\lambda$ that are found as roots of equation $\eqref{eq:14}$ can be interpreted as:
 
 * If any of the eigenvalues have a real part $Re(\lambda)>0$: $\mathbf{x_{eq}}$ is an unstable fixed point.
 * If all $Re(\lambda)<0$: $\mathbf{x_{eq}}$ is a stable fixed point.
-* If $\lambda=0$: $\mathbf{x_{eq}}$ is a neutral fixed point.
-* If eigenvalues $\lambda$ are complex conjugates, i.e., $Im(\lambda) \ne 0$: The dynamical system has oscillatory behavior around the fixed point.
+* If no eigenvalue has $Re(\lambda)>0$ and at least one has $Re(\lambda)=0$: $\mathbf{x_{eq}}$ is a non-hyperbolic fixed point and the linearization is inconclusive. The linear system $\eqref{eq:9}$ is neutrally stable along the eigenvectors with $Re(\lambda)=0$, but the higher order terms dropped in $\eqref{eq:8}$ decide the stability of the nonlinear system, and they can make it either stable or unstable. Settling the question requires [Lyapunov's direct method](https://en.wikipedia.org/wiki/Lyapunov_stability), which works with the nonlinear system itself.
+
+A fixed point where every eigenvalue has a nonzero real part is called hyperbolic. There, the [Hartman-Grobman theorem](https://en.wikipedia.org/wiki/Hartman%E2%80%93Grobman_theorem) guarantees that the flow of the nonlinear system near $\mathbf{x_{eq}}$ is topologically equivalent to the flow of its linearization, which is what licenses reading stability off the eigenvalues. The first bullet holds even without hyperbolicity, because one eigenvalue with $Re(\lambda)>0$ creates a direction along which the perturbation grows, whatever the other eigenvalues do.
+
+
+### Complex eigenvalues
+
+The three cases above are decided by $Re(\lambda)$ alone and cover every possibility. A nonzero $Im(\lambda)$ describes the shape of the trajectories rather than their stability. Since $\mathbf{f}^{\prime}(\mathbf{x_{eq}})$ is a real matrix, complex eigenvalues occur in conjugate pairs $\lambda = \alpha \pm i \beta$. Each pair contributes a rotation of angular frequency $\beta$ in the real plane spanned by the real and imaginary parts of the corresponding eigenvector:
+
+* $\alpha<0$: trajectories spiral inward to $\mathbf{x_{eq}}$ (stable spiral).
+* $\alpha>0$: trajectories spiral outward (unstable spiral).
+* $\alpha=0$: the linearization predicts closed orbits around a center. This is the non-hyperbolic case, so the higher order terms decide whether the orbits stay closed, spiral in, or spiral out.
 
 
 
@@ -194,7 +203,7 @@ In this post, we discussed a general case of interpreting the fixed points of a 
 
 ### References and Further Readings:
 
-* Deshpande, A. M. Stablility of Fixed Point of a Dynamical System. [[web](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)]
+* Deshpande, A. M. Stability of Fixed Point of a Dynamical System. [[web](https://adipandas.github.io/posts/2020/02/stable-unstable-fixed-point/)]
 * Strogatz, Steven H. Nonlinear dynamics and chaos with student solutions manual: With applications to physics, biology, chemistry, and engineering. CRC press, 2018.
 * Khalil, Hassan K. "Lyapunov stability." *Control Systems, Robotics and AutomatioN–Volume XII: Nonlinear, Distributed, and Time Delay Systems-I* (2009): 115.
 * Bomze, Immanuel M., and Jörgen W. Weibull. "Does neutral stability imply Lyapunov stability?." *Games and Economic Behavior* 11.2 (1995): 173-192.

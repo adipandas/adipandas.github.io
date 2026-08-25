@@ -22,7 +22,7 @@ $$\dot x = f(x)  \tag{1}$$
 
 A **fixed point** of this system is given by:
 
-$$\dot x = 0$$
+$$\dot x = 0  \tag{2}$$
 
 Therefore, $$f(x) = 0$$ or roots of the function $$f(x)$$ form the fixed points of the dynamical system.
 
