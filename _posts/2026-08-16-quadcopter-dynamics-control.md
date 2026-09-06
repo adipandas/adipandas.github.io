@@ -13,9 +13,9 @@ tags:
   - Rotation
 ---
 
-These are my notes on quadcopter dynamics and control. I wrote them in grad school, at a point where I could fly a controller that I was unable to explain.
+These are my notes on quadcopter dynamics and control from my grad school days. 
 
-I could tune the gains to get the thing in the air, but the shape of the control law stayed a mystery to me. Most papers state the equations of motion and then produce a finished mixer matrix a line or two later. The steps in between are left to the reader: where the small-angle approximation gets used, why yaw is treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands. I worked through those steps and wrote out every line I had to do by hand. The notes then sat in a folder for a few years.
+Most papers state the equations of motion and then produce a finished mixer matrix a line or two later. The steps in between are left to the reader: where the small-angle approximation gets used, why yaw is treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands.
 
 A quadcopter has six degrees of freedom and four actuators, so it is underactuated. Thrust acts along a single body axis, so horizontal acceleration is available only by tilting that axis first, which couples translation to attitude. The cascaded controller in section 5 is built around that coupling.
 
