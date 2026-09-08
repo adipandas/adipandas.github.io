@@ -28,8 +28,9 @@
     overflow-y: hidden;
   }
 
-  /* Same idea for wide tables on narrow screens. */
-  .page__content table {
+  /* Same idea for wide tables on narrow screens. The side-by-side comparison
+     table opts out: it needs a real table box for its 50/50 columns. */
+  .page__content table:not(.compare) {
     display: block;
     width: 100%;
     max-width: 100%;

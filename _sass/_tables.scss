@@ -36,3 +36,100 @@ td {
 tr, td, th {
   vertical-align: middle;
 }
+
+/* ==========================================================================
+   SIDE-BY-SIDE COMPARISON TABLE
+   A derivation run in two parallel columns. Rows that hold material common to
+   both columns span the full width; rows that diverge split back into two.
+   ========================================================================== */
+
+$compare-stack-width: 800px; // below this, two columns of display math stop fitting
+
+.compare {
+  display: table; // overrides the global `display: block` fallback for wide tables
+  table-layout: fixed;
+  width: 100%;
+  overflow: visible; // a scroll container here would break `position: sticky`
+  font-size: $type-size-5;
+
+  @include breakpoint($large) {
+    // Reach into the grid gutters either side of the content column, so each
+    // half still has room for a 4x4 matrix. The left pull stops short of the
+    // sticky author sidebar.
+    margin-left: -6%;
+    width: 131%;
+  }
+
+  // Scoped to direct children throughout, so tables nested inside a cell are untouched.
+  > thead > tr > th,
+  > tbody > tr > td {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  > thead > tr > th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 50%;
+    padding: 0.6em 0.8em;
+    text-align: center;
+    font-size: $type-size-5;
+  }
+
+  > tbody > tr > td {
+    padding: 0.8em 1em 0.2em;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.compare__step {
+  padding: 0.5em 1em;
+  background-color: $lighter-gray;
+  border-top: 2px solid $primary-color;
+  color: $primary-color;
+  font-size: $type-size-5;
+}
+
+.compare__scope {
+  float: right;
+  color: $muted-text-color;
+  font-size: $type-size-6;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@include breakpoint(max-width $compare-stack-width) {
+  .compare {
+    display: block;
+    width: 100%;
+
+    > thead {
+      display: none;
+    }
+
+    > tbody,
+    > tbody > tr,
+    > tbody > tr > th,
+    > tbody > tr > td {
+      display: block;
+      width: auto;
+    }
+
+    > tbody > tr > td[data-config]::before {
+      content: attr(data-config);
+      display: block;
+      margin-bottom: 0.4em;
+      color: $muted-text-color;
+      font-size: $type-size-6;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+  }
+}
