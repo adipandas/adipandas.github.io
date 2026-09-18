@@ -15,19 +15,11 @@ tags:
 
 These are my notes on quadcopter dynamics and control from my grad school days.
 
-Two rotor layouts cover most of what you meet in practice. The `+` layout puts one rotor on each body axis, so the nose looks straight past rotor 1. The `X` layout puts one rotor on each diagonal, so the nose points into the gap between rotors 1 and 2. The rigid-body model is the same for both airframes, and so is the cascaded position-and-attitude controller built on top of it. What changes is the geometry, the roll and pitch torques the four rotors can produce, and the mixer that turns four scalar demands back into four rotor thrusts.
+A quadcopter has six degrees of freedom and four actuators, so it is underactuated. Thrust acts along a single body axis. Two rotor layouts are common. The `+` layout puts one rotor on each body axis, so the nose looks straight past rotor 1. The `X` layout puts one rotor on each diagonal, so the nose points into the gap between rotors 1 and 2. The key differences in both layouts is of the geometry, the roll and pitch torques the four rotors can produce, and the mixer that turns four scalar demands back into four rotor thrusts. The rigid-body model is the same for both airframes, and so is the cascaded position-and-attitude controller built on top of it. 
 
 Most papers state the equations of motion and then produce a finished mixer matrix a line or two later, for one layout only. The steps in between are left to the reader: where the small-angle approximation gets used, why yaw is treated differently from roll and pitch, how four rotor thrusts come out of four scalar demands, and what has to change when the same airframe is rotated by 45 degrees.
 
-A quadcopter has six degrees of freedom and four actuators, so it is underactuated. Thrust acts along a single body axis, so horizontal acceleration is available only by tilting that axis first, which couples translation to attitude. The cascaded controller below is built around that coupling.
-
-Everything stays symbolic over here. I have not put in parameters for any particular airframe, so none of the gains, limits or time constants mentioned below are measured values. I hope someone finds these notes useful.
-
-## How to read this
-
-The derivation runs in a two-column table. The `+` layout goes down the left column and the `X` layout down the right. Where a step holds for both airframes the row spans the full width and its equations carry plain numbers. Where the two diverge the row splits, each column carries its own algebra, and the equations are tagged $(n^{+})$ and $(n^{\times})$. Reading one column from top to bottom gives the complete derivation for that airframe, from rotor positions through to motor commands.
-
-On a screen narrower than 800 pixels the two columns stack, `+` above `X`, with each cell labeled by the layout it belongs to.
+I hope someone finds these notes useful.
 
 ## Conventions used here
 
@@ -61,7 +53,9 @@ If you work in a NED frame (z-down, thrust along $$-z_{b}$$), a number of the si
 
 The state is 12-dimensional, $$(\mathbf{x}, \dot{\mathbf{x}}, \phi, \theta, \psi, p, q, r)$$, and the input is 4-dimensional, $$(\omega_1, \omega_2, \omega_3, \omega_4)$$.
 
-# The derivation, side by side
+# The derivation
+
+>> **NOTE**: For the following derivation, when a step holds for both airframes the row spans the full width of the table and its equations carry plain numbers. Where the two diverge the row splits, each column carries its own algebra, and the equations are tagged $(n^{+})$ and $(n^{\times})$. Reading one column from top to bottom gives the complete derivation for that airframe, from rotor positions through to motor commands.
 
 <table class="compare">
 <thead>
