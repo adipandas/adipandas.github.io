@@ -786,7 +786,7 @@ The remedy is the same for both airframes: rank the channels, and give the avail
 </table>
 
 
-# What the model leaves out
+# Limitations
 
 This is the standard model, and it holds up well for hover and gentle flight on either airframe. It also leaves out a fair amount, and the omissions are the same for both layouts:
 
