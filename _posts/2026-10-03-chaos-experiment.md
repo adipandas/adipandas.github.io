@@ -20,7 +20,7 @@ I assumed adulthood was a hard science. But after some immersive experience of "
 
 Technically, it is a random process where you incorporate prior knowledge while making predictions (the philosophy of RL? 🤯).
 
-Some key thoughts for myself:
+## Some key thoughts for myself:
 * Let time do heavy lifting - keep compounding (knowledge, wealth etc etc)
 * Doing nothing is really boring. [**Rest in motion**](https://mindingourway.com/rest-in-motion/).
 * [Ability to bounce back is the key](https://www.youtube.com/watch?v=isPR8TYWkLU&t=13)
