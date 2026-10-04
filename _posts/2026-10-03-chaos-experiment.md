@@ -1,7 +1,7 @@
 ---
 title: 'Embracing the Chaos Experiment'
 date: 2026-10-03
-excerpt: Notes to myself on adulthood as a random process, rest, resilience and the B lane swimmer.
+excerpt:
 permalink: /posts/2026/10/chaos-experiment/
 header:
   teaser: thumbnails/chaos-experiment.svg
